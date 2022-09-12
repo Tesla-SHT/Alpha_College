@@ -4,3 +4,6 @@
 欢迎大家加入编写，现在有一些issue在网页版上，可以自己创建也可以自告奋勇进行编写。
 
 PS:project似乎是自己的project，可以把自己的project加到issue里
+
+navigator: home, notification, journal, activity, group discussion,
+           about alpha&website development journal
