@@ -24,10 +24,23 @@
 	</header>
 	<br>
 	<br>
+	<!--这里是纯CSS写的图片廊，如果要简便一些可以用Js,
+		包括自动切换图片也是要用js才能实现-->
 	<ul class="slides">
-		<li class="slide">1</li>
-		<li class="slide">2</li>
-		<li class="slide">3</li>
+		<input type="radio" id="control-1" name="control" checked>
+		<input type="radio" id="control-2" name="control">
+		<input type="radio" id="control-3" name="control">
+
+		<li class="slide"><img src="image/1.png" width="800" height="420"></li>
+		<li class="slide"><img src="image/2.jpg" width="820" height="420"></li>
+		<li class="slide"><img src="image/3.jpg" width="800" height="420"></li>
+
+		<div class="control-visible">
+			<label for="control-1"></label>
+			<label for="control-2"></label>
+			<label for="control-3"></label>
+		</div>
 	</ul>
+	<!--picture slides end here-->
 </body>
 </html>
