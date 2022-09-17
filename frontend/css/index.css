@@ -34,6 +34,9 @@ ul li a {
 ul li:hover a {
 	color: #2C9AB7;
 }
+a.website-title{
+    width : 60%;
+}
 a.website-title:link {color:#c8c02b;text-decoration:none;}
 a.website-title:visited {color:#000000;text-decoration:none;}
 a.website-title:hover {text-decoration:underline;}
