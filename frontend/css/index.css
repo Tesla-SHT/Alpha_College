@@ -5,7 +5,7 @@ header {
     height: 50%;
     text-align: center;
 	background-image: linear-gradient(rgb(255,255,204),rgb(255,255,105));
-	border-bottom: 1px solid #f6f45a;
+	border-bottom: 0.7px solid #f6f45a;
 }
 nav.navigator {
 	float: center;
@@ -18,8 +18,9 @@ header nav ul {
 	float: right;
 }
 nav ul li {
+    border-bottom-style:solid;
 	float: left;
-	color: #FFFFFF;
+	color: #7d97df;
 	font-size: 14px;
 	text-align: center;
 	margin-right: 25px;
@@ -27,7 +28,7 @@ nav ul li {
 	font-weight: bold;
 	transition: all 0.3s linear;
 }
-ul li a {
+ul li a {   
 	color: #9f7be9;
 	text-decoration: none;
 }
