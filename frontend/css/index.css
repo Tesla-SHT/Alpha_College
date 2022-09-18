@@ -9,17 +9,12 @@ header {
 }
 nav.navigator {
 	float: center;
-	width: 70%;
 	text-align: center;
-	margin-right: 25px;
-}
-header nav ul {
-	list-style: none;
-	float: right;
+	/*margin-right: 25px;*/
 }
 nav ul li {
     border-bottom-style:solid;
-	float: left;
+	display:inline;
 	color: #7d97df;
 	font-size: 14px;
 	text-align: center;
@@ -51,7 +46,8 @@ ul.slides {
 	width: 600px;
 	height: 280px;
 	list-style: none;
-	margin:0;
+	margin:10px;
+	/*margin:auto;*/
 	padding:0;
 	background-color: #eee;
 	overflow: hidden;
@@ -147,3 +143,10 @@ input[type="radio"]{
 	transform: translateX(-400%);
 }
 /*picture slides end here*/
+/*Notification*/
+div.notification{
+	margin: 10px;
+	position:absolute;
+	left: 670px;
+	top:180px;
+}
