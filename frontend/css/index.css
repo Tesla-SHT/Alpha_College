@@ -7,6 +7,9 @@ header {
 	background-image: linear-gradient(rgb(255,255,204),rgb(255,255,105));
 	border-bottom: 0.7px solid #f6f45a;
 }
+body{
+	background-color: rgb(255,255,230);
+}
 nav.navigator {
 	float: center;
 	text-align: center;
@@ -32,6 +35,7 @@ ul li:hover a {
 }
 a.website-title{
     width : 60%;
+	font-family: Georgia, 'Times New Roman', Times, serif;
 }
 a.website-title:link {color:#c8c02b;text-decoration:none;}
 a.website-title:visited {color:#000000;text-decoration:none;}
@@ -149,4 +153,5 @@ div.notification{
 	position:absolute;
 	left: 670px;
 	top:180px;
+
 }
