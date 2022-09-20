@@ -164,7 +164,7 @@ div.notification{
 	min-height:100%;*/
 	/**/
 	width: 100% !important;
-	height: 300px;
+	height: 240px;
 	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。可以根据实际情况修改*/
 	position: relative;
 	/*这里我试了一下好像只要是矩形的四个角的的点都行,也就是说right:0;bottom:0;也可以*/
@@ -173,7 +173,7 @@ div.notification{
 	/*将视频放在元素的堆叠顺序最底层，以防覆盖其他东西*/
 	z-index: -9999;
 	/*被替换的内容正好填充元素的内容框。整个对象将完全填充此框。如果对象的宽高比与内容框不相匹配，那么该对象将被拉伸以适应内容框。*/
-	object-fit: fill;
+	object-fit:cover;
 }
 #parent{
 	position:absolute;
