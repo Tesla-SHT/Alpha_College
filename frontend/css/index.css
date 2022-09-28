@@ -5,7 +5,11 @@ header {
     height: 50%;
     text-align: center;
 	background-image: linear-gradient(rgb(255,255,204),rgb(255,255,165));
-	border-bottom: 0.7px solid #f6f45a;
+	border-bottom: 0.7px solid #f6f45a;  
+	position: sticky;
+	top: 0;
+	padding: 5px;
+	z-index: 9999;
 }
 body{
 	background-color: rgb(255,255,230);
@@ -220,4 +224,52 @@ div.notification{
 	border-left: 6px
 	 solid aqua!important;
 	list-style-type:none
+}
+/*footer*/
+.copyright {
+	text-align: center;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	background-color: #b9b9b9;
+	color: #FFFFFF;
+	text-transform: uppercase;
+	font-weight: lighter;
+	letter-spacing: 2px;
+	border-top-width: 2px;
+}
+/*here are several templates of table!!*/
+
+.table1
+{
+	border-collapse: collapse;
+	margin: 0 auto;
+	text-align: center;
+}
+.table1 td, table th
+{
+	border: 1px solid #cad9ea;
+	color: #666;
+	height: 30px;
+}
+.table1 thead th
+{
+	background-color: #CCE8EB;
+	width: 100px;
+}
+.table1 tr:nth-child(odd)
+{
+	background: #fff;
+}
+.table1 tr:nth-child(even)
+{
+	background: #F5FAFA;
+}
+.tableborder
+{
+	border:2px solid #a1a1a1;
+	width : 70%;
+	padding:10px 20px; 
+	border-radius:25px;
+	margin: 0 auto;
+	text-align: center
 }
