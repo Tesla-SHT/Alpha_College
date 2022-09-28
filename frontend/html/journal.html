@@ -1,9 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+	<meta charset="UTF-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
     <title>About Alpha College</title>
     <link href="../css/index.css" rel="stylesheet">
+	<script type="text/javascript">
+ 
+		function display(id){  
+			var traget=document.getElementById(id);  
+			if(traget.style.display=="none"){  
+				traget.style.display="";  
+			}else{  
+				traget.style.display="none";  
+		  }  
+	   }  
+	</script>
+	<script type="text/javascript" async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML"></script>
+    <script type="text/x-mathjax-config">
+        MathJax.Hub.Config({
+	    tex2jax: {
+	        inlineMath: [['$','$'], ['\\(','\\)']],
+	        processEscapes: true
+	    }
+	});
+    </script>
 </head>
 <body>
     <header>
@@ -23,7 +44,26 @@
 	</header>
 	<ul>
 		<li>
-			<a href="journal/9.18会议纪要.docx"target="_blank">9.18会议纪要</a>
+			<!--<a href="https://c9fvjv9r5h.feishu.cn/file/boxcnZRRyZac4S7DTkbLh8mC8ef?from=from_copylink"target="_blank">9.18会议纪要</a>
+			-->
+			<input type="button" value="2022-9-18会议纪要" onclick="display('lb1')" class="button">
+			<div id="lb1" style="display:none">
+				<iframe src='
+				https://c9fvjv9r5h.feishu.cn/file/boxcnZRRyZac4S7DTkbLh8mC8ef?from=from_copylink' width="900" height="900">
+				</iframe>
+			</div>
+		</li>
+		<li>
+			<input type="button" value="2022-9-25会议纪要" onclick="display('lb2')" class="button">
+			<div id="lb2" style="display:none">
+				<iframe src='
+				https://c9fvjv9r5h.feishu.cn/file/boxcnCWG1UEG6VKcvovYzciAjpf?from=from_copylink' width="900" height="900">
+				</iframe>
+			</div>
+			<!--you can just write LaTeX here-->
+				<p>$\frac{fuck}{LaTeX}$</p>
+				
+
 		</li>
 	</ul>
 </body>
