@@ -1,0 +1,14 @@
+/*button(example in journal)*/
+.button {
+    background-color: none;
+    border: none;
+	display:inline;
+	color: #7d97df;
+	font-size: 14px;
+	text-align: center;
+	margin-right: 25px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	transition: all 0.3s linear;
+	text-decoration:none;
+}
