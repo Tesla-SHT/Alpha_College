@@ -33,6 +33,7 @@ nav ul li {
 	letter-spacing: 2px;
 	font-weight: bold;
 	transition: all 0.3s linear;
+	letter-spacing: 4.5px;
 }
 ul li a {   
 	color: #9f7be9;
