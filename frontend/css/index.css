@@ -45,7 +45,7 @@ ul li:hover a {
 a.website-title{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 }
-a.website-title:link {color:#c8c02b;text-decoration:none;}
+a.website-title:link {color:#000000;text-decoration:none;}
 a.website-title:visited {color:#000000;text-decoration:none;}
 a.website-title:hover {text-decoration:underline;}
 /*picture slides*/
