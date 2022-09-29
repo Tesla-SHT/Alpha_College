@@ -173,7 +173,7 @@ div.notification{
 	min-height:100%;*/
 	/**/
 	width: 100% !important;
-	height: 180px;
+	height: 70px;
 	/*生成绝对定位的元素，相对于 static 定位以外的第一个父元素进行定位。可以根据实际情况修改*/
 	position: relative;
 	/*这里我试了一下好像只要是矩形的四个角的的点都行,也就是说right:0;bottom:0;也可以*/
