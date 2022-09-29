@@ -242,7 +242,6 @@ div.notification{
 	border-top-width: 2px;
 }
 /*here are several templates of table!!*/
-
 .table1
 {
 	border-collapse: collapse;
@@ -268,6 +267,7 @@ div.notification{
 {
 	background: #F5FAFA;
 }
+/*边框在这里！*/
 .tableborder
 {
 	border:2px solid #a1a1a1;
