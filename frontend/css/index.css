@@ -2,9 +2,9 @@
 /*website index*/
 header {
 	width: 100%;
-    height: 20%;
+    height: 10%;
     text-align: center;
-	background-image: linear-gradient(rgba(27, 27, 27, 0.50),rgba(27,27,27, 0.01));
+	background-image: linear-gradient(rgba(27, 27, 27, 0.50),rgba(27,27,27, 0));
 	margin:0;
 	border:0; 
 	position: sticky;
@@ -26,7 +26,6 @@ nav ul li {
 	font-size: 20px;
 	text-align: center;
 	margin-right: 25px;
-	letter-spacing: 2px;
 	font-weight: bold;
 	transition: all 0.3s linear;
 	letter-spacing: 1.2px;
@@ -42,17 +41,17 @@ a.website-title{
 	font-family: 'Blackadder ITC', 'Times New Roman', Times, serif;
 	font-size: 30px;
 }
-a.website-title:link {color:#0881a3;text-decoration:none;}
-a.website-title:visited {color:#000000;text-decoration:none;}
-a.website-title:hover {text-decoration:underline;}
+a.website-title:link {color:#ffffff;text-decoration:none;}
+a.website-title:visited {color:#ffffff;text-decoration:none;}
+a.website-title:hover {color: #F25C05;}
 
 a.notificationtext{
-	font-family: 'Californian FB', 'Times New Roman', Times, serif;
+	font-family: 'Californian FB', 'Times New Roman';
 	font-size: 14px;
 }
-a.notificationtext:link {color:#0881a3;text-decoration:none;font-size: 14px;}
+a.notificationtext:link {color:#ffaa00;text-decoration:none;font-size: 14px;}
 a.notificationtext:visited {color:#000000;text-decoration:none;}
-a.notificationtext:hover {text-decoration:underline;}
+a.notificationtext:hover {color: #f25c05;}
 /*picture slides*/
 ul.slides {
 	display: flex;
@@ -221,7 +220,7 @@ div.notification{
     display: block;
 }
 /* 鼠标移上去后修改下拉菜单链接颜色 */
-.dropdown-content a:hover {color: #2C9AB7;}
+.dropdown-content a:hover {color: #f25c05;}
 /* 在鼠标移上去后显示下拉菜单 */
 .dropdown:hover .dropdown-content {
     display: block;
