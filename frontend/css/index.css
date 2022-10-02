@@ -4,9 +4,13 @@
 body{
 	background-color: rgb(245,242,234);
 }
-.icon2{
+.icon1{
 	height: 80px!important;
 	width:80px!important;
+}
+.icon2{
+	height: 98px!important;
+	width:98px!important;
 }
 .navigator{
 	color: #7d97df!important;
