@@ -42,11 +42,12 @@ ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height:680px;
+	/*min-height:680px;*/
 	position:relative;
 	width: 100%;
-	max-height:680px;
+	/*max-height:680px;*/
 	list-style: none;
+	height:100%	;
 	/*margin:auto;*/
 	padding:0;
 	background-color: #eee;
@@ -95,8 +96,9 @@ input[type="radio"]{
 .control-visible{
 	position: absolute;
 	width: 100%;
-	bottom:12px;
+	bottom:30px;
 	text-align:center;
+	margin-bottom: 40px;
 }
 .control-visible label{
 	display:inline-block;
