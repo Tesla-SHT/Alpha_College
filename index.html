@@ -1,78 +1,85 @@
 <!doctype html>
 <html>
+
 <head>
 	<meta charset="utf-8">
 	<title>Alpha College</title>
 	<!--<h1>2022/9/8/18:00</h1><-->
-    <link href="Semantic/semantic.min.css" rel="stylesheet" type="text/css">
+	<link href="Semantic/semantic.min.css" rel="stylesheet" type="text/css">
 	<link href="frontend/css/index.css" rel="stylesheet">
 	<link href="frontend/css/navigator.css" rel="stylesheet">
-    <script src="Semantic/jquery-3.1.1.min.js"></script>
-    <script src="Semantic/semantic.min.js"></script>
+	<script src="Semantic/jquery-3.1.1.min.js"></script>
+	<script src="Semantic/semantic.min.js"></script>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<style>
-		#skystardecoration{
+		#skystardecoration {
 			height: 70px;
 			display: block;
 		}
 	</style>
+	<script>
+		$(function () {
+			$(".ui.dropdown").dropdown();
+		})
+		$('.button').popup();
+
+	</script>
 </head>
+
 <body>
 	<header>
-		<!--<img src="image/logo1.jpg" width="90px" height="90px" style="float:left">
-		<nav class="navigator">
-			<ul>		
-				<li><a href="index.html"target="_blank">Home</a></li>
-				<li><a href="frontend/html/notification.html"target="_blank">Notification</a></li>
-				<div class="dropdown">
-					<li><a href="">Journal</a></li>
-					<div class="dropdown-content">
-					  <a href="frontend/html/meetingsummary.html">Meeting Summary</a>
-					  <a href="frontend/html/collegeactivity.html">College Activity</a>
-					</div>
-				  </div><div class="dropdown">
-					<li><a href="frontend/html/about.html">About</a></li>
-					<div class="dropdown-content">
-					  <a href="frontend/html/about.html#aboutcollege">Alpha College</a>
-					  <a href="frontend/html/about.html#aboutwebsite">Website</a>
-					</div>
-				  </div>
-				<li><a href="frontend/html/blog.html"target="_blank">Blog</a></li>
-				<li><a href="frontend/html/forum.html"target="_blank">Forum</a></li>
-			</ul>
-		</nav>-->
-		<div class="ui yellow fixed borderless eight  menu">
-			<a href="https://westlake.edu.cn" class="item" >
+		<div class="ui yellow labeled fixed borderless menu" style="height:80px">
+			<a href="https://westlake.edu.cn" class="item">
 				<img class="ui small image icon1" src="image/Westlakelogo.jpg">
 			</a>
-				<a href="frontend/underneath_decoration/skystar.html" class="item">
-					<img class="ui small image icon2" src="image/logo.jpg">
-						</a>
-			<a href="index.html" class="active item navigator">Home</a>
-			<a href="frontend/html/notification.html" class="item navigator">Notification</a>
-			<a href="#" class="item navigator">Journal</a>
-			<a href="frontend/html/blog.html" class="item navigator">Blog</a>
-			<a href="frontend/html/forum.html" class="item navigator">Forum</a>
-			<a href="frontend/html/about.html" class="item navigator">About</a>
+			<a href="frontend/underneath_decoration/skystar.html" class="item">
+				<img class="ui small image icon2" src="image/logo.jpg">
+			</a>
+
+			<a href="index.html" class="active item navigator">
+				<i class="large home icon"></i>
+				Home
+			</a>
+			<a href="frontend/html/notification.html" class="item navigator">
+				<i class="large comment alternate icon"></i>
+				Notification
+			</a>
+			<div class="item"style="">
+				<div class="ui dropdown labeled icon button" 
+					style="background-color:white;margin: 0px !important;border:0px!important">
+					<i class="large pencil alternate icon button" style="background-color:white;color: #7d97df!important;"></i>
+					<a href="frontend/html/meetingsummary.html" class="item navigator" style="border-bottom: none;padding: 0px !important;">Journal</a>
+					<div class="menu" style="color: #7d97df;padding: 0px !important;border: 0px !important;margin: 0px !important;">
+						<a href="frontend/html/meetingsummary.html" class="ui button item navigator" 
+						style="color:#7d97df!important;margin: 0px !important;border:0px!important">Meeting
+							Summary</a>
+						<a href="frontend/html/collegeactivity.html" class="ui button item navigator"
+						style="color:#7d97df!important;margin: 0px !important;border:0px!important">College
+							Activity</a>
+					</div>
+				</div>
+			</div>
+			<a href="frontend/html/blog.html" class="item navigator">
+				<i class="large paper plane icon"></i>
+				Blog
+			</a>
+			<a href="frontend/html/forum.html" class="item navigator"style="margin-left: 15px !important;">
+				<i class="large comments icon"></i>Forum</a>
+			<div class="item">
+				<div class="ui dropdown labeled icon button" 
+					style="background-color:white;margin: 0px !important;border:0px!important">
+					<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+					<a href="frontend/html/about.html" class="item navigator" style="border-bottom: none;padding: 0px !important;">About</a>
+					<div class="menu" style="color: #7d97df;border: 0px !important">
+						<a href="frontend/html/about.html#aboutcollege" class="ui button item navigator" style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+							Alpha College</a>
+						<a href="frontend/html/about.html#aboutwebsite" class="ui button item navigator"style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+							Website</a>
+					</div>
+				</div>
+			</div>
 		</div>
 	</header>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
-	<br>
 	<br>
 	<br>
 	<!--这里是纯CSS写的图片廊，如果要简便一些可以用Js,
@@ -84,11 +91,11 @@
 		<input type="radio" id="control-4" name="control">
 		<input type="radio" id="control-5" name="control">
 
-		<li class="slide"><img src="image/scenery/1.png" width="800" height="420"></li>
-		<li class="slide"><img src="image/scenery/2.jpg" width="800" height="420"></li>
-		<li class="slide"><img src="image/college ativity/2022_9_22/4e1a9bd6dfc47db20ff63a34a235ab4.jpg" width="800" height="420"></li>
-		<li class="slide"><img src="image/college ativity/2022_9_25/midnight snack 4.jpg" width="800" height="420"></li>
-		<li class="slide"><img src="image/personal/mmexport1662532337217.jpg" width="800" height="420"></li>
+		<li class="slide"><img src="image/scenery/1.png" style="width:100%;height:100%;"></li>
+		<li class="slide"><img src="image/college ativity/20220925PingpongMatch/GroupPhoto.jpg" style="width:100%;height:100%;"></li>
+		<li class="slide"><img src="image/college ativity/2022_9_22/4e1a9bd6dfc47db20ff63a34a235ab4.jpg"style="width:100%;height:100%;"></li>
+		<li class="slide"><img src="image/college ativity/2022_9_25/midnight snack 4.jpg"style="width:100%;height:100%;"></li>
+		<li class="slide"><img src="image/personal/mmexport1662532337217.jpg"style="width:100%;height:100%;"></li>
 
 		<div class="control-visible">
 			<label for="control-1"></label>
@@ -99,27 +106,29 @@
 		</div>
 	</ul>
 	<!--picture slides end here-->
-	<div class="notification">	
-		<a href="frontend/html/notification.html" target="_blank" class="website-title"> 
+	<div class="notification">
+		<a href="frontend/html/notification.html" target="_blank" class="website-title">
 			<h2><strong>Latest Notification</strong></h2>
 		</a>
 		<ul>
 			<li class="indexnotification">
 				<a href="files/值日安排.xlsx" target="_blank"> &nbspDuty Arrangement</a>
 			</li>
-			<li class="indexnotification"><a href="frontend/html/notification.html#Group" target="_blank">&nbspGroups' Arrangement</a></li>
+			<li class="indexnotification"><a href="frontend/html/notification.html#Group" target="_blank" >&nbspGroups'
+					Arrangement</a></li>
 		</ul>
 	</div>
-	<div >
+	<div>
 		<a href="frontend/underneath_decoration/skystar.html" id="skystardecoration">
-		<!--<video class="starsky" poster="image/mmexport1662386031160.jpg" autoplay muted loop >
+			<!--<video class="starsky" poster="image/mmexport1662386031160.jpg" autoplay muted loop >
 			<source src="image/wonderful_starsky.mp4" type="video/mp4">
 	  	</video>-->
-		<img src="image/decoration1.png" class="decoration">
-	</a>
+			<img src="image/decoration1.png" class="decoration">
+		</a>
 	</div>
 	</footer>
 	<!-- Copyrights Section -->
 	<div class="copyright">&copy;2022 - <strong>Alpha College</strong></div>
 </body>
+
 </html>

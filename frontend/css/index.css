@@ -2,43 +2,51 @@
 /*website index*/
 
 body{
-	background-color: rgb(245,242,234);
+	background-color: rgb(245,242,234)!important;
+}
+.item{
+	padding: 20px !important;
+}
+.button{
+	border: 0px !important;
+}
+.icon{
+	margin:5px!important;
 }
 .icon1{
+	height: 70px!important;
+	width:70px!important;
+}
+.icon2{
 	height: 80px!important;
 	width:80px!important;
 }
-.icon2{
-	height: 98px!important;
-	width:98px!important;
-}
 .navigator{
 	color: #7d97df!important;
-	font-size: 14px!important;
+	font-size: 18px!important;
 	text-align: center!important;
-	margin-right: 25px!important;
-	letter-spacing: 2px!important;
+	/*margin-right: 25px!important;*/
+	letter-spacing: 1px!important;
 	font-weight: bold!important;
 	transition: all 0.3s linear!important;
-	letter-spacing: 4.5px!important;
-}
+} 
 a{
 	font-family: Georgia, 'Times New Roman', Times, serif;
+	text-decoration: none!important;
 }
-a:link {color:#c8c02b;text-decoration:none;}
-a:visited {color:#000000;text-decoration:none;}
-a:hover {text-decoration:underline;}
+a:link {color:rgb(202, 194, 43)!important;text-decoration:none!important;}
+a:visited {color:#7d97df!important;text-decoration:none!important;}
+a:hover{color:#9f7be9}
 /*picture slides*/
 ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height:50vh;
+	min-height:680px;
 	position:relative;
-	width: 600px;
-	height: 280px;
+	width: 100%;
+	max-height:680px;
 	list-style: none;
-	margin:10px;
 	/*margin:auto;*/
 	padding:0;
 	background-color: #eee;
@@ -138,14 +146,9 @@ input[type="radio"]{
 /*Notification*/
 div.notification{
 	margin: 10px;
-	position:absolute;
-	left: 670px;
-	top:180px;
+	position:inherit;
 
 }
-/*.starsky{
-	height: auto; width: auto\9; width:100%;height:30%;object-fit: fill;
-}*/
 
 .decoration {
 	/*设置视频最小宽度和高度 这个设不设置没有什么影响 */
@@ -168,50 +171,7 @@ div.notification{
 #parent{
 	position:absolute;
 }
-/* 下拉按钮样式 */
-.dropbtn {
-    background-color: #4CAF50;
-    color: white;
-    padding: 16px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-/* 容器 <div> - 需要定位下拉内容 */
-.dropdown {
-    position: relative;
-    display: inline-block;
-}
-/* 下拉内容 (默认隐藏) */
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-}
-/* 下拉菜单的链接 */
-.dropdown-content a {
-	color: #9f7be9;
-    padding: 12px 2px;
-    text-decoration: none;
-    display: block;
-}
-/* 鼠标移上去后修改下拉菜单链接颜色 */
-.dropdown-content a:hover {color: #2C9AB7;}
-/* 在鼠标移上去后显示下拉菜单 */
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-/* 当下拉内容显示后修改下拉按钮的背景颜色 */
-.dropdown:hover .dropbtn {
-    background-color: #3e8e41;
-}
-.indexnotification{
-	border-left: 6px
-	 solid aqua!important;
-	list-style-type:none
-}
+
 /*footer*/
 .copyright {
 	text-align: center;
