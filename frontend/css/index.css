@@ -30,13 +30,20 @@ body{
 	font-weight: bold!important;
 	transition: all 0.3s linear!important;
 } 
+.border_decoration{
+	border-left-style:solid;
+	border-left-width:5px;
+	padding-left:10px;
+	color:#7d97df!important;
+}
 a{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-decoration: none!important;
+	color:#7d97df!important;
 }
-a:link {color:rgb(202, 194, 43)!important;text-decoration:none!important;}
+a:link {color:#7d97df!important;text-decoration:none!important;}
 a:visited {color:#7d97df!important;text-decoration:none!important;}
-a:hover{color:#9f7be9}
+a:hover{color: #9f7be9 !important;}
 /*picture slides*/
 ul.slides {
 	display: flex;
