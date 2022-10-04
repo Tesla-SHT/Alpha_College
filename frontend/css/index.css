@@ -56,7 +56,8 @@ ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height:660px;
+	min-height: 100%;
+	max-height:auto;
 	position:relative;
 	/*max-height:680px;*/    
 	min-width: 700px;
