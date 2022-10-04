@@ -36,6 +36,13 @@ body{
 	padding-left:10px;
 	color:#7d97df!important;
 }
+.border_decoration2{
+	border-left-style:solid;
+	border-left-width:5px;
+	padding-left:10px;
+	border-color:#df7d7d!important;
+	color:chocolate;
+}
 a{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-decoration: none!important;
@@ -153,7 +160,7 @@ input[type="radio"]{
 }
 /*picture slides end here*/
 /*Notification*/
-div.notification{
+.notification{
 	margin: 10px;
 	position:inherit;
 
