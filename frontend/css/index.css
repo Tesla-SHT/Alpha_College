@@ -59,17 +59,15 @@ ul.slides {
 	min-height: 100%;
 	max-height:auto;
 	position:relative;
-	/*max-height:680px;*/    
-	min-width: 700px;
 	overflow-x: hidden;
-    overflow-y: auto;
+    overflow-y: hidden;
     width: 100%;
-    height: auto;
+    height:expression(document.body.clientHeight>600?”600px”:”auto”);
 	list-style: none;
 	margin:0 auto;
 	padding:0;
 	background-color: #eee;
-	overflow: hidden;
+	/*max-height:680px;*/    
 }
 li.slide{
 	margin: 0;
@@ -88,23 +86,23 @@ li.slide{
 	transition: .5s transform ease-in-out;
 }
 .slide:nth-of-type(1) {
-	background-color: #F25C05;
+	background-color: transparent;
 }
 .slide:nth-of-type(2) {
 	left:100%;
-	background-color: #F25C05;
+	background-color: transparent;
 }
 .slide:nth-of-type(3) {
 	left:200%;
-	background-color: #F25C05;
+	background-color: transparent;
 }
 .slide:nth-of-type(4) {
 	left:300%;
-	background-color: #F25C05;
+	background-color: transparent;
 }
 .slide:nth-of-type(5) {
 	left:400%;
-	background-color: #F25C05;
+	background-color: transparent;
 }
 input[type="radio"]{
 	position: relative;
