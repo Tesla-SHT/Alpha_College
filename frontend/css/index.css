@@ -30,13 +30,13 @@ body{
 	font-weight: bold!important;
 	transition: all 0.3s linear!important;
 } 
-a{
+.indexnot{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-decoration: none!important;
 }
-a:link {color:rgb(202, 194, 43)!important;text-decoration:none!important;}
-a:visited {color:#7d97df!important;text-decoration:none!important;}
-a:hover{color:#9f7be9}
+.indexnot:link {color:rgb(202, 194, 43)!important;text-decoration:none!important;}
+.indexnot:visited {color:#7d97df!important;text-decoration:none!important;}
+.indexnot:hover{color:#9f7be9}
 /*picture slides*/
 ul.slides {
 	display: flex;
