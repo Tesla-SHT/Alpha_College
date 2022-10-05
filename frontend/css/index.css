@@ -42,10 +42,7 @@ ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-<<<<<<< Updated upstream
 	min-height:680px;
-=======
->>>>>>> Stashed changes
 	position:relative;
 	width: 100%;
 	max-height:680px;
@@ -53,14 +50,7 @@ ul.slides {
 	/*margin:auto;*/
 	padding:0;
 	background-color: #eee;
-<<<<<<< Updated upstream
 	overflow: hidden;
-=======
-	min-height:680px;
-	max-height:680px;
-	background-color: transparent!important;
-	/*max-height:680px;*/    
->>>>>>> Stashed changes
 }
 li.slide{
 	margin: 0;
