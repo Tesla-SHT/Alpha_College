@@ -42,10 +42,6 @@ ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-<<<<<<< Updated upstream
-	min-height:680px;
-=======
->>>>>>> Stashed changes
 	position:relative;
 	width: 100%;
 	max-height:680px;
@@ -53,14 +49,11 @@ ul.slides {
 	/*margin:auto;*/
 	padding:0;
 	background-color: #eee;
-<<<<<<< Updated upstream
-	overflow: hidden;
-=======
 	min-height:680px;
 	max-height:680px;
 	background-color: transparent!important;
+	overflow: hidden;
 	/*max-height:680px;*/    
->>>>>>> Stashed changes
 }
 li.slide{
 	margin: 0;
@@ -79,23 +72,23 @@ li.slide{
 	transition: .5s transform ease-in-out;
 }
 .slide:nth-of-type(1) {
-	background-color: #F25C05;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(2) {
 	left:100%;
-	background-color: #F25C05;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(3) {
 	left:200%;
-	background-color: #F25C05;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(4) {
 	left:300%;
-	background-color: #F25C05;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(5) {
 	left:400%;
-	background-color: #F25C05;
+	background-color: transparent!important;
 }
 input[type="radio"]{
 	position: relative;
