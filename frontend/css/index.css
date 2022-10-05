@@ -30,43 +30,29 @@ body{
 	font-weight: bold!important;
 	transition: all 0.3s linear!important;
 } 
-.border_decoration{
-	border-left-style:solid;
-	border-left-width:5px;
-	padding-left:10px;
-	color:#7d97df!important;
-}
-.border_decoration2{
-	border-left-style:solid;
-	border-left-width:5px;
-	padding-left:10px;
-	border-color:#df7d7d!important;
-	color:chocolate;
-}
 a{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-decoration: none!important;
-	color:#7d97df!important;
 }
-a:link {color:#7d97df!important;text-decoration:none!important;}
+a:link {color:rgb(202, 194, 43)!important;text-decoration:none!important;}
 a:visited {color:#7d97df!important;text-decoration:none!important;}
-a:hover{color: #9f7be9 !important;}
+a:hover{color:#9f7be9}
 /*picture slides*/
 ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	min-height: 100%;
-	max-height:auto;
 	position:relative;
-	overflow-x: hidden;
-    overflow-y: hidden;
-    width: 100%;
-    height:auto;
+	width: 100%;
+	max-height:680px;
 	list-style: none;
-	margin:0 auto;
+	/*margin:auto;*/
 	padding:0;
 	background-color: #eee;
+	min-height:680px;
+	max-height:680px;
+	background-color: transparent!important;
+	overflow: hidden;
 	/*max-height:680px;*/    
 }
 li.slide{
@@ -86,23 +72,23 @@ li.slide{
 	transition: .5s transform ease-in-out;
 }
 .slide:nth-of-type(1) {
-	background-color: transparent;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(2) {
 	left:100%;
-	background-color: transparent;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(3) {
 	left:200%;
-	background-color: transparent;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(4) {
 	left:300%;
-	background-color: transparent;
+	background-color: transparent!important;
 }
 .slide:nth-of-type(5) {
 	left:400%;
-	background-color: transparent;
+	background-color: transparent!important;
 }
 input[type="radio"]{
 	position: relative;
@@ -112,9 +98,8 @@ input[type="radio"]{
 .control-visible{
 	position: absolute;
 	width: 100%;
-	bottom:30px;
+	bottom:12px;
 	text-align:center;
-	margin-bottom: 40px;
 }
 .control-visible label{
 	display:inline-block;
@@ -162,7 +147,7 @@ input[type="radio"]{
 }
 /*picture slides end here*/
 /*Notification*/
-.notification{
+div.notification{
 	margin: 10px;
 	position:inherit;
 
