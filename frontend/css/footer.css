@@ -19,9 +19,10 @@ footer
     margin-top:0px;
     position: relative;
     width: 100%;
-    background: #3586ff;
+    background: rgb(232,201,105);
     min-height: 100px;
     padding: 20px 50px;
+    opacity: 0.53;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,15 +51,15 @@ footer
     margin: 0 10px;
     display: inline-block;
     text-decoration: none;
-    opacity: 0.75;
+    opacity: 0.3;
 }
 .footer_word li p:hover
 {
-    opacity: 1;
+    opacity: 0.3;
 }
 .footer_p
 {
-    color: #fff;
+    color: black;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 10px;
@@ -71,7 +72,7 @@ footer
     left: 0;
     width: 100%;
     height: 70px;
-    background: url(../../image/wave.png);
+    background: url(../../image/waveY.png);
     background-size: 1000px 100px;
 }
 .wave#wave1
