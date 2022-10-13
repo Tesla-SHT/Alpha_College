@@ -8,7 +8,7 @@
 */
     {
     --borderWidth: 5px;
-    background-color:rgb(255,255,230);
+    background-color:rgb(245,242,234)!important;
     position: relative;
     border-radius: var(--borderWidth);
     padding-left: 20px;
