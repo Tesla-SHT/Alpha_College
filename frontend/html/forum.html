@@ -5,6 +5,7 @@
     <title>College Forum</title>    
 	<link href="../css/index.css" rel="stylesheet">
 	<link href="../css/blog.css" rel="stylesheet">
+	<link href="../css/journal.css" rel="stylesheet">
 	<link href="../../Semantic/semantic.min.css" rel="stylesheet" type="text/css">
 	<link href="../css/navigator.css" rel="stylesheet">
 	<script src="../../Semantic/jquery-3.1.1.min.js"></script>
@@ -17,6 +18,18 @@
 		$('.button').popup();
 
 	</script>
+		</script>
+		<script type="text/javascript">
+ 
+			function display(id){  
+				var traget=document.getElementById(id);  
+				if(traget.style.display=="none"){  
+					traget.style.display="";  
+				}else{  
+					traget.style.display="none";  
+			  }  
+		   }  
+		</script>
 </head>
 <body>
 	<header>
@@ -100,12 +113,24 @@
 	<br>
 	<br>
 	<br>
+	<ul>
+		<li>
+			<!--<a href="https://c9fvjv9r5h.feishu.cn/file/boxcnZRRyZac4S7DTkbLh8mC8ef?from=from_copylink"target="_blank">9.18会议纪要</a>
+			-->
+			<input type="button" value="Scientific Writing Competition" onclick="display('lb1')" class="button">
+			<div id="lb1" style="display:none">
+				<iframe src='	https://c9fvjv9r5h.feishu.cn/file/boxcn5zs35azp0kvaXzD4kaiX9d?from=from_copylink' width="900" height="900">
+				</iframe>
+			</div>
+		</li>
+	</ul>
+<!--
 	<h2>科幻作文大赛</h2>
 	<ol>
 		<li>
 			<p>影</p>
 		</li>
-	</ol>
+	</ol>-->
 </footer>
 <!-- Copyrights Section -->
 <div class="copyright">&copy;2022 - <strong>Alpha College</strong></div>

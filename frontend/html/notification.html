@@ -5,6 +5,8 @@
     <title>Notifications</title>
 	<link href="../css/index.css" rel="stylesheet">
 	<link href="../css/blog.css" rel="stylesheet">
+	
+    <link href="../css/journal.css" rel="stylesheet">
 	<link href="../../Semantic/semantic.min.css" rel="stylesheet" type="text/css">
 	<link href="../css/navigator.css" rel="stylesheet">
 	<script src="../../Semantic/jquery-3.1.1.min.js"></script>
@@ -17,6 +19,17 @@
 		$('.button').popup();
 
 	</script>
+		<script type="text/javascript">
+ 
+			function display(id){  
+				var traget=document.getElementById(id);  
+				if(traget.style.display=="none"){  
+					traget.style.display="";  
+				}else{  
+					traget.style.display="none";  
+			  }  
+		   }  
+		</script>
 </head>
 <body>
 	<header>
@@ -99,6 +112,17 @@
 	<br>
 	<br>
 	<br>
+	<ul>
+		<li>
+			<!--<a href="https://c9fvjv9r5h.feishu.cn/file/boxcnZRRyZac4S7DTkbLh8mC8ef?from=from_copylink"target="_blank">9.18会议纪要</a>
+			-->
+			<input type="button" value="趣味运动会" onclick="display('lb1')" class="button">
+			<div id="lb1" style="display:none">
+				<iframe src='https://c9fvjv9r5h.feishu.cn/file/boxcnc907s1TFH3S3aITeF6fVcd?from=from_copylink' width="900" height="900">
+				</iframe>
+			</div>
+		</li>
+	</ul>
 
 </footer>
 <!-- Copyrights Section -->
