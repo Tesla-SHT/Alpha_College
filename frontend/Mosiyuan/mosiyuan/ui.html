@@ -1,5 +1,5 @@
 <div>
-	<div class="popmessage" v-if="popMessages.length>0">
+	<div class="popmessage" v-if="popMessages.length>0" style="margin-top:100px">
 		<button @click="()=>{popMessages=[];}">{{`关闭`}}</button>
 		<ul>
 			<li v-for="msg in popMessages" v-html="msg"></li>
