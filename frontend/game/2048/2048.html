@@ -103,7 +103,7 @@
     <br>
     <br>
     <h1>2048</h1>
-    <p>得分：<span id="Score"></span></p>
+    <p>Score: <span id="Score"></span></p>
     <span id="FF1"></span>
     <span id="FF2"></span>
     <canvas id="game" width="400" height="400"></canvas>
@@ -211,6 +211,18 @@
                 case 40: // Down arrow
                     // Move the tiles down
                     moveDown();
+                    break;
+                case 65:
+                    moveLeft();
+                    break;
+                case 87:
+                    moveUp();
+                    break;
+                case 83:
+                    moveDown();
+                    break;
+                case 68:
+                    moveRight();
                     break;
             }
         });
