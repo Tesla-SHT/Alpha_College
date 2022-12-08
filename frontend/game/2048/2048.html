@@ -119,10 +119,10 @@
         }
         // Define the game grid
         var grid = [
-            ['','','',''],
-            ['','','',''],
-            ['','','',''],
-            ['','','','']
+            ['', '', '', ''],
+            ['', '', '', ''],
+            ['', '', '', ''],
+            ['', '', '', '']
         ];
 
         // Draw the game grid
@@ -144,7 +144,69 @@
                     ctx.font = "48px sans-serif";
                     ctx.textAlign = "center";
                     ctx.textBaseline = "middle";
-                    ctx.fillText(grid[row][col], x + 50, y + 50);
+                    //ctx.fillText(grid[row][col], x + 50, y + 50);
+                    if (grid[row][col] == 2) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/2.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width/1.37, imageObj.height/1.37);
+                    }
+                    if (grid[row][col]==4){
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/4.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width /1.37, imageObj.height /1.37);
+                    }
+                    if (grid[row][col] == 8) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/8.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width/1.37, imageObj.height/1.37);
+                    }
+                    if (grid[row][col]==16){
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/16.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width /1.37, imageObj.height /1.37);
+                    }
+                    if (grid[row][col] == 32) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/32.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width/1.37, imageObj.height/1.37);
+                    }
+                    if (grid[row][col]==64){
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/64.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width /1.37, imageObj.height /1.37);
+                    }
+                    if (grid[row][col] == 128) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/128.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width/1.37, imageObj.height/1.37);
+                    }
+                    if (grid[row][col]==256){
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/';
+                        ctx.drawImage(imageObj, x, y, imageObj.width /1.37, imageObj.height /1.37);
+                    }
+                    
+                    if (grid[row][col] == 512) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/';
+                        ctx.drawImage(imageObj, x, y, imageObj.width/1.37, imageObj.height/1.37);
+                    }
+                    if (grid[row][col]==1024){
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/';
+                        ctx.drawImage(imageObj, x, y, imageObj.width /1.37, imageObj.height /1.37);
+                    }
+                    if (grid[row][col] == 2048) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/';
+                        ctx.drawImage(imageObj, x, y, imageObj.width/1.37, imageObj.height/1.37);
+                    }
+                    if (grid[row][col]==4096){
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/';
+                        ctx.drawImage(imageObj, x, y, imageObj.width /1.37, imageObj.height /1.37);
+                    }
+
                 }
             }
         }
@@ -178,17 +240,17 @@
             var fff = 1;
             for (var row = 0; row < 4; row++) {
                 for (var col = 0; col < 4; col++) {
-                    if (grid[row][col] == 0) { fff = 0; return;}
+                    if (grid[row][col] == 0) { fff = 0; return; }
                 }
             }
             for (var row = 0; row < 4; row++) {
                 for (var col = 0; col < 3; col++) {
-                    if (grid[row][col]==grid[row][col+1]){fff=0; return;}
+                    if (grid[row][col] == grid[row][col + 1]) { fff = 0; return; }
                 }
             }
             for (var row = 0; row < 3; row++) {
                 for (var col = 0; col < 4; col++) {
-                    if (grid[row][col]==grid[row+1][col]){fff=0;return;}
+                    if (grid[row][col] == grid[row + 1][col]) { fff = 0; return; }
                 }
             }
             if (fff == 1) { alert("Game Over! Your score is " + score) }
@@ -233,10 +295,10 @@
             flag = 0;
             // Shift the tiles to the left
             for (var row = 0; row < 4; row++) {
-                var newRow = [ '', ''  ,''  ,'' ];
+                var newRow = ['', '', '', ''];
                 var next = 0;
                 for (var col = 0; col < 4; col++) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newRow[next] = grid[row][col];
                         next++;
                     }
@@ -261,7 +323,7 @@
             if (flag < 1) { return; }
             // Shift the tiles to the left again
             for (var row = 0; row < 4; row++) {
-                var newRow = ['','','',''];
+                var newRow = ['', '', '', ''];
                 var next = 0;
                 for (var col = 0; col < 4; col++) {
                     if (grid[row][col] != '') {
@@ -285,7 +347,7 @@
             flag = 0;
             // Shift the tiles up
             for (var col = 0; col < 4; col++) {
-                var newCol = ['','','',''];
+                var newCol = ['', '', '', ''];
                 var next = 0;
                 for (var row = 0; row < 4; row++) {
                     if (grid[row][col] != '') {
@@ -315,7 +377,7 @@
             if (flag < 1) { return; }
             // Shift the tiles up again
             for (var col = 0; col < 4; col++) {
-                var newCol = ['','','',''];
+                var newCol = ['', '', '', ''];
                 var next = 0;
                 for (var row = 0; row < 4; row++) {
                     if (grid[row][col] != '') {
@@ -341,7 +403,7 @@
             // Shift the tiles to the right
             flag = 0;
             for (var row = 0; row < 4; row++) {
-                var newRow = ['','','',''];
+                var newRow = ['', '', '', ''];
                 var next = 3;
                 for (var col = 3; col >= 0; col--) {
                     if (grid[row][col] != '') {
@@ -370,7 +432,7 @@
             if (flag < 1) { return; }
             // Shift the tiles to the right again
             for (var row = 0; row < 4; row++) {
-                var newRow = ['','','',''];
+                var newRow = ['', '', '', ''];
                 var next = 3;
                 for (var col = 3; col >= 0; col--) {
                     if (grid[row][col] != '') {
@@ -394,7 +456,7 @@
             // Shift the tiles down
             flag = 0;
             for (var col = 0; col < 4; col++) {
-                var newCol = ['','','',''];
+                var newCol = ['', '', '', ''];
                 var next = 3;
                 for (var row = 3; row >= 0; row--) {
                     if (grid[row][col] != '') {
@@ -411,7 +473,7 @@
             // Merge the tiles down
             for (var row = 3; row > 0; row--) {
                 for (var col = 0; col < 4; col++) {
-                    if ((grid[row][col] == grid[row - 1][col])&&(grid[row][col]!='')) {
+                    if ((grid[row][col] == grid[row - 1][col]) && (grid[row][col] != '')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         updateScore();
@@ -423,7 +485,7 @@
             if (flag < 1) { return; }
             // Shift the tiles down again
             for (var col = 0; col < 4; col++) {
-                var newCol = ['','','',''];
+                var newCol = ['', '', '', ''];
                 var next = 3;
                 for (var row = 3; row >= 0; row--) {
                     if (grid[row][col] != '') {
