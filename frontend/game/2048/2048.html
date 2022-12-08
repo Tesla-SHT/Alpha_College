@@ -119,10 +119,10 @@
         }
         // Define the game grid
         var grid = [
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0],
-            [0, 0, 0, 0]
+            ['','','',''],
+            ['','','',''],
+            ['','','',''],
+            ['','','','']
         ];
 
         // Draw the game grid
@@ -169,7 +169,7 @@
             }
 
             // Set the value of the new tile to either 2 or 4
-            grid[row][col] = Math.random() < 0.8 ? 2 : 4;
+            grid[row][col] = Math.random() < 0.9 ? 2 : 4;
 
             // Draw the updated game grid
             drawGrid();
@@ -221,7 +221,7 @@
             flag = 0;
             // Shift the tiles to the left
             for (var row = 0; row < 4; row++) {
-                var newRow = [0, 0, 0, 0];
+                var newRow = [ '', ''  ,''  ,'' ];
                 var next = 0;
                 for (var col = 0; col < 4; col++) {
                     if (grid[row][col] != 0) {
@@ -234,26 +234,25 @@
                 }
                 grid[row] = newRow;
             }
-
             // Merge the tiles to the left
             for (var row = 0; row < 4; row++) {
                 for (var col = 0; col < 3; col++) {
-                    if ((grid[row][col] == grid[row][col + 1]) && (grid[row][col] != 0)) {
+                    if ((grid[row][col] == grid[row][col + 1]) && (grid[row][col] != '')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         flag = 1;
                         updateScore();
-                        grid[row][col + 1] = 0;
+                        grid[row][col + 1] = '';
                     }
                 }
             }
             if (flag < 1) { return; }
             // Shift the tiles to the left again
             for (var row = 0; row < 4; row++) {
-                var newRow = [0, 0, 0, 0];
+                var newRow = ['','','',''];
                 var next = 0;
                 for (var col = 0; col < 4; col++) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newRow[next] = grid[row][col];
                         next++;
                     }
@@ -274,16 +273,16 @@
             flag = 0;
             // Shift the tiles up
             for (var col = 0; col < 4; col++) {
-                var newCol = [0, 0, 0, 0];
+                var newCol = ['','','',''];
                 var next = 0;
                 for (var row = 0; row < 4; row++) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newCol[next] = grid[row][col];
                         next++;
                     }
                 }
                 for (var row = 0; row < 4; row++) {
-                    if ((grid[row][col] != newCol[row]) && (grid[row][col] != 0)) {
+                    if ((grid[row][col] != newCol[row]) && (grid[row][col] != '')) {
                         flag = 1;
                     }
                     grid[row][col] = newCol[row];
@@ -297,17 +296,17 @@
                         score += grid[row][col];
                         updateScore();
                         flag = 1;
-                        grid[row + 1][col] = 0;
+                        grid[row + 1][col] = '';
                     }
                 }
             }
             if (flag < 1) { return; }
             // Shift the tiles up again
             for (var col = 0; col < 4; col++) {
-                var newCol = [0, 0, 0, 0];
+                var newCol = ['','','',''];
                 var next = 0;
                 for (var row = 0; row < 4; row++) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newCol[next] = grid[row][col];
                         next++;
                     }
@@ -330,16 +329,16 @@
             // Shift the tiles to the right
             flag = 0;
             for (var row = 0; row < 4; row++) {
-                var newRow = [0, 0, 0, 0];
+                var newRow = ['','','',''];
                 var next = 3;
                 for (var col = 3; col >= 0; col--) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newRow[next] = grid[row][col];
                         next--;
                     }
                 }
                 for (var col = 3; col >= 0; col--) {
-                    if ((grid[row][col] != newRow[col]) && (grid[row][col] != 0)) { flag = 1; }
+                    if ((grid[row][col] != newRow[col]) && (grid[row][col] != '')) { flag = 1; }
                 }
                 grid[row] = newRow;
             }
@@ -352,17 +351,17 @@
                         score += grid[row][col];
                         updateScore();
                         flag = 1;
-                        grid[row][col - 1] = 0;
+                        grid[row][col - 1] = '';
                     }
                 }
             }
             if (flag < 1) { return; }
             // Shift the tiles to the right again
             for (var row = 0; row < 4; row++) {
-                var newRow = [0, 0, 0, 0];
+                var newRow = ['','','',''];
                 var next = 3;
                 for (var col = 3; col >= 0; col--) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newRow[next] = grid[row][col];
                         next--;
                     }
@@ -383,16 +382,16 @@
             // Shift the tiles down
             flag = 0;
             for (var col = 0; col < 4; col++) {
-                var newCol = [0, 0, 0, 0];
+                var newCol = ['','','',''];
                 var next = 3;
                 for (var row = 3; row >= 0; row--) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newCol[next] = grid[row][col];
                         next--;
                     }
                 }
                 for (var row = 0; row < 4; row++) {
-                    if ((grid[row][col] != newCol[row]) && (grid[row][col] != 0)) { flag = 1; }
+                    if (grid[row][col] != newCol[row]) { flag = 1; }
                     grid[row][col] = newCol[row];
                 }
             }
@@ -400,22 +399,22 @@
             // Merge the tiles down
             for (var row = 3; row > 0; row--) {
                 for (var col = 0; col < 4; col++) {
-                    if (grid[row][col] == grid[row - 1][col]) {
+                    if ((grid[row][col] == grid[row - 1][col])&&(grid[row][col]!='')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         updateScore();
                         flag = 1;
-                        grid[row - 1][col] = 0;
+                        grid[row - 1][col] = '';
                     }
                 }
             }
             if (flag < 1) { return; }
             // Shift the tiles down again
             for (var col = 0; col < 4; col++) {
-                var newCol = [0, 0, 0, 0];
+                var newCol = ['','','',''];
                 var next = 3;
                 for (var row = 3; row >= 0; row--) {
-                    if (grid[row][col] != 0) {
+                    if (grid[row][col] != '') {
                         newCol[next] = grid[row][col];
                         next--;
                     }
