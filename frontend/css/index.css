@@ -2,7 +2,7 @@
 /*website index*/
 
 body{
-	background-color: rgb(245,242,234)!important;
+	background-color: rgb(250, 248, 242)!important;
 }
 .item{
 	padding: 20px !important;
@@ -33,6 +33,7 @@ body{
 .indexnot{
 	font-family: Georgia, 'Times New Roman', Times, serif;
 	text-decoration: none!important;
+	font-size:17px!important;
 }
 .indexnot:link {color:#7d97df!important;text-decoration:none!important;}
 .indexnot:visited {color:#7d97df!important;text-decoration:none!important;}
