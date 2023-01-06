@@ -177,449 +177,446 @@
     <span id="FF1"></span>
     <span id="FF2"></span>
     <canvas id="game" width="400" height="400"></canvas>
-        <script>
-            // Get the canvas element
-            var canvas = document.getElementById("game");
-            var ctx = canvas.getContext("2d");
-            var score = 0;
-            updateScore();
-            function updateScore() {
-                document.getElementById("Score").innerHTML = score;
-            }
-            // Define the game grid
-            var grid = [
-                ['', '', '', ''],
-                ['', '', '', ''],
-                ['', '', '', ''],
-                ['', '', '', '']
-            ];
+    <script>
+        // Get the canvas element
+        var canvas = document.getElementById("game");
+        var ctx = canvas.getContext("2d");
+        var score = 0;
+        updateScore();
+        function updateScore() {
+            document.getElementById("Score").innerHTML = score;
+        }
+        // Define the game grid
+        var grid = [
+            ['', '', '', ''],
+            ['', '', '', ''],
+            ['', '', '', ''],
+            ['', '', '', '']
+        ];
 
-            // Draw the game grid
-            function drawGrid() {
-                // Clear the canvas
-                ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Draw the game grid
+        function drawGrid() {
+            // Clear the canvas
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-                // Draw each cell in the grid
-                for (var row = 0; row < 4; row++) {
-                    for (var col = 0; col < 4; col++) {
-                        // Calculate the position of the cell
-                        var x = col * 100;
-                        var y = row * 100;
+            // Draw each cell in the grid
+            for (var row = 0; row < 4; row++) {
+                for (var col = 0; col < 4; col++) {
+                    // Calculate the position of the cell
+                    var x = col * 100;
+                    var y = row * 100;
 
-                        // Draw the cell
-                        ctx.strokeRect(x, y, 100, 100);
+                    // Draw the cell
+                    ctx.strokeRect(x, y, 100, 100);
 
-                        // Draw the cell value
-                        ctx.font = "48px sans-serif";
-                        ctx.textAlign = "center";
-                        ctx.textBaseline = "middle";
-                        //ctx.fillText(grid[row][col], x + 50, y + 50);
-                        if (grid[row][col] == 2) {
+                    // Draw the cell value
+                    ctx.font = "48px sans-serif";
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "middle";
+                    //ctx.fillText(grid[row][col], x + 50, y + 50);
+                    if (grid[row][col] == 2) {
+                        var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/2.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
+                    }
+                    else
+                        if (grid[row][col] == 4) {
                             var imageObj = new Image();
-                            imageObj.src = '../../../image/2048/2.png';
+                            imageObj.src = '../../../image/2048/4.png';
                             ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                         }
                         else
-                            if (grid[row][col] == 4) {
+                            if (grid[row][col] == 8) {
                                 var imageObj = new Image();
-                                imageObj.src = '../../../image/2048/4.png';
+                                imageObj.src = '../../../image/2048/8.png';
                                 ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                             }
                             else
-                                if (grid[row][col] == 8) {
+                                if (grid[row][col] == 16) {
                                     var imageObj = new Image();
-                                    imageObj.src = '../../../image/2048/8.png';
+                                    imageObj.src = '../../../image/2048/16.png';
                                     ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                 }
                                 else
-                                    if (grid[row][col] == 16) {
+                                    if (grid[row][col] == 32) {
                                         var imageObj = new Image();
-                                        imageObj.src = '../../../image/2048/16.png';
+                                        imageObj.src = '../../../image/2048/32.png';
                                         ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                     }
                                     else
-                                        if (grid[row][col] == 32) {
+                                        if (grid[row][col] == 64) {
                                             var imageObj = new Image();
-                                            imageObj.src = '../../../image/2048/32.png';
+                                            imageObj.src = '../../../image/2048/64.png';
                                             ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                         }
                                         else
-                                            if (grid[row][col] == 64) {
+                                            if (grid[row][col] == 128) {
                                                 var imageObj = new Image();
-                                                imageObj.src = '../../../image/2048/64.png';
+                                                imageObj.src = '../../../image/2048/128.png';
                                                 ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                             }
                                             else
-                                                if (grid[row][col] == 128) {
+                                                if (grid[row][col] == 256) {
                                                     var imageObj = new Image();
-                                                    imageObj.src = '../../../image/2048/128.png';
+                                                    imageObj.src = '../../../image/2048/256.png';
                                                     ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                                 }
                                                 else
-                                                    if (grid[row][col] == 256) {
+
+                                                    if (grid[row][col] == 512) {
                                                         var imageObj = new Image();
-                                                        imageObj.src = '../../../image/2048/256.png';
+                                                        imageObj.src = '../../../image/2048/512.png';
                                                         ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                                     }
                                                     else
-
-                                                        if (grid[row][col] == 512) {
+                                                        if (grid[row][col] == 1024) {
                                                             var imageObj = new Image();
-                                                            imageObj.src = '../../../image/2048/512.png';
-                                                            ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
+                                                            imageObj.src = '../../../image/2048/1024.png';
+                                                            ctx.drawImage(imageObj, x, y, imageObj.width / 0.765, imageObj.height / 0.765);
                                                         }
                                                         else
-                                                            if (grid[row][col] == 1024) {
+                                                            if (grid[row][col] == 2048) {
                                                                 var imageObj = new Image();
-                                                                imageObj.src = '../../../image/2048/1024.png';
+                                                                imageObj.src = '../../../image/2048/2048.png';
                                                                 ctx.drawImage(imageObj, x, y, imageObj.width / 0.765, imageObj.height / 0.765);
                                                             }
                                                             else
-                                                                if (grid[row][col] == 2048) {
+                                                                if (grid[row][col] == 4096) {
                                                                     var imageObj = new Image();
-                                                                    imageObj.src = '../../../image/2048/2048.png';
-                                                                    ctx.drawImage(imageObj, x, y, imageObj.width / 0.765, imageObj.height / 0.765);
+                                                                    imageObj.src = '../../../image/2048/';
+                                                                    ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
                                                                 }
-                                                                else
-                                                                    if (grid[row][col] == 4096) {
-                                                                        var imageObj = new Image();
-                                                                        imageObj.src = '../../../image/2048/';
-                                                                        ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
-                                                                    }
 
-                    }
                 }
             }
+        }
 
-            // Initialize the game
-            function init() {
-                // Draw the initial game grid
-                drawGrid();
-
-                // Add a new tile to the grid
-                addTile();
-            }
+        // Initialize the game
+        function init() {
+            // Draw the initial game grid
+            drawGrid();
 
             // Add a new tile to the grid
-            function addTile() {
-                // Choose a random empty cell
-                var row = Math.floor(Math.random() * 4);
-                var col = Math.floor(Math.random() * 4);
-                while (grid[row][col] != 0) {
-                    row = Math.floor(Math.random() * 4);
-                    col = Math.floor(Math.random() * 4);
-                }
+            addTile();
+        }
 
-                // Set the value of the new tile to either 2 or 4
-                grid[row][col] = Math.random() < 0.9 ? 2 : 4;
-
-                // Draw the updated game grid
-                drawGrid();
-            }
-            //按回车 确定
-            function keyLogin() {
-                if (event.keyCode == 13)  //回车键的键值为13
-                    document.getElementByIdx_x("input1").click(); //调用登录按钮的登录事件
-            }
-            //游戏结束提示框
-            function alertMsg(text) {
-                var bgHtml = "<div class='msg-bg'></div>";
-                var msgAlertHtml = "<div class='msg-alertWrap'>" +
-                    "<div class='msg-alert'>" +
-                    "<div class='msg-header'><button class='msg-dismiss'><span>&times;</span></button><h4 class='msg-title'>Game Over!</h4></div>" +
-                    "<div class='msg-body'>" +
-                    "<div class='msg-content'></div>" +
-                    "</div>" +
-                    "<div class='msg-footer'>" +
-                    "<button id='input1' type='button' class='msg-btnOk'>确定</button>" +
-                    "</div>" +
-                    "</div>" +
-                    "</div>";
-                if ($(".msg-bg").length == 0) {
-                    $("body").append(bgHtml + msgAlertHtml);
-                } else {
-                    $("body").append(msgAlertHtml);
-                }             
-                $(".msg-alertWrap:last-child .msg-content").html(text);
-                $(".msg-btnOk,.msg-dismiss").on("click", function () {
-                    $(this).parents(".msg-alertWrap").remove();
-                    if ($(".msg-alertWrap").length == 0) {
-                        $(".msg-bg").remove();
-                    }
-                })                
-
-            }
-            function CheckGameOver() {
-                var fff = 1;
-                for (var row = 0; row < 4; row++) {
-                    for (var col = 0; col < 4; col++) {
-                        if (grid[row][col] == 0) { fff = 0; return; }
-                    }
-                }
-                for (var row = 0; row < 4; row++) {
-                    for (var col = 0; col < 3; col++) {
-                        if (grid[row][col] == grid[row][col + 1]) { fff = 0; return; }
-                    }
-                }
-                for (var row = 0; row < 3; row++) {
-                    for (var col = 0; col < 4; col++) {
-                        if (grid[row][col] == grid[row + 1][col]) { fff = 0; return; }
-                    }
-                }
-                if (fff == 1) { alertMsg("Your score is " + score) }
-            }
-            // Handle keyboard input
-            document.addEventListener("keydown", function (event) {
-                switch (event.keyCode) {
-                    case 37: // Left arrow
-                        // Move the tiles to the left
-                        moveLeft();
-                        break;
-                    case 38: // Up arrow
-                        // Move the tiles up
-                        moveUp();
-                        break;
-                    case 39: // Right arrow
-                        // Move the tiles to the right
-                        moveRight();
-                        break;
-                    case 40: // Down arrow
-                        // Move the tiles down
-                        moveDown();
-                        break;
-                    case 65:
-                        moveLeft();
-                        break;
-                    case 87:
-                        moveUp();
-                        break;
-                    case 83:
-                        moveDown();
-                        break;
-                    case 68:
-                        moveRight();
-                        break;
-                }
-            });
-            var flag = 0;
-            // Move the tiles to the left
-            function moveLeft() {
-
-                flag = 0;
-                // Shift the tiles to the left
-                for (var row = 0; row < 4; row++) {
-                    var newRow = ['', '', '', ''];
-                    var next = 0;
-                    for (var col = 0; col < 4; col++) {
-                        if (grid[row][col] != '') {
-                            newRow[next] = grid[row][col];
-                            next++;
-                        }
-                    }
-                    for (var col = 0; col < 4; col++) {
-                        if (grid[row][col] != newRow[col]) { flag = 1; }
-                    }
-                    grid[row] = newRow;
-                }
-                // Merge the tiles to the left
-                for (var row = 0; row < 4; row++) {
-                    for (var col = 0; col < 3; col++) {
-                        if ((grid[row][col] == grid[row][col + 1]) && (grid[row][col] != '')) {
-                            grid[row][col] *= 2;
-                            score += grid[row][col];
-                            flag = 1;
-                            updateScore();
-                            grid[row][col + 1] = '';
-                        }
-                    }
-                }
-                if (flag < 1) { return; }
-                // Shift the tiles to the left again
-                for (var row = 0; row < 4; row++) {
-                    var newRow = ['', '', '', ''];
-                    var next = 0;
-                    for (var col = 0; col < 4; col++) {
-                        if (grid[row][col] != '') {
-                            newRow[next] = grid[row][col];
-                            next++;
-                        }
-                    }
-                    grid[row] = newRow;
-                }
-
-                // Draw the updated game grid
-                //drawGrid();
-
-                // Add a new tile to the grid
-                addTile();
-                CheckGameOver();
+        // Add a new tile to the grid
+        function addTile() {
+            // Choose a random empty cell
+            var row = Math.floor(Math.random() * 4);
+            var col = Math.floor(Math.random() * 4);
+            while (grid[row][col] != 0) {
+                row = Math.floor(Math.random() * 4);
+                col = Math.floor(Math.random() * 4);
             }
 
-            // Move the tiles up
-            function moveUp() {
-                flag = 0;
-                // Shift the tiles up
+            // Set the value of the new tile to either 2 or 4
+            grid[row][col] = Math.random() < 0.9 ? 2 : 4;
+
+            // Draw the updated game grid
+            drawGrid();
+        }
+        //按回车 确定
+
+        //游戏结束提示框
+        function alertMsg(text) {
+            var bgHtml = "<div class='msg-bg'></div>";
+            var msgAlertHtml = "<div class='msg-alertWrap'>" +
+                "<div class='msg-alert'>" +
+                "<div class='msg-header'><button class='msg-dismiss'><span>&times;</span></button><h4 class='msg-title'>Game Over!</h4></div>" +
+                "<div class='msg-body'>" +
+                "<div class='msg-content'></div>" +
+                "</div>" +
+                "<div class='msg-footer'>" +
+                "<button id='input1' type='button' class='msg-btnOk'>确定</button>" +
+                "</div>" +
+                "</div>" +
+                "</div>";
+            if ($(".msg-bg").length == 0) {
+                $("body").append(bgHtml + msgAlertHtml);
+            } else {
+                $("body").append(msgAlertHtml);
+            }
+            $(".msg-alertWrap:last-child .msg-content").html(text);
+            $(".msg-btnOk,.msg-dismiss").on("click", function () {
+                $(this).parents(".msg-alertWrap").remove();
+                if ($(".msg-alertWrap").length == 0) {
+                    $(".msg-bg").remove();
+                }
+            })
+
+        }
+        function CheckGameOver() {
+            var fff = 1;
+            for (var row = 0; row < 4; row++) {
                 for (var col = 0; col < 4; col++) {
-                    var newCol = ['', '', '', ''];
-                    var next = 0;
-                    for (var row = 0; row < 4; row++) {
-                        if (grid[row][col] != '') {
-                            newCol[next] = grid[row][col];
-                            next++;
-                        }
-                    }
-                    for (var row = 0; row < 4; row++) {
-                        if ((grid[row][col] != newCol[row]) && (grid[row][col] != '')) {
-                            flag = 1;
-                        }
-                        grid[row][col] = newCol[row];
-                    }
+                    if (grid[row][col] == 0) { fff = 0; return; }
                 }
-                // Merge the tiles up
-                for (var row = 0; row < 3; row++) {
-                    for (var col = 0; col < 4; col++) {
-                        if (grid[row][col] == grid[row + 1][col]) {
-                            grid[row][col] *= 2;
-                            score += grid[row][col];
-                            updateScore();
-                            flag = 1;
-                            grid[row + 1][col] = '';
-                        }
-                    }
+            }
+            for (var row = 0; row < 4; row++) {
+                for (var col = 0; col < 3; col++) {
+                    if (grid[row][col] == grid[row][col + 1]) { fff = 0; return; }
                 }
-                if (flag < 1) { return; }
-                // Shift the tiles up again
+            }
+            for (var row = 0; row < 3; row++) {
                 for (var col = 0; col < 4; col++) {
-                    var newCol = ['', '', '', ''];
-                    var next = 0;
-                    for (var row = 0; row < 4; row++) {
-                        if (grid[row][col] != '') {
-                            newCol[next] = grid[row][col];
-                            next++;
-                        }
-                    }
-                    for (var row = 0; row < 4; row++) {
-                        grid[row][col] = newCol[row];
+                    if (grid[row][col] == grid[row + 1][col]) { fff = 0; return; }
+                }
+            }
+            if (fff == 1) { alertMsg("Your score is " + score) }
+        }
+        // Handle keyboard input
+        document.addEventListener("keydown", function (event) {
+            switch (event.keyCode) {
+                case 37: // Left arrow
+                    // Move the tiles to the left
+                    moveLeft();
+                    break;
+                case 38: // Up arrow
+                    // Move the tiles up
+                    moveUp();
+                    break;
+                case 39: // Right arrow
+                    // Move the tiles to the right
+                    moveRight();
+                    break;
+                case 40: // Down arrow
+                    // Move the tiles down
+                    moveDown();
+                    break;
+                case 65:
+                    moveLeft();
+                    break;
+                case 87:
+                    moveUp();
+                    break;
+                case 83:
+                    moveDown();
+                    break;
+                case 68:
+                    moveRight();
+                    break;
+            }
+        });
+        var flag = 0;
+        // Move the tiles to the left
+        function moveLeft() {
+
+            flag = 0;
+            // Shift the tiles to the left
+            for (var row = 0; row < 4; row++) {
+                var newRow = ['', '', '', ''];
+                var next = 0;
+                for (var col = 0; col < 4; col++) {
+                    if (grid[row][col] != '') {
+                        newRow[next] = grid[row][col];
+                        next++;
                     }
                 }
-
-                // Draw the updated game grid
-                //drawGrid();
-
-                // Add a new tile to the grid
-                addTile();
-                CheckGameOver();
+                for (var col = 0; col < 4; col++) {
+                    if (grid[row][col] != newRow[col]) { flag = 1; }
+                }
+                grid[row] = newRow;
+            }
+            // Merge the tiles to the left
+            for (var row = 0; row < 4; row++) {
+                for (var col = 0; col < 3; col++) {
+                    if ((grid[row][col] == grid[row][col + 1]) && (grid[row][col] != '')) {
+                        grid[row][col] *= 2;
+                        score += grid[row][col];
+                        flag = 1;
+                        updateScore();
+                        grid[row][col + 1] = '';
+                    }
+                }
+            }
+            if (flag < 1) { return; }
+            // Shift the tiles to the left again
+            for (var row = 0; row < 4; row++) {
+                var newRow = ['', '', '', ''];
+                var next = 0;
+                for (var col = 0; col < 4; col++) {
+                    if (grid[row][col] != '') {
+                        newRow[next] = grid[row][col];
+                        next++;
+                    }
+                }
+                grid[row] = newRow;
             }
 
-            // Move the tiles to the right
-            function moveRight() {
-                // Shift the tiles to the right
-                flag = 0;
-                for (var row = 0; row < 4; row++) {
-                    var newRow = ['', '', '', ''];
-                    var next = 3;
-                    for (var col = 3; col >= 0; col--) {
-                        if (grid[row][col] != '') {
-                            newRow[next] = grid[row][col];
-                            next--;
-                        }
-                    }
-                    for (var col = 3; col >= 0; col--) {
-                        if ((grid[row][col] != newRow[col]) && (grid[row][col] != '')) { flag = 1; }
-                    }
-                    grid[row] = newRow;
-                }
+            // Draw the updated game grid
+            //drawGrid();
 
-                // Merge the tiles to the right
+            // Add a new tile to the grid
+            addTile();
+            CheckGameOver();
+        }
+
+        // Move the tiles up
+        function moveUp() {
+            flag = 0;
+            // Shift the tiles up
+            for (var col = 0; col < 4; col++) {
+                var newCol = ['', '', '', ''];
+                var next = 0;
                 for (var row = 0; row < 4; row++) {
-                    for (var col = 3; col > 0; col--) {
-                        if (grid[row][col] == grid[row][col - 1]) {
-                            grid[row][col] *= 2;
-                            score += grid[row][col];
-                            updateScore();
-                            flag = 1;
-                            grid[row][col - 1] = '';
-                        }
+                    if (grid[row][col] != '') {
+                        newCol[next] = grid[row][col];
+                        next++;
                     }
                 }
-                if (flag < 1) { return; }
-                // Shift the tiles to the right again
                 for (var row = 0; row < 4; row++) {
-                    var newRow = ['', '', '', ''];
-                    var next = 3;
-                    for (var col = 3; col >= 0; col--) {
-                        if (grid[row][col] != '') {
-                            newRow[next] = grid[row][col];
-                            next--;
-                        }
+                    if ((grid[row][col] != newCol[row]) && (grid[row][col] != '')) {
+                        flag = 1;
                     }
-                    grid[row] = newRow;
+                    grid[row][col] = newCol[row];
                 }
-
-                // Draw the updated game grid
-                //drawGrid();
-
-                // Add a new tile to the grid
-                addTile();
-                CheckGameOver();
+            }
+            // Merge the tiles up
+            for (var row = 0; row < 3; row++) {
+                for (var col = 0; col < 4; col++) {
+                    if (grid[row][col] == grid[row + 1][col]) {
+                        grid[row][col] *= 2;
+                        score += grid[row][col];
+                        updateScore();
+                        flag = 1;
+                        grid[row + 1][col] = '';
+                    }
+                }
+            }
+            if (flag < 1) { return; }
+            // Shift the tiles up again
+            for (var col = 0; col < 4; col++) {
+                var newCol = ['', '', '', ''];
+                var next = 0;
+                for (var row = 0; row < 4; row++) {
+                    if (grid[row][col] != '') {
+                        newCol[next] = grid[row][col];
+                        next++;
+                    }
+                }
+                for (var row = 0; row < 4; row++) {
+                    grid[row][col] = newCol[row];
+                }
             }
 
-            // Move the tiles down
-            function moveDown() {
-                // Shift the tiles down
-                flag = 0;
-                for (var col = 0; col < 4; col++) {
-                    var newCol = ['', '', '', ''];
-                    var next = 3;
-                    for (var row = 3; row >= 0; row--) {
-                        if (grid[row][col] != '') {
-                            newCol[next] = grid[row][col];
-                            next--;
-                        }
-                    }
-                    for (var row = 0; row < 4; row++) {
-                        if (grid[row][col] != newCol[row]) { flag = 1; }
-                        grid[row][col] = newCol[row];
+            // Draw the updated game grid
+            //drawGrid();
+
+            // Add a new tile to the grid
+            addTile();
+            CheckGameOver();
+        }
+
+        // Move the tiles to the right
+        function moveRight() {
+            // Shift the tiles to the right
+            flag = 0;
+            for (var row = 0; row < 4; row++) {
+                var newRow = ['', '', '', ''];
+                var next = 3;
+                for (var col = 3; col >= 0; col--) {
+                    if (grid[row][col] != '') {
+                        newRow[next] = grid[row][col];
+                        next--;
                     }
                 }
-
-                // Merge the tiles down
-                for (var row = 3; row > 0; row--) {
-                    for (var col = 0; col < 4; col++) {
-                        if ((grid[row][col] == grid[row - 1][col]) && (grid[row][col] != '')) {
-                            grid[row][col] *= 2;
-                            score += grid[row][col];
-                            updateScore();
-                            flag = 1;
-                            grid[row - 1][col] = '';
-                        }
-                    }
+                for (var col = 3; col >= 0; col--) {
+                    if ((grid[row][col] != newRow[col]) && (grid[row][col] != '')) { flag = 1; }
                 }
-                if (flag < 1) { return; }
-                // Shift the tiles down again
-                for (var col = 0; col < 4; col++) {
-                    var newCol = ['', '', '', ''];
-                    var next = 3;
-                    for (var row = 3; row >= 0; row--) {
-                        if (grid[row][col] != '') {
-                            newCol[next] = grid[row][col];
-                            next--;
-                        }
-                    }
-                    for (var row = 0; row < 4; row++) {
-                        grid[row][col] = newCol[row];
-                    }
-                }
-
-                // Draw the updated game grid
-                //drawGrid();
-
-                // Add a new tile to the grid
-                addTile();
-                CheckGameOver();
+                grid[row] = newRow;
             }
 
-            // Initialize the game
-            init();
-        </script>
-    </body>
+            // Merge the tiles to the right
+            for (var row = 0; row < 4; row++) {
+                for (var col = 3; col > 0; col--) {
+                    if (grid[row][col] == grid[row][col - 1]) {
+                        grid[row][col] *= 2;
+                        score += grid[row][col];
+                        updateScore();
+                        flag = 1;
+                        grid[row][col - 1] = '';
+                    }
+                }
+            }
+            if (flag < 1) { return; }
+            // Shift the tiles to the right again
+            for (var row = 0; row < 4; row++) {
+                var newRow = ['', '', '', ''];
+                var next = 3;
+                for (var col = 3; col >= 0; col--) {
+                    if (grid[row][col] != '') {
+                        newRow[next] = grid[row][col];
+                        next--;
+                    }
+                }
+                grid[row] = newRow;
+            }
+
+            // Draw the updated game grid
+            //drawGrid();
+
+            // Add a new tile to the grid
+            addTile();
+            CheckGameOver();
+        }
+
+        // Move the tiles down
+        function moveDown() {
+            // Shift the tiles down
+            flag = 0;
+            for (var col = 0; col < 4; col++) {
+                var newCol = ['', '', '', ''];
+                var next = 3;
+                for (var row = 3; row >= 0; row--) {
+                    if (grid[row][col] != '') {
+                        newCol[next] = grid[row][col];
+                        next--;
+                    }
+                }
+                for (var row = 0; row < 4; row++) {
+                    if (grid[row][col] != newCol[row]) { flag = 1; }
+                    grid[row][col] = newCol[row];
+                }
+            }
+
+            // Merge the tiles down
+            for (var row = 3; row > 0; row--) {
+                for (var col = 0; col < 4; col++) {
+                    if ((grid[row][col] == grid[row - 1][col]) && (grid[row][col] != '')) {
+                        grid[row][col] *= 2;
+                        score += grid[row][col];
+                        updateScore();
+                        flag = 1;
+                        grid[row - 1][col] = '';
+                    }
+                }
+            }
+            if (flag < 1) { return; }
+            // Shift the tiles down again
+            for (var col = 0; col < 4; col++) {
+                var newCol = ['', '', '', ''];
+                var next = 3;
+                for (var row = 3; row >= 0; row--) {
+                    if (grid[row][col] != '') {
+                        newCol[next] = grid[row][col];
+                        next--;
+                    }
+                }
+                for (var row = 0; row < 4; row++) {
+                    grid[row][col] = newCol[row];
+                }
+            }
+
+            // Draw the updated game grid
+            //drawGrid();
+
+            // Add a new tile to the grid
+            addTile();
+            CheckGameOver();
+        }
+
+        // Initialize the game
+        init();
+    </script>
+</body>

@@ -18,14 +18,14 @@
 			display: block;
 		}
 	</style>
+	<!--按钮-->
 	<script>
 		$(function () {
 			$(".ui.dropdown").dropdown();
 		})
 		$('.button').popup();
-
 	</script>
-	<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
+	<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script><!--背景雪花-->
 	<style type="text/css">
 		.snow-container {
 			position: fixed;
@@ -46,7 +46,7 @@
 </head>
 
 <body>
-	<header>
+	<header><!--导航栏-->
 		<div class="ui yellow labeled fixed borderless menu" style="height:80px">
 			<a href="frontend/underneath_decoration/skystar.html" class="item">
 				<img class="ui small image icon2" src="image/logo.jpg">
@@ -100,6 +100,7 @@
 					</div>
 				</div>
 			</div>
+			<!--置右部分-->
 			<div class="right fixed menu" style="z-index:999!important">
 				<div class="ui right aligned category search item">
 					<div class="ui transparent icon input">
@@ -155,14 +156,13 @@
 			<label for="control-5"></label>
 		</div>
 	</ul>
-	<!--picture slides end here-->
-
+	<!--图片廊结束-->
 	<div class="ui container">
 		<div class="ui grid">
 
-			<!--<div class="ui segment" style="background-color:transparent!important;">-->
-
-			<!--<div class="ui two column very relaxed grid">-->
+				<!--<div class="ui segment" style="background-color:transparent!important;">-->
+				<!--<div class="ui two column very relaxed grid">-->
+			<!--左侧栏-->
 			<div class="eleven wide column">
 				<div class="notification">
 					<a href="frontend/html/notification.html" target="_blank" class="indexnot">
@@ -248,7 +248,7 @@
 					</div>
 				</div>
 			</div>
-			<!--侧栏-->
+			<!--右侧栏-->
 			<div class="five wide column">
 				<!--accumulation-->
 				<div class="notification">
@@ -287,10 +287,7 @@
 							</li>
 							<br>
 							<!--塞句子-->
-							<div class="hitokoto" style="
-    text-align: center;
-    color: grey;
-">
+							<div class="hitokoto" style="text-align: center;color: grey;">
 								<script type='text/javascript'>
 									$.get("https://v1.hitokoto.cn/", function (data, status) {
 										if (status == 'success') {
@@ -380,17 +377,19 @@
 					</div>
 
 				</div>
-				<!--侧栏-->
+				<!--右侧栏-->
 			</div>
 		</div>
 	</div>
 	<footer style="margin-top:70px">
+		<!--页尾波浪-->
 		<div class="waves">
 			<div class="wave" id="wave1"></div>
 			<div class="wave" id="wave2"></div>
 			<div class="wave" id="wave3"></div>
 			<div class="wave" id="wave4"></div>
 		</div>
+		<!--内容-->
 		<div class="ui four column grid" style="color:black">
 			<div class="column">
 				<div class="ui inverted circular segment"
