@@ -3,6 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Alpha College</title>
 	<!--<h1>2022/9/8/18:00</h1><-->
 	<link href="Semantic/semantic.min.css" rel="stylesheet" type="text/css">
@@ -39,413 +40,432 @@
 	</style>
 	<!--二次元-->
 	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css"/>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
-
 	<div class="snow-container"></div>
+	<script>
+		document.onreadystatechange = function () {
+			if (document.readyState == "complete") {
+				$(".loading-div").hide();
+				$('body').css('overflow', 'scroll');
+			}
+		} 
+	</script>
+	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<header><!--导航栏-->
-		<div class="ui yellow labeled fixed borderless menu" style="height:80px">
-			<a href="frontend/underneath_decoration/skystar.html" class="item">
-				<img class="ui small image icon2" src="image/logo.jpg">
-			</a>
+	<div class="loading-div">
+		<i class="fa fa-spinner fa-pulse fa-3x fa-fw "></i>
+		<span class="sr-only">Loading...</span>
+	</div>
+	<div class="main">
+		<header><!--导航栏-->
+			<div class="ui yellow labeled fixed borderless menu" style="height:80px">
+				<a href="frontend/underneath_decoration/skystar.html" class="item">
+					<img class="ui small image icon2" src="image/logo.jpg">
+				</a>
 
-			<a href="index.html" class="active item navigator">
-				<i class="large home icon"></i>
-				Home
-			</a>
-			<a href="frontend/html/notification.html" class="item navigator">
-				<i class="large comment alternate icon"></i>
-				Notification
-			</a>
-			<div class="item" style="">
-				<div class="ui dropdown labeled icon button"
-					style="background-color:white;margin: 0px !important;border:0px!important">
-					<i class="large pencil alternate icon button"
-						style="background-color:white;color: #7d97df!important;"></i>
-					<a href="frontend/html/meetingsummary.html" class="item navigator"
-						style="border-bottom: none;padding: 0px !important;">Journal</a>
-					<div class="menu"
-						style="color: #7d97df;padding: 0px !important;border: 0px !important;margin: 0px !important;">
-						<a href="frontend/html/meetingsummary.html" class="ui button item navigator"
-							style="color:#7d97df!important;margin: 0px !important;border:0px!important">Meeting
-							Summary</a>
-						<a href="frontend/html/collegeactivity.html" class="ui button item navigator"
-							style="color:#7d97df!important;margin: 0px !important;border:0px!important">College
-							Activity</a>
+				<a href="index.html" class="active item navigator">
+					<i class="large home icon"></i>
+					Home
+				</a>
+				<a href="frontend/html/notification.html" class="item navigator">
+					<i class="large comment alternate icon"></i>
+					Notification
+				</a>
+				<div class="item" style="">
+					<div class="ui dropdown labeled icon button"
+						style="background-color:white;margin: 0px !important;border:0px!important">
+						<i class="large pencil alternate icon button"
+							style="background-color:white;color: #7d97df!important;"></i>
+						<a href="frontend/html/meetingsummary.html" class="item navigator"
+							style="border-bottom: none;padding: 0px !important;">Journal</a>
+						<div class="menu"
+							style="color: #7d97df;padding: 0px !important;border: 0px !important;margin: 0px !important;">
+							<a href="frontend/html/meetingsummary.html" class="ui button item navigator"
+								style="color:#7d97df!important;margin: 0px !important;border:0px!important">Meeting
+								Summary</a>
+							<a href="frontend/html/collegeactivity.html" class="ui button item navigator"
+								style="color:#7d97df!important;margin: 0px !important;border:0px!important">College
+								Activity</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<a href="frontend/html/blog.html" class="item navigator">
-				<i class="large paper plane icon"></i>
-				Blog
-			</a>
-			<a href="frontend/html/forum.html" class="item navigator" style="margin-left: 15px !important;">
-				<i class="large comments icon"></i>Forum</a>
-			<div class="item">
-				<div class="ui dropdown labeled icon button"
-					style="background-color:white;margin: 0px !important;border:0px!important">
-					<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
-					<a href="frontend/html/people.html" class="item navigator"
-						style="border-bottom: none;padding: 0px !important;">People</a>
-					<div class="menu" style="color: #7d97df;border: 0px !important">
-						<a href="frontend/html/people.html#aboutcollege" class="ui button item navigator"
-							style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-							Alpha College</a>
-						<a href="frontend/html/people.html" class="ui button item navigator"
-							style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-							College Members</a>
+				<a href="frontend/html/blog.html" class="item navigator">
+					<i class="large paper plane icon"></i>
+					Blog
+				</a>
+				<a href="frontend/html/forum.html" class="item navigator" style="margin-left: 15px !important;">
+					<i class="large comments icon"></i>Forum</a>
+				<div class="item">
+					<div class="ui dropdown labeled icon button"
+						style="background-color:white;margin: 0px !important;border:0px!important">
+						<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+						<a href="frontend/html/people.html" class="item navigator"
+							style="border-bottom: none;padding: 0px !important;">People</a>
+						<div class="menu" style="color: #7d97df;border: 0px !important">
+							<a href="frontend/html/people.html#aboutcollege" class="ui button item navigator"
+								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+								Alpha College</a>
+							<a href="frontend/html/people.html" class="ui button item navigator"
+								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+								College Members</a>
+						</div>
 					</div>
 				</div>
-			</div>
-			<!--置右部分-->
-			<div class="right fixed menu" style="z-index:999!important">
-				<div class="ui right aligned category search item">
-					<div class="ui transparent icon input">
-						<input class="prompt" type="text" placeholder="Search">
-						<i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
+				<!--置右部分-->
+				<div class="right fixed menu" style="z-index:999!important">
+					<div class="ui right aligned category search item">
+						<div class="ui transparent icon input">
+							<input class="prompt" type="text" placeholder="Search">
+							<i class="search link icon"
+								style="margin-bottom:20px!important;margin-top:0px!important"></i>
+						</div>
+						<div class="results"></div>
 					</div>
-					<div class="results"></div>
-				</div>
-				<!--<a href="https://westlake.edu.cn" class="ui right floated header">
+					<!--<a href="https://westlake.edu.cn" class="ui right floated header">
 					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
 				</a>-->
-				<div class="tiny ui buttons" style="margin:20px 0 20px 0;">
-					<button class="tiny ui button ">中文</button>
-					<div class="or"></div>
-					<button class="tiny ui button active yellow button">English</button>
+					<div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+						<button class="tiny ui button ">中文</button>
+						<div class="or"></div>
+						<button class="tiny ui button active yellow button">English</button>
+					</div>
+
 				</div>
-
 			</div>
-		</div>
-	</header>
-	<br>
-	<br>
-	<br>
-	<!--这里是纯CSS写的图片廊，如果要简便一些可以用Js,
+		</header>
+		<br>
+		<br>
+		<br>
+		<!--这里是纯CSS写的图片廊，如果要简便一些可以用Js,
 		包括自动切换图片也是要用js才能实现-->
-	<ul class="slides">
-		<input type="radio" id="control-1" name="control" checked>
-		<input type="radio" id="control-2" name="control">
-		<input type="radio" id="control-3" name="control">
-		<input type="radio" id="control-4" name="control">
-		<input type="radio" id="control-5" name="control">
+		<ul class="slides">
+			<input type="radio" id="control-1" name="control" checked>
+			<input type="radio" id="control-2" name="control">
+			<input type="radio" id="control-3" name="control">
+			<input type="radio" id="control-4" name="control">
+			<input type="radio" id="control-5" name="control">
 
-		<li class="slide"><img src="image/scenery/1.png" style="
+			<li class="slide"><img src="image/scenery/1.png" style="
 			zoom:expression( function(e) {
 				if(e.width>e.height) {if (e.width>128) { e.height = e.height*(128 /e.width); e.width=128; }}
 				else {if (e.height>128) { e.width = e.width*(128 /e.height); e.height=128; }}
 				e.style.zoom = '1';     }(this));"></li>
-		
-		<li class="slide"><a href="frontend/lone_file/WorldCupArrangement.html"><img src="image/college ativity/2022WorldCup/小组.jpg"
-			style="width:130%;height:130%;"></a></li>
-		<li class="slide"><img src="image/college ativity/2022_10_22趣味运动会/合照1 (1).png" style="width:100%;height:100%;">
-		</li>
-		<li class="slide"><img src="image/college ativity/sciencefiction/活动海报2.jpg"
-				style="width:40%;height:10%;"></li>
-		<li class="slide"><img src="image/college ativity/2022_10_22趣味运动会/176A7926_2.png"
-				style="width:100%;height:100%;"></li>
 
-		<div class="control-visible">
-			<label for="control-1"></label>
-			<label for="control-2"></label>
-			<label for="control-3"></label>
-			<label for="control-4"></label>
-			<label for="control-5"></label>
-		</div>
-	</ul>
-	<!--图片廊结束-->
-	<div class="ui container">
-		<div class="ui grid">
+			<li class="slide"><a href="frontend/lone_file/WorldCupArrangement.html"><img
+						src="image/college ativity/2022WorldCup/小组.jpg" style="width:130%;height:130%;"></a></li>
+			<li class="slide"><img src="image/college ativity/2022_10_22趣味运动会/合照1 (1).png"
+					style="width:100%;height:100%;">
+			</li>
+			<li class="slide"><img src="image/college ativity/sciencefiction/活动海报2.jpg" style="width:40%;height:10%;">
+			</li>
+			<li class="slide"><img src="image/college ativity/2022_10_22趣味运动会/176A7926_2.png"
+					style="width:100%;height:100%;"></li>
+
+			<div class="control-visible">
+				<label for="control-1"></label>
+				<label for="control-2"></label>
+				<label for="control-3"></label>
+				<label for="control-4"></label>
+				<label for="control-5"></label>
+			</div>
+		</ul>
+		<!--图片廊结束-->
+		<div class="ui container">
+			<div class="ui grid">
 
 				<!--<div class="ui segment" style="background-color:transparent!important;">-->
 				<!--<div class="ui two column very relaxed grid">-->
-			<!--左侧栏-->
-			<div class="eleven wide column">
-				<div class="notification">
-					<a href="frontend/html/notification.html" target="_blank" class="indexnot">
-						<h2 class="border_decoration"><strong>Latest Notification</strong></h2>
-					</a>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="files/值日安排.xlsx" target="_blank" style="font-size:17px" class="indexnot">
-									&nbspDuty
-									Arrangement</a></li>
-						</div>
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="frontend/html/notification.html#Group" target="_blank" style="font-size:17px"
-									class="indexnot">&nbspGroups'
-									Arrangement</a></li>
-						</div>
-					</div>
-				</div>
-				<!--Colege Activity-->
-				<div class="notification">
-					<a href="frontend/html/collegeactivity.html" target="_blank" class="indexnot">
-						<h2 class="border_decoration2"><strong>College Activity</strong></h2>
-					</a>
-					<div class="ui stacked segments"
-						style="background-color:transparent!important;padding-top:0px!important">
-						<div class="ui segment"
-							style="background-color:rgb(247, 245, 239)!important;padding-top:0px!important">
-							<dl>
-								<dt>
-									<a href="frontend/html/collegeactivity.html#pingpongmatch" class="indexnot">
-										<h1 style="color:black"><strong>First Pingpong Match</strong></h1>
-									</a>
-									<div class="meta">
-										<span class="date">2022.9.25</span>
-									</div>
-									<img src="image/college ativity/20220925PingpongMatch/GroupPhoto.jpg" width="400"
-										height="280">
-								</dt>
-							</dl>
-						</div>
-					</div>
-				</div>
-
-				<!--blog-->
-				<div class="notification">
-					<a href="frontend/html/blog.html" class="indexnot">
-						<h2 class="border_decoration"><strong>Blog</strong></h2>
-					</a>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="Frontend/html/blog.html" target="_blank" style="font-size:17px"
-									class="indexnot">
-									Everlasting Midnight Snack</a></li>
-							<br>
-							<img src="image/college ativity/snack/6c9cc705120ef3db35aeb3fe251427e.jpg" width="200"
-								height="150">
-							<img src="image/college ativity/snack/49991d5fa5fe9d01e807a2514a8955a.jpg" width="200"
-								height="150">
-							<img src="image/college ativity/snack/e7d38b850f3c373892e81dcf7cccf9f.jpg" width="200"
-								height="150">
-							<a href="Frontend/html/blog.html" target="_blank" class="indexnot">
-								<br>2022.10.06 midnight
-								<br>Crazy Thursday!
-								<br>Thanks to the contribution of Gehua Weng, we succeeded having KFC on Thursday in the
-								campus.
-								<br>(Could KFC be added to our university? We need crazy Thursday!)</a>
-						</div>
-					</div>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="Frontend/html/blog.html" target="_blank" style="font-size:17px"
-									class="indexnot">
-									Board Game Party</a></li>
-
-							<a href="frontend/html/blog.html" target="_blank" class="indexnot">
-								<br>2022.10.07 afternoon
-								<br>
-								A god-given activity composed of Werewolves of Miller's Hollow
-								with werewolves winning all the games and UNO with 10+ players.
-								<br>
-								<b>PS:</b> Enclosed here with the UNO loser's forced <i>Solitary Brave</i></a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<!--右侧栏-->
-			<div class="five wide column">
-				<!--accumulation-->
-				<div class="notification">
-					<h2 class="border_decoration" style="color:#7d97df" id="Hello"><strong></strong></h2>
-					<script type="text/javascript">
-						var dd = new Date();
-						var st = document.getElementById("Hello");
-						var hour = dd.getHours();
-						if (hour > 1 && hour <= 5) {
-							st.innerHTML = "Good midnight!";
-						} else if (hour >= 5 && hour < 6) {
-							st.innerHTML = "Good before dawn!";
-						} else if (hour >= 6 && hour < 7) {
-							st.innerHTML = "Good dawn!";
-						} else if (hour >= 7 && hour < 9) {
-							st.innerHTML = "Good early morning!";
-						} else if (hour >= 9 && hour < 11) {
-							st.innerHTML = "Good morning!";
-						} else if (hour >= 11 && hour < 13) {
-							st.innerHTML = "Good meridiem!";
-						} else if (hour >= 13 && hour < 17) {
-							st.innerHTML = "Good afternoon!";
-						} else if (hour >= 17 && hour < 18) {
-							st.innerHTML = "Good sunset!";
-						} else if (hour >= 18 && hour < 19) {
-							st.innerHTML = "Good dusk!";
-						} else if (hour >= 19 && hour < 22) {
-							st.innerHTML = "Good evening!";
-						} else { st.innerHTML = "Good late night!" }
-					</script>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a target="_blank" style="font-size:17px" class="indexnot">
-									&nbspLiterature
-									Essence</a>
-							</li>
-							<br>
-							<!--塞句子-->
-							<div class="hitokoto" style="text-align: center;color: grey;">
-								<script type='text/javascript'>
-									$.get("https://v1.hitokoto.cn/", function (data, status) {
-										if (status == 'success') {
-											$('.hitokoto').text(data.hitokoto + "——" + data.from);
-										} else {
-											$('.hitokoto').text('获取出错！');
-										}
-									});
-								</script>
+				<!--左侧栏-->
+				<div class="eleven wide column">
+					<div class="notification">
+						<a href="frontend/html/notification.html" target="_blank" class="indexnot">
+							<h2 class="border_decoration"><strong>Latest Notification</strong></h2>
+						</a>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="files/值日安排.xlsx" target="_blank" style="font-size:17px" class="indexnot">
+										&nbspDuty
+										Arrangement</a></li>
 							</div>
-
-						</div>
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a target="_blank" style="font-size:17px" class="indexnot">&nbspDaily
-									Tricks</a>
-							</li>
-							<!--塞题目-->
-							<br>
-							<p></p>
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="frontend/html/notification.html#Group" target="_blank"
+										style="font-size:17px" class="indexnot">&nbspGroups'
+										Arrangement</a></li>
+							</div>
 						</div>
 					</div>
-				</div>
-				<!--tools-->
-				<div class="notification">
-					<h2 class="border_decoration" style="color:#7d97df"><strong>Tools</strong></h2>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a target="_blank" style="font-size:17px" class="indexnot">
-									&nbsp Free now_空了吗 <br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 查看同学空余时间
-								</a>
-
-						</div>
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a target="_blank" style="font-size:17px" class="indexnot">&nbsp Preference Circle_爱好党
-									<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 个人爱好展示
-								</a>
-
-						</div>
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="frontend/html/honor.html" target="_blank" style="font-size:17px" class="indexnot">&nbsp Honor Time_荣誉殿堂
-									<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 书院荣誉
-								</a>
-
-						</div>
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="frontend/html/books.html"target="_blank" style="font-size:17px" class="indexnot">&nbsp Book Link_书海徜徉
-									<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 电子图书馆
-								</a>
-
-						</div>
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a target="_blank" style="font-size:17px" class="indexnot">&nbsp Shortcut_捷径
-									<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 高效学习生活资源
-								</a>
-
-						</div>
-					</div>
-				</div>
-				<div class="notification">
-					<h2 class="border_decoration" style="color:#7d97df"><strong>Entertainment</strong></h2>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="frontend/game/snake/Snake.html" target="_blank" style="font-size:17px"
-									class="indexnot">
-									Snake Game!
-								</a>
-
-						</div>
-					</div>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="frontend/Mosiyuan/mosiyuan/index.html" target="_blank" style="font-size:17px"
-									class="indexnot">
-									Mosiyuan!
-								</a>
-
-						</div>
-					</div>
-					<div class="ui raised segments">
-						<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-							<li><a href="frontend/game/2048/2048.html" target="_blank" style="font-size:17px"
-									class="indexnot">
-									2048!
-								</a>
-
+					<!--Colege Activity-->
+					<div class="notification">
+						<a href="frontend/html/collegeactivity.html" target="_blank" class="indexnot">
+							<h2 class="border_decoration2"><strong>College Activity</strong></h2>
+						</a>
+						<div class="ui stacked segments"
+							style="background-color:transparent!important;padding-top:0px!important">
+							<div class="ui segment"
+								style="background-color:rgb(247, 245, 239)!important;padding-top:0px!important">
+								<dl>
+									<dt>
+										<a href="frontend/html/collegeactivity.html#pingpongmatch" class="indexnot">
+											<h1 style="color:black"><strong>First Pingpong Match</strong></h1>
+										</a>
+										<div class="meta">
+											<span class="date">2022.9.25</span>
+										</div>
+										<img src="image/college ativity/20220925PingpongMatch/GroupPhoto.jpg"
+											width="400" height="280">
+									</dt>
+								</dl>
+							</div>
 						</div>
 					</div>
 
+					<!--blog-->
+					<div class="notification">
+						<a href="frontend/html/blog.html" class="indexnot">
+							<h2 class="border_decoration"><strong>Blog</strong></h2>
+						</a>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="Frontend/html/blog.html" target="_blank" style="font-size:17px"
+										class="indexnot">
+										Everlasting Midnight Snack</a></li>
+								<br>
+								<img src="image/college ativity/snack/6c9cc705120ef3db35aeb3fe251427e.jpg" width="200"
+									height="150">
+								<img src="image/college ativity/snack/49991d5fa5fe9d01e807a2514a8955a.jpg" width="200"
+									height="150">
+								<img src="image/college ativity/snack/e7d38b850f3c373892e81dcf7cccf9f.jpg" width="200"
+									height="150">
+								<a href="Frontend/html/blog.html" target="_blank" class="indexnot">
+									<br>2022.10.06 midnight
+									<br>Crazy Thursday!
+									<br>Thanks to the contribution of Gehua Weng, we succeeded having KFC on Thursday in
+									the
+									campus.
+									<br>(Could KFC be added to our university? We need crazy Thursday!)</a>
+							</div>
+						</div>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="Frontend/html/blog.html" target="_blank" style="font-size:17px"
+										class="indexnot">
+										Board Game Party</a></li>
+
+								<a href="frontend/html/blog.html" target="_blank" class="indexnot">
+									<br>2022.10.07 afternoon
+									<br>
+									A god-given activity composed of Werewolves of Miller's Hollow
+									with werewolves winning all the games and UNO with 10+ players.
+									<br>
+									<b>PS:</b> Enclosed here with the UNO loser's forced <i>Solitary Brave</i></a>
+							</div>
+						</div>
+					</div>
 				</div>
 				<!--右侧栏-->
+				<div class="five wide column">
+					<!--accumulation-->
+					<div class="notification">
+						<h2 class="border_decoration" style="color:#7d97df" id="Hello"><strong></strong></h2>
+						<script type="text/javascript">
+							var dd = new Date();
+							var st = document.getElementById("Hello");
+							var hour = dd.getHours();
+							if (hour > 1 && hour <= 5) {
+								st.innerHTML = "Good midnight!";
+							} else if (hour >= 5 && hour < 6) {
+								st.innerHTML = "Good before dawn!";
+							} else if (hour >= 6 && hour < 7) {
+								st.innerHTML = "Good dawn!";
+							} else if (hour >= 7 && hour < 9) {
+								st.innerHTML = "Good early morning!";
+							} else if (hour >= 9 && hour < 11) {
+								st.innerHTML = "Good morning!";
+							} else if (hour >= 11 && hour < 13) {
+								st.innerHTML = "Good meridiem!";
+							} else if (hour >= 13 && hour < 17) {
+								st.innerHTML = "Good afternoon!";
+							} else if (hour >= 17 && hour < 18) {
+								st.innerHTML = "Good sunset!";
+							} else if (hour >= 18 && hour < 19) {
+								st.innerHTML = "Good dusk!";
+							} else if (hour >= 19 && hour < 22) {
+								st.innerHTML = "Good evening!";
+							} else { st.innerHTML = "Good late night!" }
+						</script>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a target="_blank" style="font-size:17px" class="indexnot">
+										&nbspLiterature
+										Essence</a>
+								</li>
+								<br>
+								<!--塞句子-->
+								<div class="hitokoto" style="text-align: center;color: grey;">
+									<script type='text/javascript'>
+										$.get("https://v1.hitokoto.cn/", function (data, status) {
+											if (status == 'success') {
+												$('.hitokoto').text(data.hitokoto + "——" + data.from);
+											} else {
+												$('.hitokoto').text('获取出错！');
+											}
+										});
+									</script>
+								</div>
+
+							</div>
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a target="_blank" style="font-size:17px" class="indexnot">&nbspDaily
+										Tricks</a>
+								</li>
+								<!--塞题目-->
+								<br>
+								<p></p>
+							</div>
+						</div>
+					</div>
+					<!--tools-->
+					<div class="notification">
+						<h2 class="border_decoration" style="color:#7d97df"><strong>Tools</strong></h2>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a target="_blank" style="font-size:17px" class="indexnot">
+										&nbsp Free now_空了吗 <br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 查看同学空余时间
+									</a>
+
+							</div>
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a target="_blank" style="font-size:17px" class="indexnot">&nbsp Preference
+										Circle_爱好党
+										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 个人爱好展示
+									</a>
+
+							</div>
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="frontend/html/honor.html" target="_blank" style="font-size:17px"
+										class="indexnot">&nbsp Honor Time_荣誉殿堂
+										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 书院荣誉
+									</a>
+
+							</div>
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="frontend/html/books.html" target="_blank" style="font-size:17px"
+										class="indexnot">&nbsp Book Link_书海徜徉
+										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 电子图书馆
+									</a>
+
+							</div>
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a target="_blank" style="font-size:17px" class="indexnot">&nbsp Shortcut_捷径
+										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 高效学习生活资源
+									</a>
+
+							</div>
+						</div>
+					</div>
+					<div class="notification">
+						<h2 class="border_decoration" style="color:#7d97df"><strong>Entertainment</strong></h2>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="frontend/game/snake/Snake.html" target="_blank" style="font-size:17px"
+										class="indexnot">
+										Snake Game!
+									</a>
+
+							</div>
+						</div>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="frontend/Mosiyuan/mosiyuan/index.html" target="_blank"
+										style="font-size:17px" class="indexnot">
+										Mosiyuan!
+									</a>
+
+							</div>
+						</div>
+						<div class="ui raised segments">
+							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
+								<li><a href="frontend/game/2048/2048.html" target="_blank" style="font-size:17px"
+										class="indexnot">
+										2048!
+									</a>
+
+							</div>
+						</div>
+
+					</div>
+					<!--右侧栏-->
+				</div>
 			</div>
 		</div>
-	</div>
-	<footer style="margin-top:70px">
-		<!--页尾波浪-->
-		<div class="waves">
-			<div class="wave" id="wave1"></div>
-			<div class="wave" id="wave2"></div>
-			<div class="wave" id="wave3"></div>
-			<div class="wave" id="wave4"></div>
-		</div>
-		<!--内容-->
-		<div class="ui four column grid" style="color:black">
-			<div class="column">
-				<div class="ui inverted circular segment"
-					style="background-color:transparent;border-color:transparent!important">
-					<a href="frontend/html/WebsiteMilestone.html">
+		<footer style="margin-top:70px">
+			<!--页尾波浪-->
+			<div class="waves">
+				<div class="wave" id="wave1"></div>
+				<div class="wave" id="wave2"></div>
+				<div class="wave" id="wave3"></div>
+				<div class="wave" id="wave4"></div>
+			</div>
+			<!--内容-->
+			<div class="ui four column grid" style="color:black">
+				<div class="column">
+					<div class="ui inverted circular segment"
+						style="background-color:transparent;border-color:transparent!important">
+						<a href="frontend/html/WebsiteMilestone.html">
+							<h3 class="ui header" style="color:black">
+								Website Milestone
+							</h3>
+						</a>
+						<p class="content">
+
+						</p>
+					</div>
+				</div>
+
+				<div class="column">
+					<div class="ui inverted circular segment"
+						style="background-color:transparent;border-color:transparent!important">
 						<h3 class="ui header" style="color:black">
-							Website Milestone
+							Picture Repository
 						</h3>
-					</a>
-					<p class="content">
+						<p class="content">
 
-					</p>
+						</p>
+					</div>
 				</div>
-			</div>
+				<div class="column">
+					<div class="ui inverted circular segment"
+						style="background-color:transparent;border-color:transparent!important">
+						<h3 class="ui header" style="color:black">
+							Contact us
+						</h3>
+						<p class="content">
 
-			<div class="column">
-				<div class="ui inverted circular segment"
-					style="background-color:transparent;border-color:transparent!important">
-					<h3 class="ui header" style="color:black">
-						Picture Repository
-					</h3>
-					<p class="content">
+						</p>
+					</div>
 
-					</p>
-				</div>
-			</div>
-			<div class="column">
-				<div class="ui inverted circular segment"
-					style="background-color:transparent;border-color:transparent!important">
-					<h3 class="ui header" style="color:black">
-						Contact us
-					</h3>
-					<p class="content">
-
-					</p>
 				</div>
 
-			</div>
+				<div class="column">
+					<div class="ui inverted circular segment"
+						style="background-color:transparent;border-color:transparent!important">
+						<h3 class="ui header" style="color:black">
+							Relative Links
+						</h3>
+						</h3>
+					</div>
 
-			<div class="column">
-				<div class="ui inverted circular segment"
-					style="background-color:transparent;border-color:transparent!important">
-					<h3 class="ui header" style="color:black">
-						Relative Links
-					</h3>
-					</h3>
 				</div>
-
 			</div>
-		</div>
-		<p class="footer_p">&copy;2022 - <a href="frontend/underneath_decoration/skystar.html"
-				style="color:black"><strong>Alpha College</strong></a> All rights reserved</p>
-	</footer>
-	<script type="mouble" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-
+			<p class="footer_p">&copy;2022 - <a href="frontend/underneath_decoration/skystar.html"
+					style="color:black"><strong>Alpha College</strong></a> All rights reserved</p>
+		</footer>
+		<script type="mouble" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+	</div>
 </body>
 
 </html>
