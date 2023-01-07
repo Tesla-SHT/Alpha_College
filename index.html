@@ -44,6 +44,10 @@
 	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 	<div class="snow-container"></div>
 	<script>
+		setTimeout(function(){
+			$(".loading-div").hide();
+			$('body').css('overflow', 'scroll');
+		},8000)
 		document.onreadystatechange = function () {
 			if (document.readyState == "complete") {
 				$(".loading-div").hide();
