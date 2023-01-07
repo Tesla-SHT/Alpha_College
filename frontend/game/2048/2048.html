@@ -88,9 +88,13 @@
 
         /*自制提示框 end*/
     </style>
+    <script>
+
+
+    </script>
 </head>
 
-<body>
+<body onkeydown="keyLogin();">
     <header>
         <div class="ui yellow labeled fixed borderless menu" style="height:80px">
             <!--<a href="https://westlake.edu.cn" class="item">
@@ -178,6 +182,7 @@
     <span id="FF2"></span>
     <canvas id="game" width="400" height="400"></canvas>
     <script>
+        var ffff=0;
         // Get the canvas element
         var canvas = document.getElementById("game");
         var ctx = canvas.getContext("2d");
@@ -316,10 +321,14 @@
             // Draw the updated game grid
             drawGrid();
         }
-        //按回车 确定
-
+        //按回车 重新加载
+        function keyLogin() {
+                if (event.keyCode == 13 && ffff==1)  //回车键的键值为13
+                location.reload();
+            }
         //游戏结束提示框
         function alertMsg(text) {
+
             var bgHtml = "<div class='msg-bg'></div>";
             var msgAlertHtml = "<div class='msg-alertWrap'>" +
                 "<div class='msg-alert'>" +
@@ -363,7 +372,7 @@
                     if (grid[row][col] == grid[row + 1][col]) { fff = 0; return; }
                 }
             }
-            if (fff == 1) { alertMsg("Your score is " + score) }
+            if (fff == 1) { ffff=1;alertMsg("Your score is " + score); }
         }
         // Handle keyboard input
         document.addEventListener("keydown", function (event) {

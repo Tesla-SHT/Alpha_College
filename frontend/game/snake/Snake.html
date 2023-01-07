@@ -17,7 +17,10 @@
 			$(".ui.dropdown").dropdown();
 		})
 		$('.button').popup();
-
+        function keyLogin() {
+                if (event.keyCode == 13 && gameOver)  //回车键的键值为13
+                location.reload();
+            }
 	</script>
 
     <link rel="stylesheet" href="Snake.css">
@@ -28,7 +31,7 @@
 	<script src="snakeUtils.js" defer></script>
 </head>
 
-<body>
+<body onkeydown="keyLogin();">
 	<header>
 		<div class="ui yellow labeled fixed borderless menu" style="height:80px">
 			<!--<a href="https://westlake.edu.cn" class="item">
