@@ -26,23 +26,14 @@
 		})
 		$('.button').popup();
 	</script>
-	<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script><!--背景雪花-->
-	<style type="text/css">
-		.snow-container {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 100%;
-			pointer-events: none;
-			z-index: -100001;
-		}
-	</style>
+	<!--背景雪花-->
+
 	<!--二次元-->
 	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
 	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
-	<div class="snow-container"></div>
+
+	<!--加载 脚本-->
 	<script>
 		setTimeout(function(){
 			$(".loading-div").hide();
@@ -64,6 +55,19 @@
 		<span class="sr-only">Loading...</span>
 	</div>
 	<div class="main">
+		<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
+		<style type="text/css">
+			.snow-container {
+				position: fixed;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				pointer-events: none;
+				z-index: -100001;
+			}
+		</style>	
+		<div class="snow-container"></div>
 		<header><!--导航栏-->
 			<div class="ui yellow labeled fixed borderless menu" style="height:80px">
 				<a href="frontend/underneath_decoration/skystar.html" class="item">
@@ -342,7 +346,7 @@
 
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a target="_blank" style="font-size:17px" class="indexnot">&nbsp Preference
+								<li><a href="frontend/html/PreferenceCircle.html"target="_blank" style="font-size:17px" class="indexnot">&nbsp Preference
 										Circle_爱好党
 										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 个人爱好展示
 									</a>
