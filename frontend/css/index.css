@@ -260,11 +260,6 @@ table th {
 	text-align: center
 }
 /*加载界面*/
-body {
-	width: 100%;
-	height: 100%;
-	overflow: hidden;
-}
 
 .loading-div {
 	width: 1800px;
