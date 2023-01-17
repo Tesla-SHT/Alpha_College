@@ -12,7 +12,6 @@
 	<script src="Semantic/jquery-3.1.1.min.js"></script>
 	<script src="Semantic/semantic.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link href="frontend/css/footer.css" rel="stylesheet">
 	<style>
 		#skystardecoration {
 			height: 70px;
@@ -26,19 +25,14 @@
 		})
 		$('.button').popup();
 	</script>
-	<!--背景雪花-->
 
-	<!--二次元-->
-	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
-	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 
 	<!--加载 脚本-->
 	<script>
-		setTimeout(function(){
+		setTimeout(function () {
 			$(".loading-div").hide();
 			$('body').css('overflow', 'scroll');
-		},8000)
+		}, 8000)
 		document.onreadystatechange = function () {
 			if (document.readyState == "complete") {
 				$(".loading-div").hide();
@@ -50,11 +44,21 @@
 </head>
 
 <body>
+	<style>
+		body{
+			overflow:hidden;
+		}
+	</style>
 	<div class="loading-div">
 		<i class="fa fa-spinner fa-pulse fa-3x fa-fw "></i>
 		<span class="sr-only">Loading...</span>
 	</div>
+	<!--二次元-->
+	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
+	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 	<div class="main">
+		<!--背景雪花-->
 		<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
 		<style type="text/css">
 			.snow-container {
@@ -66,7 +70,7 @@
 				pointer-events: none;
 				z-index: -100001;
 			}
-		</style>	
+		</style>
 		<div class="snow-container"></div>
 		<header><!--导航栏-->
 			<div class="ui yellow labeled fixed borderless menu" style="height:80px">
@@ -346,7 +350,8 @@
 
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/html/PreferenceCircle.html"target="_blank" style="font-size:17px" class="indexnot">&nbsp Preference
+								<li><a href="frontend/html/PreferenceCircle.html" target="_blank" style="font-size:17px"
+										class="indexnot">&nbsp Preference
 										Circle_爱好党
 										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 个人爱好展示
 									</a>
@@ -410,6 +415,7 @@
 			</div>
 		</div>
 		<footer style="margin-top:70px">
+			<link href="frontend/css/footer.css" rel="stylesheet">
 			<!--页尾波浪-->
 			<div class="waves">
 				<div class="wave" id="wave1"></div>
@@ -422,7 +428,7 @@
 				<div class="column">
 					<div class="ui inverted circular segment"
 						style="background-color:transparent;border-color:transparent!important">
-						<a href="frontend/时间轴/Milestone.html"style="">
+						<a href="frontend/时间轴/Milestone.html" style="">
 							<h3>
 								Website Milestone
 							</h3>
