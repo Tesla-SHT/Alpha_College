@@ -6,12 +6,15 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Alpha College</title>
 	<!--<h1>2022/9/8/18:00</h1><-->
-	<link href="Semantic/semantic.min.css" rel="stylesheet" type="text/css">
 	<link href="frontend/css/index.css" rel="stylesheet">
 	<link href="frontend/css/navigator.css" rel="stylesheet">
-	<script src="Semantic/jquery-3.1.1.min.js"></script>
-	<script src="Semantic/semantic.min.js"></script>
+	<script src="ui_resources/jquery-3.1.1.min.js"></script>
+	<!--semantic UI-->
+	<link href="ui_resources/semantic.min.css" rel="stylesheet" type="text/css">
+	<script src="ui_resources/semantic.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+	<!--bootstrap UI-->
+	<link rel="stylesheet" href="ui_resources/bootstrap.min.css">
 	<style>
 		#skystardecoration {
 			height: 70px;
@@ -153,7 +156,7 @@
 		<br>
 		<!--这里是纯CSS写的图片廊，如果要简便一些可以用Js,
 		包括自动切换图片也是要用js才能实现-->
-		<ul class="slides">
+		<ul class="slides" style="text-align:center">
 			<input type="radio" id="control-1" name="control" checked>
 			<input type="radio" id="control-2" name="control">
 			<input type="radio" id="control-3" name="control">
@@ -166,14 +169,15 @@
 				else {if (e.height>128) { e.width = e.width*(128 /e.height); e.height=128; }}
 				e.style.zoom = '1';     }(this));"></li>
 
-			<li class="slide"><a href="frontend/lone_file/WorldCupArrangement.html"><img
-						src="image/college ativity/2022WorldCup/小组.jpg" style="width:130%;height:130%;"></a></li>
-			<li class="slide"><img src="image/college ativity/2022_10_22趣味运动会/合照1 (1).png"
-					style="width:100%;height:100%;">
+			<li class="slide"><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM5ODA1MQ==&mid=2247485140&idx=1&sn=0df486646847471796b3adbfc0eccd2a&chksm=c3240d58f453844e47c5c8ca76fa369810c9e2f41d0dbb9659a5b7e63b06d3c8d07d0ff47b59&scene=90&sessionid=1674031523&subscene=236&key=cfdc9b8a3db953b193700a9a6fee5b9c23a6e5dc34fd518725d43e42ca1aafa924cc23977f6a451943956f60f2989decd76b6ffd9eef6ff3b1aad9a956721226819796b6b5e3e90e089b8646ceb713247f403526e7ab33ebb7ac837ef36bab354af0848ea336f6aca914b8c098859e510d25b1a099e12c8f18786328b87d1a28&ascene=0&uin=MTIxODM3Nzc5&devicetype=Windows+10+x64&version=6308011a&lang=zh_CN&exportkey=n_ChQIAhIQp3fInWZLAnJRhCDyV8cs7BLfAQIE97dBBAEAAAAAAKWSATdgHVEAAAAOpnltbLcz9gKNyK89dVj0bUsxULa03ME79w2VifcQMFJkpI%2BV64OPssq04%2FGfWgdZflW11%2FiZzQPg336vGSBMZPt%2B7EUQ1QRjl99qBgaWL3spBFFiUFOf7uaOmT0nzJnMj2fNZL3sojdFFYkZbITFg8eQGN1bGxZnokIsSgwuKieVIz0nkklN5qnQxw6Z1cTZhM6sClrFh0rsPyTf5kyo1ycc%2B5oFdKGongJZXYI7kofBJ7dP128NXEFF6bzuuWnOH2%2B%2BdPpxhWI%3D&acctmode=0&pass_ticket=l64KfUw0BYjbLEYhbPptCo2%2FkNe08nA5gbFVcr9vqq%2B0o9L8mhreQUo7vNBMbCC2UlW0ut2xz3u41y5VLUZktQ%3D%3D&wx_header=1&fontgear=2">
+				<img src="image/college activity/2022WorldCup/alpha meets world cup (2).jpg" style="width:100%;height:60%;margin-bottom:10px;">
+			</a></li>
+			<li class="slide"><a target="_blank" href="https://mp.weixin.qq.com/s/zJjL8obhI918AaoTtK31yg"><img src="image/college activity/2022_10_22趣味运动会/合照1 (1).png"
+					style="width:100%;height:100%;"></a>
 			</li>
-			<li class="slide"><img src="image/college ativity/sciencefiction/活动海报2.jpg" style="width:40%;height:10%;">
+			<li class="slide"><img src="image/college activity/sciencefiction/活动海报2.jpg" style="width:40%;height:10%;">
 			</li>
-			<li class="slide"><img src="image/college ativity/2022_10_22趣味运动会/176A7926_2.png"
+			<li class="slide"><img src="image/college activity/2022_10_22趣味运动会/176A7926_2.png"
 					style="width:100%;height:100%;"></li>
 
 			<div class="control-visible">
@@ -226,7 +230,7 @@
 										<div class="meta">
 											<span class="date">2022.9.25</span>
 										</div>
-										<img src="image/college ativity/20220925PingpongMatch/GroupPhoto.jpg"
+										<img src="image/college activity/20220925PingpongMatch/GroupPhoto.jpg"
 											width="400" height="280">
 									</dt>
 								</dl>
@@ -245,11 +249,11 @@
 										class="indexnot">
 										Everlasting Midnight Snack</a></li>
 								<br>
-								<img src="image/college ativity/snack/6c9cc705120ef3db35aeb3fe251427e.jpg" width="200"
+								<img src="image/college activity/snack/6c9cc705120ef3db35aeb3fe251427e.jpg" width="200"
 									height="150">
-								<img src="image/college ativity/snack/49991d5fa5fe9d01e807a2514a8955a.jpg" width="200"
+								<img src="image/college activity/snack/49991d5fa5fe9d01e807a2514a8955a.jpg" width="200"
 									height="150">
-								<img src="image/college ativity/snack/e7d38b850f3c373892e81dcf7cccf9f.jpg" width="200"
+								<img src="image/college activity/snack/e7d38b850f3c373892e81dcf7cccf9f.jpg" width="200"
 									height="150">
 								<a href="Frontend/html/blog.html" target="_blank" class="indexnot">
 									<br>2022.10.06 midnight
@@ -429,9 +433,9 @@
 					<div class="ui inverted circular segment"
 						style="background-color:transparent;border-color:transparent!important">
 						<a href="frontend/时间轴/Milestone.html" style="">
-							<h3>
+							<h4>
 								Website Milestone
-							</h3>
+							</h4>
 						</a>
 						<p class="content">
 
@@ -442,9 +446,9 @@
 				<div class="column">
 					<div class="ui inverted circular segment"
 						style="background-color:transparent;border-color:transparent!important">
-						<h3 class="ui header" style="color:black">
+						<h4  style="color:black">
 							Picture Repository
-						</h3>
+						</h4>
 						<p class="content">
 
 						</p>
@@ -453,9 +457,9 @@
 				<div class="column">
 					<div class="ui inverted circular segment"
 						style="background-color:transparent;border-color:transparent!important">
-						<h3 class="ui header" style="color:black">
+						<h4 style="color:black">
 							Contact us
-						</h3>
+						</h4>
 						<p class="content">
 
 						</p>
@@ -466,10 +470,9 @@
 				<div class="column">
 					<div class="ui inverted circular segment"
 						style="background-color:transparent;border-color:transparent!important">
-						<h3 class="ui header" style="color:black">
+						<h4 style="color:black">
 							Relative Links
-						</h3>
-						</h3>
+						</h4>
 					</div>
 
 				</div>
