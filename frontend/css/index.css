@@ -56,9 +56,9 @@ body {
 .indexnot:hover {
 	color: #9f7be9 !important
 }
-
+/*这是老版的图片轮播图的样式，如果觉得可以的话可以直接把下面的都删掉了*/
 /*picture slides*/
-ul.slides {
+/*ul.slides {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -66,14 +66,12 @@ ul.slides {
 	width: 100%;
 	max-height: 680px;
 	list-style: none;
-	/*margin:auto;*/
 	padding: 0;
 	background-color: #eee;
 	min-height: 680px;
 	max-height: 680px;
 	background-color: transparent !important;
 	overflow: hidden;
-	/*max-height:680px;*/
 }
 
 li.slide {
@@ -178,16 +176,14 @@ input[type="radio"] {
 
 .slides input[type="radio"]:nth-of-type(5):checked~.slide {
 	transform: translateX(-400%);
-}
-
 /*picture slides end here*/
+
 /*Notification*/
 div.notification {
 	margin: 10px;
 	position: inherit;
 
 }
-
 .decoration {
 	/*设置视频最小宽度和高度 这个设不设置没有什么影响 */
 	/*min-width: 100%;
