@@ -1,11 +1,10 @@
 <!doctype html>
 <html>
-
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<title>Alpha College</title>
-	<!--<h1>2022/9/8/18:00</h1><-->
+	<!--<h1>2022/9/8/18:00 First Code</h1><-->
 	<link href="frontend/css/index.css" rel="stylesheet">
 	<link href="frontend/css/navigator.css" rel="stylesheet">
 	<script src="ui_resources/jquery-3.1.1.min.js"></script>
@@ -31,9 +30,7 @@
 		})
 		$('.button').popup();
 	</script>
-
-
-	<!--加载动画的脚本-->
+	<!--加载界面的脚本-->
 	<script>
 		setTimeout(function () {
 			$(".loading-div").hide();
@@ -55,14 +52,12 @@
 			overflow: hidden;
 		}
 	</style>
+	<!--加载界面-->
 	<div class="loading-div">
 		<i class="fa fa-spinner fa-pulse fa-3x fa-fw "></i>
 		<span class="sr-only">Loading...</span>
 	</div>
-	<!--二次元-->
-	<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
-	<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
+	<!--独立主体部分，为了与加载界面区分-->
 	<div class="main">
 		<!--背景雪花-->
 		<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
@@ -78,82 +73,12 @@
 			}
 		</style>
 		<div class="snow-container"></div>
-		<header><!--导航栏-->
-			<div class="ui yellow labeled fixed borderless menu" style="height:80px">
-				<a href="frontend/underneath_decoration/skystar.html" class="item">
-					<img class="ui small image icon2" src="image/logo.jpg">
-				</a>
-
-				<a href="index.html" class="active item navigator">
-					<i class="large home icon"></i>
-					Home
-				</a>
-				<a href="frontend/html/notification.html" class="item navigator">
-					<i class="large comment alternate icon"></i>
-					Notification
-				</a>
-				<div class="item" style="">
-					<div class="ui dropdown labeled icon button"
-						style="background-color:white;margin: 0px !important;border:0px!important">
-						<i class="large pencil alternate icon button"
-							style="background-color:white;color: #7d97df!important;"></i>
-						<a href="frontend/html/meetingsummary.html" class="item navigator"
-							style="border-bottom: none;padding: 0px !important;">Journal</a>
-						<div class="menu"
-							style="color: #7d97df;padding: 0px !important;border: 0px !important;margin: 0px !important;">
-							<a href="frontend/html/meetingsummary.html" class="ui button item navigator"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important">Meeting
-								Summary</a>
-							<a href="frontend/html/collegeactivity.html" class="ui button item navigator"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important">College
-								Activity</a>
-						</div>
-					</div>
-				</div>
-				<a href="frontend/html/blog.html" class="item navigator">
-					<i class="large paper plane icon"></i>
-					Blog
-				</a>
-				<a href="frontend/html/forum.html" class="item navigator" style="margin-left: 15px !important;">
-					<i class="large comments icon"></i>Forum</a>
-				<div class="item">
-					<div class="ui dropdown labeled icon button"
-						style="background-color:white;margin: 0px !important;border:0px!important">
-						<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
-						<a href="frontend/html/people.html" class="item navigator"
-							style="border-bottom: none;padding: 0px !important;">People</a>
-						<div class="menu" style="color: #7d97df;border: 0px !important">
-							<a href="frontend/html/people.html#aboutcollege" class="ui button item navigator"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-								Alpha College</a>
-							<a href="frontend/html/people.html" class="ui button item navigator"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-								College Members</a>
-						</div>
-					</div>
-				</div>
-				<!--置右部分-->
-				<div class="right fixed menu" style="z-index:999!important">
-					<div class="ui right aligned category search item">
-						<div class="ui transparent icon input">
-							<input class="prompt" type="text" placeholder="Search">
-							<i class="search link icon"
-								style="margin-bottom:20px!important;margin-top:0px!important"></i>
-						</div>
-						<div class="results"></div>
-					</div>
-					<!--<a href="https://westlake.edu.cn" class="ui right floated header">
-					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
-				</a>-->
-					<div class="tiny ui buttons" style="margin:20px 0 20px 0;">
-						<button class="tiny ui button ">中文</button>
-						<div class="or"></div>
-						<button class="tiny ui button active yellow button">English</button>
-					</div>
-
-				</div>
-			</div>
-		</header>
+		<!--**页首导航栏header**-->
+		<script src="frontend/js/Header_index.js"></script>
+		<!--二次元人物-->
+		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
+		<script src="https://cdn.jsdelivr.net/gh/stevenjoezhang/live2d-widget/autoload.js"></script>
 		<!--轮播图-->
 		<div id="myCarousel" class="carousel slide" style="display:block;position:inherit;height:680px">
 			<!--轮播（Carousel）指标 -->
@@ -180,13 +105,12 @@
 				</div>
 				<div class="item">
 					<a target="_blank" href="https://mp.weixin.qq.com/s/zJjL8obhI918AaoTtK31yg">
-						<img src="image/college activity/2022_10_22趣味运动会/合照1 (1).png"
-						alt="Third slide">
+						<img src="image/college activity/2022_10_22趣味运动会/合照1 (1).png" alt="Third slide">
 					</a>
 					<div class="carousel-caption">Fun Sport Game</div>
 				</div>
 				<div class="item">
-					<img src="image/college activity/sciencefiction/活动海报2.jpg"style="height:105%" alt="Fourth slide" >
+					<img src="image/college activity/sciencefiction/活动海报2.jpg" style="height:105%" alt="Fourth slide">
 					<div class="carousel-caption">Science-fiction Writing Competition</div>
 				</div>
 			</div>
@@ -240,9 +164,6 @@
 		<br>
 		<div class="ui container">
 			<div class="ui grid">
-
-				<!--<div class="ui segment" style="background-color:transparent!important;">-->
-				<!--<div class="ui two column very relaxed grid">-->
 				<!--左侧栏-->
 				<div class="eleven wide column">
 					<div class="notification">
@@ -468,71 +389,9 @@
 				</div>
 			</div>
 		</div>
-		<footer style="margin-top:70px">
-			<link href="frontend/css/footer.css" rel="stylesheet">
-			<!--页尾波浪-->
-			<div class="waves">
-				<div class="wave" id="wave1"></div>
-				<div class="wave" id="wave2"></div>
-				<div class="wave" id="wave3"></div>
-				<div class="wave" id="wave4"></div>
-			</div>
-			<!--内容-->
-			<div class="ui four column grid" style="color:black">
-				<div class="column">
-					<div class="ui inverted circular segment"
-						style="background-color:transparent;border-color:transparent!important">
-						<a href="frontend/时间轴/Milestone.html" style="">
-							<h4>
-								Website Milestone
-							</h4>
-						</a>
-						<p class="content">
-
-						</p>
-					</div>
-				</div>
-
-				<div class="column">
-					<div class="ui inverted circular segment"
-						style="background-color:transparent;border-color:transparent!important">
-						<h4 style="color:black">
-							Picture Repository
-						</h4>
-						<p class="content">
-
-						</p>
-					</div>
-				</div>
-				<div class="column">
-					<div class="ui inverted circular segment"
-						style="background-color:transparent;border-color:transparent!important">
-						<h4 style="color:black">
-							Contact us
-						</h4>
-						<p class="content">
-
-						</p>
-					</div>
-
-				</div>
-
-				<div class="column">
-					<div class="ui inverted circular segment"
-						style="background-color:transparent;border-color:transparent!important">
-						<h4 style="color:black">
-							Relative Links
-						</h4>
-					</div>
-
-				</div>
-			</div>
-			<p class="footer_p">&copy;2022 - <a href="frontend/underneath_decoration/skystar.html"
-					style="color:black"><strong>Alpha College</strong></a> All rights reserved</p>
-		</footer>
-		<script type="mouble" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-		<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	</div>
+	<!--页脚-->
+	<script src="frontend/js/Footer_index.js"></script>
 </body>
 
 </html>
