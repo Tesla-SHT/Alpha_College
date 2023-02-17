@@ -14,10 +14,7 @@
 	<script src="ui_resources/semantic.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<!--bootstrap UI-->
-	
-	<!--<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="ui_resources/bootstrap.min.css">
-	<script src="ui_resources/bootstrap.min.js"></script>-->
+	<!--<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="ui_resources/bootstrap.min.css"><script src="ui_resources/bootstrap.min.js"></script>-->
 	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
 		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -28,7 +25,6 @@
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
-
 	<!--星空装饰-->
 	<style>
 		#skystardecoration {
@@ -73,7 +69,7 @@
 	<!--独立主体部分，为了与加载界面区分-->
 	<div class="main">
 		<!--背景雪花-->
-		<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
+		<!--<script src="http://www.lmlblog.com/winter/templets/xq/js/snowy.js"></script>
 		<style type="text/css">
 			.snow-container {
 				position: fixed;
@@ -85,7 +81,8 @@
 				z-index: -100001;
 			}
 		</style>
-		<div class="snow-container"></div>
+		<div class="snow-container"></div>-->
+
 		<!--**页首导航栏header**-->
 		<script src="frontend/js/Header_index.js"></script>
 		<!--二次元人物-->
@@ -141,41 +138,15 @@
 			</div>
 		</div>
 		<!--图片廊轮播图结束-->
-		<!--这里是老版的轮播图代码，如果觉得现在的可以，下面的都可以删掉了(包括CSS)-->
-		<!--<ul class="slides" style="text-align:center">
-			<input type="radio" id="control-1" name="control" checked>
-			<input type="radio" id="control-2" name="control">
-			<input type="radio" id="control-3" name="control">
-			<input type="radio" id="control-4" name="control">
-			<input type="radio" id="control-5" name="control">
-
-			<li class="slide"><img src="image/scenery/1.png" style="
-			zoom:expression( function(e) {
-				if(e.width>e.height) {if (e.width>128) { e.height = e.height*(128 /e.width); e.width=128; }}
-				else {if (e.height>128) { e.width = e.width*(128 /e.height); e.height=128; }}
-				e.style.zoom = '1';     }(this));"></li>
-
-			<li class="slide"><a target="_blank" href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM5ODA1MQ==&mid=2247485140&idx=1&sn=0df486646847471796b3adbfc0eccd2a&chksm=c3240d58f453844e47c5c8ca76fa369810c9e2f41d0dbb9659a5b7e63b06d3c8d07d0ff47b59&scene=90&sessionid=1674031523&subscene=236&key=cfdc9b8a3db953b193700a9a6fee5b9c23a6e5dc34fd518725d43e42ca1aafa924cc23977f6a451943956f60f2989decd76b6ffd9eef6ff3b1aad9a956721226819796b6b5e3e90e089b8646ceb713247f403526e7ab33ebb7ac837ef36bab354af0848ea336f6aca914b8c098859e510d25b1a099e12c8f18786328b87d1a28&ascene=0&uin=MTIxODM3Nzc5&devicetype=Windows+10+x64&version=6308011a&lang=zh_CN&exportkey=n_ChQIAhIQp3fInWZLAnJRhCDyV8cs7BLfAQIE97dBBAEAAAAAAKWSATdgHVEAAAAOpnltbLcz9gKNyK89dVj0bUsxULa03ME79w2VifcQMFJkpI%2BV64OPssq04%2FGfWgdZflW11%2FiZzQPg336vGSBMZPt%2B7EUQ1QRjl99qBgaWL3spBFFiUFOf7uaOmT0nzJnMj2fNZL3sojdFFYkZbITFg8eQGN1bGxZnokIsSgwuKieVIz0nkklN5qnQxw6Z1cTZhM6sClrFh0rsPyTf5kyo1ycc%2B5oFdKGongJZXYI7kofBJ7dP128NXEFF6bzuuWnOH2%2B%2BdPpxhWI%3D&acctmode=0&pass_ticket=l64KfUw0BYjbLEYhbPptCo2%2FkNe08nA5gbFVcr9vqq%2B0o9L8mhreQUo7vNBMbCC2UlW0ut2xz3u41y5VLUZktQ%3D%3D&wx_header=1&fontgear=2">
-				<img src="image/college activity/2022WorldCup/alpha meets world cup (2).jpg" style="width:100%;height:60%;margin-bottom:10px;">
-			</a></li>
-			<li class="slide"><a target="_blank" href="https://mp.weixin.qq.com/s/zJjL8obhI918AaoTtK31yg"><img src="image/college activity/2022_10_22趣味运动会/合照1 (1).png"
-					style="width:100%;height:100%;"></a>
-			</li>
-			<li class="slide"><img src="image/college activity/sciencefiction/活动海报2.jpg" style="width:40%;height:10%;">
-			</li>
-			<li class="slide"><img src="image/college activity/2022_10_22趣味运动会/176A7926_2.png"
-					style="width:100%;height:100%;"></li>
-
-			<div class="control-visible">
-				<label for="control-1"></label>
-				<label for="control-2"></label>
-				<label for="control-3"></label>
-				<label for="control-4"></label>
-				<label for="control-5"></label>
-			</div>
-		</ul>-->
 		<br>
+
 		<div class="ui container">
+			<!--粒子特效-->
+			<div id="particles-js"></div>
+			<script src="particles.js"></script>
+			<script src="app.js"></script>
+			<!--粒子特效-->
+
 			<div class="ui grid">
 				<!--左侧栏-->
 				<div class="eleven wide column">
@@ -402,13 +373,10 @@
 				</div>
 			</div>
 		</div>
+
+		<!--页脚-->
+		<script src="frontend/js/Footer_index.js"></script>
 	</div>
-	<!--页脚-->
-	<script src="frontend/js/Footer_index.js"></script>
-	<!--粒子特效-->
-	<script src="particles.js"></script>
-	<script src="app.js"></script>
-    <!--粒子特效-->
 </body>
 
 

@@ -56,127 +56,6 @@ body {
 .indexnot:hover {
 	color: #9f7be9 !important
 }
-/*这是老版的图片轮播图的样式，如果觉得可以的话可以直接把下面的都删掉了*/
-/*picture slides*/
-/*ul.slides {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	position: relative;
-	width: 100%;
-	max-height: 680px;
-	list-style: none;
-	padding: 0;
-	background-color: #eee;
-	min-height: 680px;
-	max-height: 680px;
-	background-color: transparent !important;
-	overflow: hidden;
-}
-
-li.slide {
-	margin: 0;
-	padding: 0;
-	width: inherit;
-	height: inherit;
-	position: absolute;
-	top: 0;
-	left: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	font-family: Helvetica;
-	font-size: 120px;
-	color: #fff;
-	transition: .5s transform ease-in-out;
-}
-
-.slide:nth-of-type(1) {
-	background-color: transparent !important;
-}
-
-.slide:nth-of-type(2) {
-	left: 100%;
-	background-color: transparent !important;
-}
-
-.slide:nth-of-type(3) {
-	left: 200%;
-	background-color: transparent !important;
-}
-
-.slide:nth-of-type(4) {
-	left: 300%;
-	background-color: transparent !important;
-}
-
-.slide:nth-of-type(5) {
-	left: 400%;
-	background-color: transparent !important;
-}
-
-input[type="radio"] {
-	position: relative;
-	z-index: 100;
-	display: none;
-}
-
-.control-visible {
-	position: absolute;
-	width: 100%;
-	bottom: 12px;
-	text-align: center;
-}
-
-.control-visible label {
-	display: inline-block;
-	width: 10px;
-	height: 10px;
-	background-color: #fff;
-	border-radius: 50%;
-	margin: 0 3px;
-	border: 2px solid #fff;
-}
-
-.slides input[type="radio"]:nth-of-type(1):checked~.control-visible label:nth-of-type(1) {
-	background-color: #333;
-}
-
-.slides input[type="radio"]:nth-of-type(2):checked~.control-visible label:nth-of-type(2) {
-	background-color: #333;
-}
-
-.slides input[type="radio"]:nth-of-type(3):checked~.control-visible label:nth-of-type(3) {
-	background-color: #333;
-}
-
-.slides input[type="radio"]:nth-of-type(4):checked~.control-visible label:nth-of-type(4) {
-	background-color: #333;
-}
-
-.slides input[type="radio"]:nth-of-type(5):checked~.control-visible label:nth-of-type(5) {
-	background-color: #333;
-}
-
-.slides input[type="radio"]:nth-of-type(1):checked~.slide {
-	transform: translateX(0%);
-}
-
-.slides input[type="radio"]:nth-of-type(2):checked~.slide {
-	transform: translateX(-100%);
-}
-
-.slides input[type="radio"]:nth-of-type(3):checked~.slide {
-	transform: translateX(-200%);
-}
-
-.slides input[type="radio"]:nth-of-type(4):checked~.slide {
-	transform: translateX(-300%);
-}
-
-.slides input[type="radio"]:nth-of-type(5):checked~.slide {
-	transform: translateX(-400%);
-/*picture slides end here*/
 
 /*Notification*/
 div.notification {
@@ -184,6 +63,7 @@ div.notification {
 	position: inherit;
 
 }
+
 .decoration {
 	/*设置视频最小宽度和高度 这个设不设置没有什么影响 */
 	/*min-width: 100%;
@@ -255,6 +135,7 @@ table th {
 	margin: 0 auto;
 	text-align: center
 }
+
 /*加载界面*/
 
 .loading-div {
@@ -271,4 +152,14 @@ table th {
 .loading-div::before {
 	display: inline-block;
 	vertical-align: middle;
+}
+
+#particles-js {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	z-index:9999;
 }
