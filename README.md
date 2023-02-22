@@ -1,6 +1,6 @@
 # Alpha_College
 
-Welcome to my website! This website serves as a platform to showcase my recent activities and experiences. The website is designed with a user-friendly interface to enhance your browsing experience.
+Welcome to the website! This website serves as a platform to showcase  recent activities took place in alpha college. The website is designed with a user-friendly interface to enhance your browsing experience.
 
 Currently, the website is in its initial phase, and there are several areas that require improvement. Here is a list of the improvements that are needed:
 
