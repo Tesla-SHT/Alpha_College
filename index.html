@@ -8,37 +8,20 @@
 	<!--<h1>2022/9/8/18:00 First Code</h1><-->
 	<link href="frontend/css/index.css" rel="stylesheet">
 	<link href="frontend/css/navigator.css" rel="stylesheet">
-	<script src="ui_resources/jquery-3.1.1.min.js"></script>
+	<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
 	<!--semantic UI-->
 	<link href="ui_resources/semantic.min.css" rel="stylesheet" type="text/css">
 	<script src="ui_resources/semantic.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 	<!--bootstrap UI-->
-	<!--<link rel="stylesheet" href="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css"><link rel="stylesheet" href="ui_resources/bootstrap.min.css"><script src="ui_resources/bootstrap.min.js"></script>-->
-	<!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
 		integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 	<!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
 		integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-	<!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
 	<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
 		integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
 		crossorigin="anonymous"></script>
-	<!--星空装饰-->
-	<style>
-		#skystardecoration {
-			height: 70px;
-			display: block;
-		}
-	</style>
-	<!--下拉菜单按钮-->
-	<script>
-		$(function () {
-			$(".ui.dropdown").dropdown();
-		})
-		$('.button').popup();
-	</script>
 	<!--加载界面的脚本-->
 	<script>
 		setTimeout(function () {
@@ -69,8 +52,100 @@
 	<!--独立主体部分，为了与加载界面区分-->
 	<div class="main">
 
-		<!--**页首导航栏header**-->
-		<script src="frontend/js/Header_index.js"></script>
+		<!--**页首导航栏header放在单独的js文件里**-->
+		<!--<script src="frontend/js/Header_index.js"></script>-->
+		<header><!--导航栏-->
+			<div class="ui yellow labeled fixed borderless menu" style="height:80px">
+				<a href="frontend/underneath_decoration/skystar.html" class="item">
+					<img class="ui small image icon2" src="image/logo.jpg">
+				</a>
+
+				<a href="index.html" class="active item navigator">
+					<i class="large home icon"></i>
+					Home
+				</a>
+				<a href="frontend/html/notification.html" class="item navigator">
+					<i class="large comment alternate icon"></i>
+					Notification
+				</a>
+				<div class="item navigator" style="">
+					<div class="dropdown navigator" style="">
+						<i class="large pencil alternate icon button" style="color: #7d97df!important;"></i>
+						<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+							style="background-color:white;margin: 0px !important;">
+							<a href="frontend/html/meetingsummary.html" class="item navigator"
+								style="border-bottom: none;padding: 0px !important;">Journal</a>
+
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+								<a href="frontend/html/meetingsummary.html" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;">Meeting
+									Summary</a>
+							</li>
+							<li role="presentation">
+								<a href="frontend/html/collegeactivity.html" role="menuitem" tabindex="-1"
+									style="color:#7d97df">College
+									Activity</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<a href="frontend/html/blog.html" class="item navigator">
+					<i class="large paper plane icon"></i>
+					Blog
+				</a>
+				<a href="frontend/html/forum.html" class="item navigator" style="margin-left: 15px !important;">
+					<i class="large comments icon"></i>Forum</a>
+				<div class="item navigator" style="">
+					<div class="dropdown navigator" style="">
+						<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+						<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+							style="background-color:white;margin: 0px !important;">
+							<a href="frontend/html/people.html" class="item navigator"
+								style="border-bottom: none;padding: 0px !important;">People</a>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+
+								<a href="frontend/html/people.html#aboutcollege" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+									Alpha College</a>
+							</li>
+							<li role="presentation">
+								<a href="frontend/html/people.html" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+									College Members</a>
+							</li>
+
+						</ul>
+					</div>
+				</div>
+				<!--置右部分-->
+				<div class="right fixed menu" style="z-index:999!important">
+					<div class="ui right aligned category search item">
+						<div class="ui transparent icon input">
+							<input class="prompt" type="text" placeholder="Search">
+							<i class="search link icon"
+								style="margin-bottom:20px!important;margin-top:0px!important"></i>
+						</div>
+						<div class="results"></div>
+					</div>
+					<!--<a href="https://westlake.edu.cn" class="ui right floated header">
+					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
+				</a>-->
+					<div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+						<button class="tiny ui button ">中文</button>
+						<div class="or"></div>
+						<button class="tiny ui button active yellow button">English</button>
+					</div>
+
+				</div>
+			</div>
+		</header>
+
+
 		<!--二次元人物-->
 		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
@@ -351,12 +426,9 @@
 				</div>
 			</div>
 		</div>
-
 		<!--页脚-->
 		<script src="frontend/js/Footer_index.js"></script>
 	</div>
 </body>
-
-
 
 </html>

@@ -154,6 +154,7 @@ table th {
 	vertical-align: middle;
 }
 
+/*粒子特效*/
 #particles-js {
 	position: fixed;
 	top: 0;
@@ -161,5 +162,29 @@ table th {
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
-	z-index:9999;
+	z-index: 9999;
 }
+
+/*下拉菜单 悬停样式*/
+.dropdown:hover .dropdown-menu,
+.btn-group:hover .dropdown-menu {
+	display: block;
+}
+.dropdown-toggle {
+	margin: auto;
+}
+/*星空装饰*/
+#skystardecoration {
+	height: 70px;
+	display: block;
+}
+/*滚动条*/
+::-webkit-scrollbar {
+    width: 10px;
+    height: 5px;
+    background-color: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background-color: #cdcabd;
+  }
