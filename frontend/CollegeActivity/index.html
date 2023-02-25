@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js"> <!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alpha College Activity</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/templatemo-style.css">
+    <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
+	<link href="../css/index.css" rel="stylesheet">
+	<link href="../css/navigator.css" rel="stylesheet">
+    <!--semantic UI-->
+    <link href="../../ui_resources/semantic.min.css" rel="stylesheet" type="text/css">
+    <script src="../../ui_resources/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <!--bootstrap UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+    <header><!--导航栏-->
+        <div class="ui yellow labeled fixed borderless menu" style="height:80px">
+            <a href="../underneath_decoration/skystar.html" class="item">
+                <img class="ui small image icon2" src="../../image/logo.jpg">
+            </a>
+
+            <a href="../../index.html" class="item navigator">
+                <i class="large home icon"></i>
+                Home
+            </a>
+            <a href="../html/notification.html" class="item navigator">
+                <i class="large comment alternate icon"></i>
+                Notification
+            </a>
+            <div class="item navigator" style="">
+                <div class="dropdown navigator" style="">
+                    <i class="large pencil alternate icon button" style="color: #7d97df!important;"></i>
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                        style="background-color:white;margin: 0px !important;">
+                        <a href="../html/meetingsummary.html" class="item navigator"
+                            style="border-bottom: none;padding: 0px !important;">Journal</a>
+
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="../html/meetingsummary.html" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;">Meeting
+                                Summary</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="index.html" role="menuitem" tabindex="-1" style="color:#7d97df">College
+                                Activity</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <a href="../html/blog.html" class="item navigator">
+                <i class="large paper plane icon"></i>
+                Blog
+            </a>
+            <a href="../html/forum.html" class="item navigator" style="margin-left: 15px !important;">
+                <i class="large comments icon"></i>Forum</a>
+            <div class="item navigator" style="">
+                <div class="dropdown navigator" style="">
+                    <i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                        style="background-color:white;margin: 0px !important;">
+                        <a href="../html/people.html" class="item navigator"
+                            style="border-bottom: none;padding: 0px !important;">People</a>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+
+                            <a href="../html/people.html#aboutcollege" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                Alpha College</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="../html/people.html#collegemember" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                College Members</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--置右部分-->
+            <div class="right fixed menu" style="z-index:999!important">
+                <div class="ui right aligned category search item">
+                    <div class="ui transparent icon input">
+                        <input class="prompt" type="text" placeholder="Search">
+                        <i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+                <!--<a href="https://westlake.edu.cn" class="ui right floated header">
+					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
+				</a>-->
+                <div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+                    <button class="tiny ui button ">中文</button>
+                    <div class="or"></div>
+                    <button class="tiny ui button active yellow button">English</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- SIDEBAR -->
+    <div class="sidebar-menu hidden-xs hidden-sm" style="overflow: auto !important;vertical-align:middle;">
+        <div class="top-section">
+            <h3 class="profile-title">Alpha College Activities</h3>
+        </div><!-- top-section -->
+        <div class="main-navigation ">
+            <ul class="navigation">
+                <li><a href="#Pingpong"><i class="fa fa-pencil"></i>First Pingpong Competition</a></li>
+                <li><a href="#FunGame"><i class="fa fa-paperclip"></i>Fun Game</a></li>
+                <li><a href="#2022WorldCup"><i class="fa fa-link"></i>2022 World Cup</a></li>
+            </ul>
+        </div> <!-- .main-navigation -->
+        <br>
+        <br>
+        <br>
+        <br>
+
+    </div> <!-- .sidebar-menu -->
+
+
+    <!-- MAIN CONTENT -->
+    <div class="main-content">
+        <div class="fluid-container">
+
+            <div class="content-wrapper">
+
+                <!-- Pingpong -->
+                <div class="page-section overflow:hidden" id="Pingpong">
+                    <div class="row overflow:hidden">
+                        <div class="col-md-12 overflow:hidden">
+                            <h4 class="widget-title">First Table Tennis Competition</h4>
+                            <div class="about-image overflow:hidden">
+                                <img src="img/1003210628351.png" alt="" width="1760" height="2200"
+                                    class="overflow:hidden" />
+                            </div>
+                        </div>
+                    </div> <!-- #Pingpong -->
+                </div>
+
+                <!-- FunGame -->
+                <div class="page-section" id="FunGame">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">Fun Game</h4>
+                            <p>2022 October 22, we organized a variety of fun games, containing Darts Puzzle, Flying
+                                Saucer, Snaking Bicycle...
+                                This Fun Game not only let everyone relax, bring joy, but also narrow the distance
+                                between each other through thrilling competitions</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/1.jpg" alt="Darts Puzzle">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Darts Puzzle</a></h5>
+                                        <p>Alpha college's Dean Ling Li is darting in the final.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/2.jpg" alt="Flying Saucer">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Flying Saucer</a></h5>
+                                        <p>Alpha College is competing against Delta College</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/3.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Snaking Bicycle</a></h5>
+                                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam cursus.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/4.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Crossing the River on Finger Pressure Plates</a></h5>
+                                        <p>The players are ploughing their way on the biting finger pressure plates</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/5.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Participative Audience</a></h5>
+                                        <p>They can enjoy beverages and snacks bathing in the afternoon sun</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/6.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Group Photo</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- FunGame -->
+                </div>
+                <hr>
+
+                <!-- 2022WorldCup -->
+                <div class="page-section" id="2022WorldCup">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h4 class="widget-title">2022 World Cup</h4>
+                            <p>We bought football posters, national flags of the competing nations,
+                                and other decorations to decorate the college,
+                                all planned and organized by α SDC.
+                                We also posted the competition schedule.
+                                The college was quickly engulfed in the World Cup's carnival atmosphere.
+                                The World Cup attracted not only the students who enjoy football in their daily lives,
+                                but also the seniors, teachers, foreign staff, and even the less interested students,
+                                who joined in.
+                                The atmosphere was very lively as everyone watched the game together.</p>
+                        </div>
+                    </div>
+                    <div class="row projects-holder">
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/a.jpg" alt="Darts Puzzle">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">First Match</a></h5>
+                                        <p>Different Colleges' students watched this match together.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/b.jpg" alt="Flying Saucer">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Decoration</a></h5>
+                                        <p>Wonderful atmosphere!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/c.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Reserve a Vacuum Classroom for the Semi-final</a></h5>
+                                        <p>Apparently our university has many football fans!</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/d.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href='#'>Evidently a Spain's Fan</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/e.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Drink and Barbecue are Necessary</a></h5>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+                            <div class="project-item">
+                                <img src="img/f.jpg" alt="">
+                                <div class="project-hover">
+                                    <div class="inside">
+                                        <h5><a href="#">Delicious Take-out</a></h5>
+                                        <p>Watching matches at midnight really made us hungry</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> <!-- .projects-holder -->
+                </div>
+                <hr>
+
+                <div class="row" id="footer">
+                    <div class="col-md-12 text-center">
+                        <p class="copyright-text">Copyright &copy; 2084 Company Name | More Templates <a
+                                href="http://www.cssmoban.com/" target="_blank" title="模板之家">模板之家</a> - Collect from <a
+                                href="http://www.cssmoban.com/" title="网页模板" target="_blank">网页模板</a></p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/vendor/jquery-1.10.2.min.js"></script>
+    <script src="js/min/plugins.min.js"></script>
+    <script src="js/min/main.min.js"></script>
+
+</body>
+
+</html>
