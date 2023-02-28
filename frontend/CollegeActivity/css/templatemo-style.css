@@ -237,7 +237,7 @@ h1, h2, h3, h4, h5 {
 }
 
 .content-wrapper {
-  padding: 0 80px;
+  padding-right: 30px;
 }
 @media screen and (max-width: 992px) {
   .content-wrapper {
@@ -272,7 +272,7 @@ hr {
 -------------------------------------------------------- */
 .sidebar-menu {
   float: left;
-  width: 23%;
+  width: 18%;
   height: 100%;
   position: fixed;
   background-color: #5f6d7e;
@@ -489,7 +489,7 @@ h3.profile-title {
 }
 .project-item:hover .project-hover {
   top: 0;
-  opacity: 1;
+  opacity: 0.5;
   visibility: visible;
 }
 
