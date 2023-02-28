@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Preference Circle</title>
+    <link href="../css/index.css" rel="stylesheet">
+    <link href="../../ui_resources/semantic.min.css" rel="stylesheet" type="text/css">
+    <link href="../css/navigator.css" rel="stylesheet">
+    <script src="../../ui_resources/jquery-3.1.1.min.js"></script>
+    <script src="../../ui_resources/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <script>
+        $(function () {
+            $(".ui.dropdown").dropdown();
+        })
+        $('.button').popup();
+
+    </script>
+    <!--引入图表js-->
+    <script src="../../ui_resources/Echarts.js"></script>
+    <!--bootstrap UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/PictureRepository.css">
+    <style>
+        /* 给所有内容一个盒子（包括需要做出过渡效果的内容） */
+        .total {
+            width: 533px;
+            height: 400px;
+            border: 1px solid #999999;
+            overflow: hidden;
+        }
+
+        /* 再给一个盒子放入内容（不包括需要做出过渡效果的内容） */
+        .top {
+            width: 533px;
+            height: 400px;
+            /* 给这个盒子一个过渡，因为我们是想让这个盒子出现过渡效果 */
+            transition: all 1s ease-in-out;
+        }
+
+        /* top盒中的文本内容，计算好盒子高度 */
+        .text {
+            width: 533px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+        }
+
+        /* 底部的上移效果 */
+        .bottom {
+            width: 533px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            background-color: orangered;
+            color: white;
+            font-weight: 900;
+            font-size: 20px;
+            margin-left: 1px;
+        }
+
+        /* 给total一个hover，高度是总盒子的高度减去bottom盒的高度 */
+        .total:hover .top {
+            height: 350px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="ui yellow labeled fixed borderless menu" style="height:80px">
+            <!--<a href="https://westlake.edu.cn" class="item">
+				<img class="ui small image icon1" src="../../image/Westlakelogo.jpg">
+			</a>-->
+            <a href="../underneath_decoration/skystar.html" class="item">
+                <img class="ui small image icon2" src="../../image/logo.jpg">
+            </a>
+
+            <a href="../../index.html" class="item navigator">
+                <i class="large home icon"></i>
+                Home
+            </a>
+            <a href="../html/notification.html" class="item navigator">
+                <i class="large comment alternate icon"></i>
+                Notification
+            </a>
+            <div class="item" style="">
+                <div class="ui dropdown labeled icon button"
+                    style="background-color:white;margin: 0px !important;border:0px!important">
+                    <i class="large pencil alternate icon button"
+                        style="background-color:white;color:#7d97df!important;"></i>
+                    <a href="../html/meetingsummary.html" class="item navigator"
+                        style="background-color:white;border-bottom: none;padding: 0px !important;">Journal</a>
+                    <div class="menu"
+                        style="color: #7d97df;padding: 0px !important;border: 0px !important;margin: 0px !important;">
+                        <a href="../html/meetingsummary.html" class="ui button item navigator"
+                            style="color:#7d97df!important;margin: 0px !important;border:0px!important">Meeting
+                            Summary</a>
+                        <a href="../CollegeActivity/index.html" class="ui button item navigator"
+                            style="color:#7d97df!important;margin: 0px !important;border:0px!important">College
+                            Activity</a>
+                    </div>
+                </div>
+            </div>
+            <a href="../html/blog.html" class="item navigator">
+                <i class="large paper plane icon"></i>
+                Blog
+            </a>
+            <a href="../html/forum.html" class="item navigator" style="margin-left: 15px !important;">
+                <i class="large comments icon"></i>Forum</a>
+            <div class="item">
+                <div class="ui dropdown labeled icon button"
+                    style="background-color:white;margin: 0px !important;border:0px!important">
+                    <i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+                    <a href="../html/people.html" class="item navigator"
+                        style="border-bottom: none;padding: 0px !important;">People</a>
+                    <div class="menu" style="color: #7d97df;border: 0px !important">
+                        <a href="../html/people.html#aboutcollege" class="ui button item navigator"
+                            style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                            Alpha College</a>
+                        <a href="../html/people.html" class="ui button item navigator"
+                            style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                            College Members</a>
+                    </div>
+                </div>
+            </div>
+            <div class="right fixed menu" style="z-index:999!important">
+                <div class="ui right aligned category search item">
+                    <div class="ui transparent icon input">
+                        <input class="prompt" type="text" placeholder="Search">
+                        <i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+                <!--<a href="https://westlake.edu.cn" class="ui right floated header">
+					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
+				</a>-->
+                <div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+                    <button class="tiny ui button ">中文</button>
+                    <div class="or"></div>
+                    <button class="tiny ui button active yellow button">English</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <section id="gallery" class="page-section">
+        <div class="container">
+            <div class="row page-heading">
+                <div class="col-md-8 col-sm-8">
+                    <h3 class="page-title">My Gallery</h3>
+                    <p class="page-subtitle">CHECK SOME OF MY LAST PROJECTS</p>
+                </div>
+                <div class="col-md-4 col-sm-4 hidden-xs text-right">
+                    <p class="page-icon"><i class="fa fa-camera"></i></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="gallery-holder">
+                    <div class="total col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="top gallery-thumb">
+                            <img src="../../image/decoration.png" alt="">
+                            <div class="text" style="opacity: 10%;">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/2.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/3.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/4.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/5.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/6.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/7.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 gallery-item">
+                        <div class="gallery-thumb">
+                            <img src="img/8.jpg" alt="">
+                            <div class="hover">
+                                <a href="#" class="fa fa-plus"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+</body>
