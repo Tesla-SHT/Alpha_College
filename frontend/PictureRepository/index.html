@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="zh">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>α Picture Repository</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<link rel="stylesheet" href="dist/stylesheets/chromagallery.min.css">
+	<style type="text/css">
+		body,
+		html {
+			height: 100%;
+		}
+
+		.content {
+			width: 100%;
+			height: 100%;
+			margin: 10px auto;
+		}
+
+		@media screen and (min-width: 980px)
+
+		/* Desktop */
+			{
+			.content {
+				width: 70%;
+			}
+		}
+
+		.mygallery {
+			margin: 25px 0;
+		}
+	</style>
+	<!--[if IE]>
+		<script src="http://libs.useso.com/js/html5shiv/3.7/html5shiv.min.js"></script>
+	<![endif]-->
+
+	<link href="../css/index.css" rel="stylesheet">
+    <link href="../css/navigator.css" rel="stylesheet">
+    <!--semantic UI-->
+    <link href="../../ui_resources/semantic.min.css" rel="stylesheet" type="text/css">
+    <script src="../../ui_resources/semantic.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <!--bootstrap UI-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+	
+</head>
+
+<body>
+	<header><!--导航栏-->
+        <div class="ui yellow labeled fixed borderless menu" style="height:80px">
+            <a href="../underneath_decoration/skystar.html" class="item">
+                <img class="ui small image icon2" src="../../image/logo/logo.jpg">
+            </a>
+
+            <a href="../../index.html" class="item navigator">
+                <i class="large home icon"></i>
+                Home
+            </a>
+            <a href="../html/notification.html" class="item navigator">
+                <i class="large comment alternate icon"></i>
+                Notification
+            </a>
+            <div class="item navigator" style="">
+                <div class="dropdown navigator" style="">
+                    <i class="large pencil alternate icon button" style="color: #7d97df!important;"></i>
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                        style="background-color:white;margin: 0px !important;">
+                        <a href="../html/meetingsummary.html" class="item navigator"
+                            style="border-bottom: none;padding: 0px !important;">Journal</a>
+
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="../html/meetingsummary.html" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;">Meeting
+                                Summary</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="index.html" role="menuitem" tabindex="-1" style="color:#7d97df">College
+                                Activity</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <a href="../html/blog.html" class="item navigator">
+                <i class="large paper plane icon"></i>
+                Blog
+            </a>
+            <a href="../html/forum.html" class="item navigator" style="margin-left: 15px !important;">
+                <i class="large comments icon"></i>Forum</a>
+            <div class="item navigator" style="">
+                <div class="dropdown navigator" style="">
+                    <i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                        style="background-color:white;margin: 0px !important;">
+                        <a href="../html/people.html" class="item navigator"
+                            style="border-bottom: none;padding: 0px !important;">People</a>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+
+                            <a href="../html/people.html#aboutcollege" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                Alpha College</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="../html/people.html#collegemember" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                College Members</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <!--置右部分-->
+            <div class="right fixed menu" style="z-index:999!important">
+                <div class="ui right aligned category search item">
+                    <div class="ui transparent icon input">
+                        <input class="prompt" type="text" placeholder="Search">
+                        <i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
+                <!--<a href="https://westlake.edu.cn" class="ui right floated header">
+					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
+				</a>-->
+                <div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+                    <button class="tiny ui button ">中文</button>
+                    <div class="or"></div>
+                    <button class="tiny ui button active yellow button">English</button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+	<!--粒子特效-->
+	<div id="particles-js"></div>
+	<script src="../../frontend/粒子特效/particles.js"></script>
+	<script src="../../frontend/粒子特效/app.js"></script>
+	<!--粒子特效-->
+	<br>
+	<br>
+	<br>
+	<br>
+
+	<article class="htmleaf-container">
+		<div class="content">
+			<div class="chroma-gallery mygallery">
+				<img src="../../image/Picture Repository/2022 snow.jpg" alt="Pic 1" data-largesrc="images/1.jpg">
+				<img src="../../image/Picture Repository/birthday 1.jpg" alt="Pic 2" data-largesrc="images/2.jpg">
+				<img src="images/thumbs/3.jpg" alt="Pic 3" data-largesrc="images/3.jpg">
+				<img src="images/thumbs/4.jpg" alt="Pic 4" data-largesrc="images/4.jpg">
+				<img src="images/thumbs/5.jpg" alt="Pic 5" data-largesrc="images/5.jpg">
+				<img src="images/thumbs/6.jpg" alt="Pic 6" data-largesrc="images/6.jpg">
+				<img src="images/thumbs/7.jpg" alt="Pic 7" data-largesrc="images/7.jpg">
+				<img src="images/thumbs/8.jpg" alt="Pic 8" data-largesrc="images/8.jpg">
+				<img src="images/thumbs/9.jpg" alt="Pic 9" data-largesrc="images/9.jpg">
+				<img src="images/thumbs/10.jpg" alt="Pic 10" data-largesrc="images/10.jpg">
+			</div>
+		</div>
+
+	</article>
+
+	<script src="http://libs.useso.com/js/jquery/1.11.0/jquery.min.js" type="text/javascript"></script>
+	<script>window.jQuery || document.write('<script src="js/jquery-1.11.0.min.js"><\/script>')</script>
+	<script src="dist/scripts/chromagallery.pkgd.min.js"></script>
+	<script type="text/javascript">
+		// $(document).ready(function() 
+		// {
+		//     $(".mygallery").chromaGallery();
+		// });
+		$(document).ready(function () {
+			$(".mygallery").chromaGallery
+				({
+					color: '#000',
+					gridMargin: 15,
+					maxColumns: 5,
+					dof: true,
+					screenOpacity: 0.8
+				});
+		});
+
+	</script>
+</body>
+
+</html>
