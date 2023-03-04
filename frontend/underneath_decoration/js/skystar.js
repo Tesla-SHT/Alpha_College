@@ -15,6 +15,9 @@ var words=[
     '胡胜韬',
     '蔡贺丞',
     '苑东亭',
+    '孙博爱',
+    '牛濛',
+    '李凌'
 ];
 function randomNum(min,max){
     var num = (Math.random()*(max-min+1)+min).toFixed(2);
