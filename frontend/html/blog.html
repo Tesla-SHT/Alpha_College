@@ -22,7 +22,66 @@
 	</script>
 	<link href='http://fonts.useso.com/css?family=Montserrat+Alternates:400,700' rel='stylesheet' type='text/css'>
 	<link href='http://fonts.useso.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	<!--季节颜色样式-->
+	<style>
+		.spring {
+			color: #FF69B4 !important;
+			/* pink */
+		}
 
+		.summer {
+			color: #FFA500 !important;
+			/* orange */
+		}
+
+		.autumn {
+			color: #FF8C00 !important;
+			/* dark orange */
+		}
+
+		.winter {
+			color: #87CEEB !important;
+			/* sky blue */
+		}
+	</style>
+	<script>
+		function seasoncolor() {
+			const paragraphs = document.getElementsByClassName("Month");
+			const span = document.querySelectorAll('span');
+			//const topBlog = document.querySelectorAll('div.top-blog p a');
+			//const fastLink = document.querySelectorAll('a.fast:hover');
+			const blogLeft = document.getElementsByClassName("Monthb");
+			var i;
+			for (i = 0; i < paragraphs.length; i++) {
+				const content = paragraphs[i].textContent.toLowerCase();
+				if (content.includes("mar.") || content.includes("apr.") || content.includes("may")) {
+					paragraphs[i].classList.add("spring");
+					//topBlog[i].style.color = "#FF69B4!important";
+					//fastLink[i].style.color = "#FF69B4!important";
+					blogLeft[i].classList.add("spring");
+					span[i].style.color = "#FF69B4!important";
+				} else if (content.includes("june") || content.includes("july") || content.includes("aug.")) {
+					paragraphs[i].classList.add("summer");
+					//topBlog[i].style.color = "#FFA500!important";
+					//fastLink[i].style.color = "#FFA500!important";
+					blogLeft[i].classList.add("summer");
+					span[i].style.color = "#FFA500!important";
+				} else if (content.includes("sept.") || content.includes("oct.") || content.includes("nov.")) {
+					paragraphs[i].classList.add("autumn");
+					//topBlog[i].style.color = "#FF8C00!important";
+					//fastLink[i].style.color = "#FF8C00!important";
+					blogLeft[i].classList.add("autumn");
+					span[i].style.color = "#FF8C00!important";
+				} else {
+					paragraphs[i].classList.add("winter");
+					//topBlog[i].style.color = "#87CEEB!important";
+					//fastLink[i].style.color = "#87CEEB!important";
+					blogLeft[i].classList.add("winter");
+					span[i].style.color = "#87CEEB!important";
+				}
+			}
+		}
+	</script>
 </head>
 
 <body>
@@ -115,6 +174,7 @@
 		}
 	</style>
 	<!--正文-->
+	<!--在写BLOG的月份的时候严格按照月份的缩写，这样才会有不同季节的颜色块!-->
 	<div class="blog" style="padding-top:0;">
 		<div class="container" style="padding-top:0;">
 			<div class="single-inline" style="padding-top:0;">
@@ -123,22 +183,28 @@
 				<div class="blog-to">
 					<div class="blog-top" style="margin-top:0;">
 						<div class="blog-left">
-							<b>25</b>
-							<span>Feb.</span>
+							<b class="Monthb">25</b>
+							<span class="Month">Feb.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">Lively College during Live Streaming</a>
 							<p>Posted by <a>Yuqi Shen</a> </p>
 							<p>
-								The Alpha Academy's undergraduate enrollment presentation at West Lake University was a lively affair. 
-								Attendees played tabletop games, constructed West Lake University in Minecraft, built websites, and even tackled homework.
-								 The event was a great success and generated a lot of interest among potential students.
-								 <br>
-								 The Alpha Academy's presentation at West Lake University was lively and engaging. 
-								 Attendees played games, built websites, and tackled homework, generating interest among potential students. 
-								 The innovative approach made a great impression on both attendees and virtual viewers. 
-								 Such events are effective in promoting universities and attracting students seeking unique academic experiences. 
-								 Overall, the event was a huge success and will undoubtedly continue to generate enthusiasm among potential students.
+								The Alpha Academy's undergraduate enrollment presentation at West Lake University was a
+								lively affair.
+								Attendees played tabletop games, constructed West Lake University in Minecraft, built
+								websites, and even tackled homework.
+								The event was a great success and generated a lot of interest among potential students.
+								<br>
+								The Alpha Academy's presentation at West Lake University was lively and engaging.
+								Attendees play class="Month"ed games, built websites, and tackled homework, generating
+								interest among
+								potential students.
+								The innovative approach made a great impression on both attendees and virtual viewers.
+								Such events are effective in promoting universities and attracting students seeking
+								unique academic experiences.
+								Overall, the event was a huge success and will undoubtedly continue to generate
+								enthusiasm among potential students.
 							</p>
 							<hr>
 						</div>
@@ -159,8 +225,8 @@
 				<div class="blog-to">
 					<div class="blog-top" style="margin-top:0;">
 						<div class="blog-left">
-							<b>12</b>
-							<span>Feb.</span>
+							<b class="Monthb">12</b>
+							<span class="Month">Feb.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">Back-to-school Party</a>
@@ -214,16 +280,18 @@
 				<div class="blog-to" style="margin-bottom:0;padding-bottom:0">
 					<div class="blog-top">
 						<div class="blog-left">
-							<b>12</b>
-							<span>Nov.</span>
+							<b class="Monthb">12</b>
+							<span class="Month">Nov.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">First Westlake University Games</a>
 							<p>Posted by <a>Feifan Wang</a> </p>
 							<p class="sed">
-								Nine Alpha Academy students achieved excellent results at the first sports meet of West Lake University on November 12, 2022. 
-								They won awards in various events, showcasing their outstanding athletic abilities and team spirit.
-								 Congratulations to them on their success!
+								Nine Alpha Academy students achieved excellent results at the first sports meet of West
+								Lake University on November 12, 2022.
+								They won awards in various events, showcasing their outstanding athletic abilities and
+								team spirit.
+								Congratulations to them on their success!
 							</p>
 						</div>
 						<div class="clearfix"> </div>
@@ -257,8 +325,8 @@
 				<div class="blog-to">
 					<div class="blog-top" style="margin-top:0;">
 						<div class="blog-left">
-							<b>7</b>
-							<span>Oct.</span>
+							<b class="Monthb">7</b>
+							<span class="Month">Oct.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">Board Game Party</a>
@@ -276,8 +344,8 @@
 				<div class="blog-to" style="margin-bottom:0;padding-bottom:0">
 					<div class="blog-top">
 						<div class="blog-left">
-							<b>6</b>
-							<span>Oct.</span>
+							<b class="Monthb">6</b>
+							<span class="Month">Oct.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">Everlasting Midnight Snacks ③</a>
@@ -308,8 +376,8 @@
 				<div class="blog-to">
 					<div class="blog-top" style="padding-bottom: 100px;">
 						<div class="blog-left">
-							<b>25</b>
-							<span>Sept.</span>
+							<b class="Monthb">25</b>
+							<span class="Month">Sept.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">Everlasting Midnight Snacks ②</a>
@@ -334,8 +402,8 @@
 				<div class="blog-to">
 					<div class="blog-top" style="padding-bottom: 100px;">
 						<div class="blog-left">
-							<b>23</b>
-							<span>Sept.</span>
+							<b class="Monthb">23</b>
+							<span class="Month">Sept.</span>
 						</div>
 						<div class="top-blog">
 							<a class="fast">Everlasting Midnight Snacks ①</a>
@@ -346,15 +414,17 @@
 					</div>
 					<div class="sin-on"
 						style="float:left!important;width: 9000px;margin-bottom:30px; padding-left:100px">
-						<img class="sin-on" src="../../image/college activity/2022_9_23/IMG_20220923_224737.jpg"
-							width="320" height="210">
+						<img class="sin-on" src="../../image/college activity/2022_9_23/daily live 1.jpg" width="320"
+							height="210">
 						<img class="sin-on" src="../../image/college activity/2022_9_23/IMG_20220923_231438.jpg"
 							width="320" height="210">
 						<hr>
 					</div>
 				</div>
 				<hr>
-			</div>
+			</div>				<script>
+				seasoncolor(); // 调用你的函数
+			</script>
 			<nav>
 				<ul class="pagination">
 					<li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">«</span></a></li>
@@ -378,7 +448,7 @@
 		</div>
 		<ul class="footer_word">
 		</ul>
-		<p class="footer_p">&copy;2022 - <strong>Alpha College</strong></p>
+		<p class="footer_p">&copy;2023 - <strong>Alpha College</strong></p>
 	</footer>
 	<script type="mouble" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 	<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

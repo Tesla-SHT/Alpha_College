@@ -70,14 +70,14 @@
 }
 .blog-left b{
 	font-size:3.5em;
-	color:#8fbf00;
+	color:#8FBF00;/*#8fbf00*/
 	display:block;
 	height:55px;
 	  font-family: 'Montserrat Alternates', sans-serif;
 }
 .blog-left span{
 	font-size:1.7em;
-	color:#8fbf00;
+	color:#8FBF00;
 	  font-family: 'Montserrat Alternates', sans-serif;
 }
 ul.men-grid li{
@@ -90,7 +90,7 @@ ul.men-grid li{
 }
 .top-blog p a{
 	text-decoration:none;
-	color:#8fbf00;
+	color:#8FBF00;
 }
 .top-blog  a.fast{
 	text-decoration:none;
@@ -99,7 +99,7 @@ ul.men-grid li{
 	  font-family: 'Montserrat Alternates', sans-serif;
 }
 .top-blog a.fast:hover,.top-blog p a:hover,ul.popular li a:hover,a.more-dummy:hover{
-	color:#8fbf00;
+	color:#8FBF00;
 }
 .pagination > .active > a,.pagination > .active > a:hover{
 	background:#8FBF00;
