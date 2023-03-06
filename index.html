@@ -144,6 +144,40 @@
 				</div>
 			</div>
 		</header>
+		<!--回到顶部图标-->
+		<style>
+			#backtop {display: none;position: fixed;bottom: 20px;right: 30px;z-index: 99;border: none;outline: none;background-color: red;color: white;cursor: pointer;padding: 15px;border-radius: 15px;}
+			#backtop:hover {background-color: #555;}
+		</style>
+		<script>
+			window.onscroll = function () { scrollFunction() };
+			function scrollFunction() {// 当网页向下滑动 20px 出现"返回顶部" 按钮
+				console.log(121);
+				if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+					document.getElementById("backtop").style.display = "block";
+				} else {
+					document.getElementById("backtop").style.display = "none";
+				}
+			}
+			function topFunction() {// 点击按钮，返回顶部，并且有上滑减速动画
+				var timer = null;
+				cancelAnimationFrame(timer);
+				timer = requestAnimationFrame(function fn() {
+					var oTop = document.body.scrollTop || document.documentElement.scrollTop;
+					if (oTop > 0) {
+						document.body.scrollTop = document.documentElement.scrollTop = oTop - 50;
+						timer = requestAnimationFrame(fn);
+					} else {
+						cancelAnimationFrame(timer);
+					}
+				});
+			}
+		</script>
+		<button onclick="topFunction()" style="padding:12px 15px" id="backtop" type="button"
+			class="btn btn-outline-danger btn-lg">
+			<span class="glyphicon glyphicon glyphicon-eject"></span>
+		</button>
+		<!--回到顶部结束-->
 		<!--二次元人物-->
 		<script src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome/css/font-awesome.min.css" />
@@ -165,20 +199,19 @@
 					<div class="carousel-caption">Alpha College</div>
 				</div>
 				<div class="item">
-					<a  href="frontend/html/blog.html"><img
-							src="image/college activity/开学晚会 2023_2_12/0.png" style="height:100%"
-							alt="Second slide"></a>
+					<a href="frontend/html/blog.html"><img src="image/college activity/开学晚会 2023_2_12/0.png"
+							style="height:100%" alt="Second slide"></a>
 					<div class="carousel-caption">Back-to-school Party</div>
 				</div>
 				<div class="item">
-					<a 
+					<a
 						href="https://mp.weixin.qq.com/s?__biz=Mzk0NDM5ODA1MQ==&mid=2247485140&idx=1&sn=0df486646847471796b3adbfc0eccd2a&chksm=c3240d58f453844e47c5c8ca76fa369810c9e2f41d0dbb9659a5b7e63b06d3c8d07d0ff47b59&scene=90&sessionid=1674031523&subscene=236&key=cfdc9b8a3db953b193700a9a6fee5b9c23a6e5dc34fd518725d43e42ca1aafa924cc23977f6a451943956f60f2989decd76b6ffd9eef6ff3b1aad9a956721226819796b6b5e3e90e089b8646ceb713247f403526e7ab33ebb7ac837ef36bab354af0848ea336f6aca914b8c098859e510d25b1a099e12c8f18786328b87d1a28&ascene=0&uin=MTIxODM3Nzc5&devicetype=Windows+10+x64&version=6308011a&lang=zh_CN&exportkey=n_ChQIAhIQp3fInWZLAnJRhCDyV8cs7BLfAQIE97dBBAEAAAAAAKWSATdgHVEAAAAOpnltbLcz9gKNyK89dVj0bUsxULa03ME79w2VifcQMFJkpI%2BV64OPssq04%2FGfWgdZflW11%2FiZzQPg336vGSBMZPt%2B7EUQ1QRjl99qBgaWL3spBFFiUFOf7uaOmT0nzJnMj2fNZL3sojdFFYkZbITFg8eQGN1bGxZnokIsSgwuKieVIz0nkklN5qnQxw6Z1cTZhM6sClrFh0rsPyTf5kyo1ycc%2B5oFdKGongJZXYI7kofBJ7dP128NXEFF6bzuuWnOH2%2B%2BdPpxhWI%3D&acctmode=0&pass_ticket=l64KfUw0BYjbLEYhbPptCo2%2FkNe08nA5gbFVcr9vqq%2B0o9L8mhreQUo7vNBMbCC2UlW0ut2xz3u41y5VLUZktQ%3D%3D&wx_header=1&fontgear=2">
 						<img src="image/college activity/2022WorldCup/Chosen.jpg" alt="Third slide">
 					</a>
 					<div class="carousel-caption">Alpha Meets World Cup</div>
 				</div>
 				<div class="item">
-					<a  href="https://mp.weixin.qq.com/s/zJjL8obhI918AaoTtK31yg">
+					<a href="https://mp.weixin.qq.com/s/zJjL8obhI918AaoTtK31yg">
 						<img src="image/college activity/2022_10_22趣味运动会/合照1 (1).png" alt="Fourth slide">
 					</a>
 					<div class="carousel-caption">Fun Sport Game</div>
@@ -197,8 +230,7 @@
 				</a>
 			</div>
 		</div>
-		<!--图片廊轮播图结束-->
-		<br>
+		<!--轮播图结束-->
 		<div class="ui container"><!--主页总栏目，下分左右栏-->
 			<!--粒子特效-->
 			<div id="particles-js"></div>
@@ -220,22 +252,26 @@
 								style="background-color:rgb(247, 245, 239)!important;padding-top:0px!important">
 								<dl>
 									<dt>
-										<a href="frontend/PictureRepository/index.html" class="indexnot"style="color:black">
-											<h3 ><strong>Picture Repository</strong></h3>
+										<a href="frontend/PictureRepository/index.html" class="indexnot"
+											style="color:black">
+											<h3><strong>Picture Repository</strong></h3>
 										</a>
 										<p>
-											<h5>&nbsp&nbsp&nbsp&nbspWe collected some pictures in our daily life to treasure these
-												memories.</h5>
+										<h5>&nbsp&nbsp&nbsp&nbspWe collected some pictures in our daily life to treasure
+											these
+											memories.</h5>
 										<p>
 									</dt>
 									<br>
 									<dt>
-										<a href="frontend/CollegeActivity/index.html" class="indexnot"style="link.color:black">
-											<h3 ><strong>College Activity</strong></h2>
+										<a href="frontend/CollegeActivity/index.html" class="indexnot"
+											style="link.color:black">
+											<h3><strong>College Activity</strong></h2>
 										</a>
 										<p>
-											<h5>&nbsp&nbsp&nbsp&nbspUp to now, it has recorded three activites our college held or participated.
-												You can also find this page in Journal (on the top of the website).</h5>
+										<h5>&nbsp&nbsp&nbsp&nbspUp to now, it has recorded three activites our college
+											held or participated.
+											You can also find this page in Journal (on the top of the website).</h5>
 										</p>
 									</dt>
 								</dl>
@@ -275,23 +311,32 @@
 										Lively College during Live Streaming</a></li>
 								<br>
 								<img class=" sin-on" src="image/college activity/2023_2_25书院直播/微信图片_20230302130407.jpg"
-								width="233" >
-							<img class=" sin-on" src="image/college activity/2023_2_25书院直播/微信图片_20230302130409.jpg"
-								width="233" >
-							<img class=" sin-on" src="image/college activity/2023_2_25书院直播/微信图片_20230302130410.jpg"
-								width="233" >
+									width="233">
+								<img class=" sin-on" src="image/college activity/2023_2_25书院直播/微信图片_20230302130409.jpg"
+									width="233">
+								<img class=" sin-on" src="image/college activity/2023_2_25书院直播/微信图片_20230302130410.jpg"
+									width="233">
 								<a href="" class="indexnot">
 									<p style="color:black">
-										The Alpha Academy's undergraduate enrollment presentation at West Lake University was a lively affair. 
-										Attendees played tabletop games, constructed West Lake University in Minecraft, built websites, and even tackled homework.
-										 The event was a great success and generated a lot of interest among potential students.
-										 <br>
-										 The Alpha Academy's presentation at West Lake University was lively and engaging. 
-										 Attendees played games, built websites, and tackled homework, generating interest among potential students. 
-										 The innovative approach made a great impression on both attendees and virtual viewers. 
-										 Such events are effective in promoting universities and attracting students seeking unique academic experiences. 
-										 Overall, the event was a huge success and will undoubtedly continue to generate enthusiasm among potential students.
-									</p></a>
+										The Alpha Academy's undergraduate enrollment presentation at West Lake
+										University was a lively affair.
+										Attendees played tabletop games, constructed West Lake University in Minecraft,
+										built websites, and even tackled homework.
+										The event was a great success and generated a lot of interest among potential
+										students.
+										<br>
+										The Alpha Academy's presentation at West Lake University was lively and
+										engaging.
+										Attendees played games, built websites, and tackled homework, generating
+										interest among potential students.
+										The innovative approach made a great impression on both attendees and virtual
+										viewers.
+										Such events are effective in promoting universities and attracting students
+										seeking unique academic experiences.
+										Overall, the event was a huge success and will undoubtedly continue to generate
+										enthusiasm among potential students.
+									</p>
+								</a>
 							</div>
 						</div>
 						<!--<div class="ui raised segments">
@@ -308,21 +353,22 @@
 									<br>
 									<b>PS:</b> Enclosed here with the UNO loser's forced <i>Solitary Brave</i></a>
 							</div>
-						</div>-->					</div>
+						</div>-->
+					</div>
 					<!--Notification-->
 					<div class="notification">
-						<a href="frontend/html/notification.html"  class="indexnot">
+						<a href="frontend/html/notification.html" class="indexnot">
 							<h2 class="border_decoration"><strong>Latest Notification</strong></h2>
 						</a>
 						<div class="ui raised segments">
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="files/值日安排.xlsx"  style="font-size:17px" class="indexnot">
+								<li><a href="files/值日安排.xlsx" style="font-size:17px" class="indexnot">
 										&nbspDuty
 										Arrangement</a></li>
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/html/notification.html#Group" 
-										style="font-size:17px" class="indexnot">&nbspGroups'
+								<li><a href="frontend/html/notification.html#Group" style="font-size:17px"
+										class="indexnot">&nbspGroups'
 										Arrangement</a></li>
 							</div>
 						</div>
@@ -361,7 +407,7 @@
 						</script>
 						<div class="ui raised segments">
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a  style="font-size:17px;color:black" class="indexnot">
+								<li><a style="font-size:17px;color:black" class="indexnot">
 										&nbspLiterature
 										Essence</a>
 								</li>
@@ -381,7 +427,7 @@
 
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a  style="font-size:17px;color:black" class="indexnot">&nbspDaily
+								<li><a style="font-size:17px;color:black" class="indexnot">&nbspDaily
 										Tricks</a>
 								</li>
 								<!--塞题目-->
@@ -395,32 +441,32 @@
 						<h2 class="border_decoration" style="color:#7d97df"><strong>Tools</strong></h2>
 						<div class="ui raised segments">
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a  style="font-size:17px" class="indexnot">
+								<li><a style="font-size:17px" class="indexnot">
 										&nbsp Free now_空了吗 <br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 查看同学空余时间
 									</a>
 
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/html/PreferenceCircle.html"  style="font-size:17px"
+								<li><a href="frontend/html/PreferenceCircle.html" style="font-size:17px"
 										class="indexnot">&nbsp Preference
 										Circle
 										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 个人爱好展示
 									</a>
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/html/honor.html"  style="font-size:17px"
-										class="indexnot">&nbsp Honor Time
+								<li><a href="frontend/html/honor.html" style="font-size:17px" class="indexnot">&nbsp
+										Honor Time
 										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 书院荣誉
 									</a>
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/html/books.html"  style="font-size:17px"
-										class="indexnot">&nbsp Book Link
+								<li><a href="frontend/html/books.html" style="font-size:17px" class="indexnot">&nbsp
+										Book Link
 										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 电子图书馆
 									</a>
 							</div>
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a  style="font-size:17px" class="indexnot">&nbsp Shortcut
+								<li><a style="font-size:17px" class="indexnot">&nbsp Shortcut
 										<br> <br>&nbsp&nbsp&nbsp&nbsp&nbsp 高效学习生活资源
 									</a>
 							</div>
@@ -430,24 +476,22 @@
 						<h2 class="border_decoration" style="color:#7d97df"><strong>Entertainment</strong></h2>
 						<div class="ui raised segments">
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/game/snake/Snake.html"  style="font-size:17px"
-										class="indexnot">
+								<li><a href="frontend/game/snake/Snake.html" style="font-size:17px" class="indexnot">
 										Snake Game!
 									</a>
 							</div>
 						</div>
 						<div class="ui raised segments">
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/Mosiyuan/mosiyuan/index.html" 
-										style="font-size:17px" class="indexnot">
+								<li><a href="frontend/Mosiyuan/mosiyuan/index.html" style="font-size:17px"
+										class="indexnot">
 										Mosiyuan!
 									</a>
 							</div>
 						</div>
 						<div class="ui raised segments">
 							<div class="ui segment" style="background-color:rgb(247, 245, 239)!important">
-								<li><a href="frontend/game/2048/2048.html"  style="font-size:17px"
-										class="indexnot">
+								<li><a href="frontend/game/2048/2048.html" style="font-size:17px" class="indexnot">
 										2048!
 									</a>
 							</div>
