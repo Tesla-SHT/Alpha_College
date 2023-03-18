@@ -160,7 +160,20 @@
 				</div>
 
 			</div>
-		</div>
+		</div>			
+		<!--滚动展示进度-->
+		<script>$(window).scroll(function () {
+				var wintop = $(window).scrollTop(), docheight =
+
+					$(document).height(), winheight = $(window).height();
+				var scrolled = (wintop / (docheight - winheight)) * 100;
+
+				$('.scroll-line').css('width', (scrolled + '%'));
+			});</script>
+
+		<div class="scroll-line" style="
+		position: fixed;z-index:9999999"></div>
+		<!--滚动展示进度结束-->
 	</header>
 	<br>
 	<br>

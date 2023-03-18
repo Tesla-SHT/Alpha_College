@@ -170,21 +170,53 @@ table th {
 .btn-group:hover .dropdown-menu {
 	display: block;
 }
+
 .dropdown-toggle {
 	margin: auto;
 }
+
 /*星空装饰*/
 #skystardecoration {
 	height: 70px;
 	display: block;
 }
+
 /*滚动条*/
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 5px;
-    background-color: transparent;
-  }
-  ::-webkit-scrollbar-thumb {
-    border-radius: 10px;
-    background-color: #cdcabd;
-  }
+	width: 10px;
+	height: 5px;
+	background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 10px;
+	background-color: #cdcabd;
+}
+
+/*顶部滚动展示进度*/
+.scroll-line {
+	height: 2px;
+	margin-bottom: -2px;
+	background: #0089f2;
+	width: 100%;
+}
+
+/*回到顶部*/
+#backtop {
+	display: none;
+	position: fixed;
+	bottom: 20px;
+	right: 30px;
+	z-index: 99;
+	border: none;
+	outline: none;
+	background-color: red;
+	color: white;
+	cursor: pointer;
+	padding: 15px;
+	border-radius: 15px;
+}
+
+#backtop:hover {
+	background-color: #555;
+}
