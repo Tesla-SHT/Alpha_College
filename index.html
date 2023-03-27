@@ -29,29 +29,31 @@
 	<script>
 		setTimeout(function () {
 			$(".loading-div").hide();
-			$('body').css('overflow', 'scroll');
+			$(".main").css('display', 'block');
 		}, 8000)
 		document.onreadystatechange = function () {
 			if (document.readyState == "complete") {
 				$(".loading-div").hide();
-				$('body').css('overflow', 'scroll');
+				$(".main").css('display', 'block');
 			}
-		} 
+		}
+
 	</script>
 	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
 </head>
 
 <body>
-	<style>
-		body {
-			overflow: hidden;
-		}
-	</style>
 	<!--加载界面-->
+	<style>
+		.main {
+			display: none;
+		}
+	</style>	
 	<div class="loading-div">
 		<i class="fa fa-spinner fa-pulse fa-3x fa-fw "></i>
 		<span class="sr-only">Loading...</span>
 	</div>
+
 	<!--独立主体部分，为了与加载界面区分-->
 	<div class="main">
 
@@ -145,7 +147,7 @@
 					</div>
 
 				</div>
-			</div> 
+			</div>
 			<!--滚动展示进度-->
 			<script>$(window).scroll(function () {
 					var wintop = $(window).scrollTop(), docheight =
@@ -586,4 +588,14 @@
 	</div>
 </body>
 <script src="frontend/js/index.js"></script>
+<script>
+	function setElementSize() {
+		const screenWidth = window.innerWidth;
+		const screenHeight = window.innerHeight;
+		const element = document.querySelector('.loading-div');
+		console.log(element);
+		element.style.width = screenWidth + 'px';
+		element.style.height = screenHeight + 'px';
+	}
+</script>
 </html>

@@ -3,6 +3,7 @@
 
 body {
 	background-color: rgb(250, 248, 242) !important;
+	font-family: Microsoft YaHei, NotoSansSC-Regular, NotoSansSC, PingFang SC, sans-serif;
 }
 
 .item {
@@ -38,7 +39,8 @@ body {
 }
 
 .indexnot {
-	font-family: Georgia, 'Times New Roman', Times, serif;
+	/*font-family: Georgia, 'Times New Roman', Times, serif;*/
+	font-family: Microsoft YaHei, NotoSansSC-Regular, NotoSansSC, PingFang SC, sans-serif;
 	text-decoration: none !important;
 	font-size: 17px !important;
 }
@@ -139,21 +141,18 @@ table th {
 /*加载界面*/
 
 .loading-div {
-	width: 1800px;
-	height: 1000px;
-	background-color: #fff;
-	display: table-cell;
-	vertical-align: middle;
+	height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
 	color: #555;
-	overflow: hidden;
-	text-align: center;
 }
-
+/*
 .loading-div::before {
 	display: inline-block;
 	vertical-align: middle;
 }
-
+*/
 /*粒子特效*/
 #particles-js {
 	position: fixed;
