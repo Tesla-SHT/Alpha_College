@@ -372,8 +372,9 @@
 			transition: all 0.5s ease-in;
 		}
 
-		.impress-supported .year2012,
-		.impress-supported .year2013 {
+		.impress-supported .year2022,
+		.impress-supported .year2024,
+		.impress-supported .year2023 {
 			position: absolute;
 			top: -120px;
 			color: rgba(255, 255, 255, .5);
@@ -381,8 +382,9 @@
 			color: #fff;
 		}
 
-		.impress-not-supported .year2012,
-		.impress-not-supported .year2013 {
+		.impress-not-supported .year2022,
+		.impress-not-supported .year2024,
+		.impress-not-supported .year2023 {
 			padding: 0;
 			width: 110px;
 			height: 38px;
@@ -546,7 +548,7 @@
 		.impress-enabled .step.active .show3 p,
 		.impress-enabled .step.active .show4 3 img {
 			left: auto;
-			right:0;
+			right: 0;
 			width: 460px;
 		}
 
@@ -655,7 +657,7 @@
 			height: 50px;
 			cursor: pointer;
 			font-size: 24px;
-			font-weight:bold;
+			font-weight: bold;
 			border-radius: 50%;
 			background-color: rgba(255, 255, 255, .2);
 			-webkit-transition: all 0.2s ease-in;
@@ -852,8 +854,9 @@
 			<div id="line" class="line_white"></div>
 			<div id="impress">
 				<div id="timeList">
+					<!--data-x是每个事件差200，年份和当年第一个事件差600；记得年份和事件都要让id加一-->
 					<div class="step year" data-x="-600" data-y="0" data-scale="0.5" id="0">
-						<div class="year2012">2022</div>
+						<div class="year2022">2022</div>
 						<div class="list_show">2022年<br /></div>
 					</div>
 					<div class="timeList_item step" data-x="0" data-y="0" id="1">
@@ -868,7 +871,7 @@
 					<img src="images/event2.jpg">
 					<h2><a href="#">全面启空间自定义风格</a></h2>
 					<p class="m160">Less CSS 框架开发<br/>7种方案随心选择</p>
-				</div>-->
+					</div>-->
 					</div>
 					<div class="timeList_item step" data-x="400" data-y="0" id="3">
 						<div class="circle">09/12</div>
@@ -877,7 +880,7 @@
 					<img src="images/event3.png" width="500">
 					<h2><a href="#">收录软件超过2万</a></h2>
 					<p>截至2012年4月3日，收录的软件/项目（包括极少部分商业软件）达到2万款。</p>
-				</div>-->
+					</div>-->
 					</div>
 					<div class="timeList_item step" data-x="600" data-y="0" id="4">
 						<div class="circle">10/01</div>
@@ -886,7 +889,7 @@
 					<img src="images/event4.jpg" width="500">
 					<h2><a href="#">成都源创会</a></h2>
 					<p><img src="images/chengdu.jpg" /></p>
-				</div>-->
+					</div>-->
 					</div>
 					<div class="timeList_item step" data-x="800" data-y="0" id="5">
 						<div class="circle">10/14</div>
@@ -895,7 +898,25 @@
 					<img src="images/event5.png" width="500">
 					<h2><a href="#">开源U型枕</a></h2>
 					<p>倾情定制，开源U型枕！<br/>我们找了我们能找到的最好的工厂，用最好的面料加最好的粒子定制！</p>
-				</div>-->
+					</div>-->
+					</div>
+					<div class="timeList_item step" data-x="1000" data-y="0" id="6">
+						<div class="circle">11/3</div>
+						<h2 class="timeList_item_title">Open entertainment column including some games </h2>
+					</div>
+
+					<!--2023-->
+					<div class="step year" data-x="1200" data-y="0" data-scale="0.5" id="7">
+						<div class="year2023">2023</div>
+						<div class="list_show">2023年<br /></div>
+					</div>
+					<div class="timeList_item step" data-x="1800" data-y="0" id="8">
+						<div class="circle">1/7</div>
+						<h2 class="timeList_item_title">Update the Website Milestone page</h2>
+					</div>
+					<div class="timeList_item step" data-x="2000" data-y="0" id="9">
+						<div class="circle">3/2</div>
+						<h2 class="timeList_item_title">Update the Blog page</h2>
 					</div>
 				</div>
 			</div>
