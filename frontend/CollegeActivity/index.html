@@ -131,19 +131,7 @@
 
             </div>
         </div>
-        <!--滚动展示进度-->
-        <script>$(window).scroll(function () {
-                var wintop = $(window).scrollTop(), docheight =
 
-                    $(document).height(), winheight = $(window).height();
-                var scrolled = (wintop / (docheight - winheight)) * 100;
-
-                $('.scroll-line').css('width', (scrolled + '%'));
-            });</script>
-
-        <div class="scroll-line" style="
-			position: fixed;z-index:9999999"></div>
-        <!--滚动展示进度结束-->
     </header>
     <br>
     <br>
@@ -156,7 +144,7 @@
             <h3 class="profile-title">Alpha College Activities</h3>
         </div><!-- top-section -->
         <div class="main-navigation">
-            <ul class="navigation" style="text-align: center;">
+            <ul class="navigation" >
                 <style>
                     .line {
                         height: 0;
@@ -166,7 +154,7 @@
 
                     .text {
                         position: relative;
-                        top: -14px;
+                        top: -10px;
                         background-color: #fff;
                     }
                 </style>
@@ -174,7 +162,7 @@
                     <span class="text"style="background-color:#5f6d7e;"><b>2023</b></span>
                 </div>
                 <li><a href="#2023Basketball">College Basketball Competition</a></li>
-                <li><a href="#2023Badminton">College Badminton Competition</a></li>
+                <li><a href="#2023Badminton" style="line-height: 150%;">College Badminton Competition</a></li>
 
 
                 <div class="line" style="height:fit-content;margin-top:12px;">
