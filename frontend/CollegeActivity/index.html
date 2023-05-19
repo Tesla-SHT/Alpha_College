@@ -51,6 +51,7 @@
                 display: block;
                 padding: 10px;
                 text-decoration: none;
+                text-align: center;
             }
     
             .navigation .dropdown-menu {
@@ -80,94 +81,110 @@
     <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <header><!--导航栏-->
-        <div class="ui yellow labeled fixed borderless menu" style="height:80px">
-            <a href="../underneath_decoration/skystar.html" class="item">
-                <img class="ui small image icon2" src="../../image/logo/logo.jpg">
-            </a>
+		<header><!--导航栏-->
+			<div class="ui yellow labeled fixed borderless menu" style="height:80px">
+				<a href="../underneath_decoration/skystar.html" class="item">
+					<img class="ui small image icon2" src="../../image/logo/logo.jpg">
+				</a>
 
-            <a href="../../index.html" class="item navigator">
-                <i class="large home icon"></i>
-                Home
-            </a>
-            <a href="../html/notification.html" class="item navigator">
-                <i class="large comment alternate icon"></i>
-                Notification
-            </a>
-            <div class="item navigator" style="">
-                <div class="dropdown navigator" style="">
-                    <i class="large pencil alternate icon button" style="color: #7d97df!important;"></i>
-                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-                        style="background-color:white;margin: 0px !important;">
-                        <a href="../html/meetingsummary.html" class="item navigator"
-                            style="border-bottom: none;padding: 0px !important;">Journal</a>
+				<a href="../../index.html" class="item navigator">
+					<i class="large home icon"></i>
+					Home
+				</a>
+				<a href="../html/meetingsummary.html" class="item navigator">
+					<i class="large comment alternate icon"></i>
+					Journal
+				</a>
+				<a href="../CollegeActivity/index.html" class="active yellow item navigator">
+					<i class="large pencil alternate icon"></i>
+					Activity</a>
+				<div class="item navigator" style="">
+					<div class="dropdown navigator" style="">
+						<i class="large paper plane icon"></i>
+						<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+							style="background-color:white;margin: 0px !important;">
+                            <p class="item navigator" style="border-bottom: none;padding: 0px !important;background-color: #fff;">Blog</p>
 
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
-                            <a href="../html/meetingsummary.html" role="menuitem" tabindex="-1"
-                                style="color:#7d97df!important;">Meeting
-                                Summary</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="index.html" role="menuitem" tabindex="-1" style="color:#7d97df">College
-                                Activity</a>
-                        </li>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
+								<a href="../html/blog.html" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;">Daily Life</a>
+							</li>
+							<li role="presentation">
+								<a href="../PictureRepository/index.html" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;">Picture Repository</a>
+							</li>
 
-                    </ul>
-                </div>
-            </div>
-            <a href="../html/blog.html" class="item navigator">
-                <i class="large paper plane icon"></i>
-                Blog
-            </a>
-            <a href="../html/forum.html" class="item navigator" style="margin-left: 15px !important;">
-                <i class="large comments icon"></i>Forum</a>
-            <div class="item navigator" style="">
-                <div class="dropdown navigator" style="">
-                    <i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
-                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-                        style="background-color:white;margin: 0px !important;">
-                        <a href="../html/people.html" class="item navigator"
-                            style="border-bottom: none;padding: 0px !important;">People</a>
-                    </button>
-                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-                        <li role="presentation">
+						</ul>
+					</div>
+				</div>
+				<a href="https://community.westlake.edu.cn" class="item navigator" style="margin-left: 15px !important;">
+					<i class="large comments icon"></i>Forum</a>
+				<div class="item navigator" style="">
+					<div class="dropdown navigator" style="">
+						<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+						<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+							style="background-color:white;margin: 0px !important;">
+							<a href="../html/people.html" class="item navigator"
+								style="border-bottom: none;padding: 0px !important;">About</a>
+						</button>
+						<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+							<li role="presentation">
 
-                            <a href="../html/people.html#aboutcollege" role="menuitem" tabindex="-1"
-                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-                                Alpha College</a>
-                        </li>
-                        <li role="presentation">
-                            <a href="../html/people.html#collegemember" role="menuitem" tabindex="-1"
-                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-                                College Members</a>
-                        </li>
+								<a href="../html/people.html#aboutcollege" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+									Alpha College</a>
+							</li>
+							<li role="presentation">
+								<a href="../html/people.html#collegemember" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+									College Members</a>
+							</li>
+							<li role="presentation">
+								<a href="../时间轴/Milestone.html" role="menuitem" tabindex="-1"
+									style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+									Website Milestone</a>
+							</li>
 
-                    </ul>
-                </div>
-            </div>
-            <!--置右部分-->
-            <div class="right fixed menu" style="z-index:999!important">
-                <div class="ui right aligned category search item">
-                    <div class="ui transparent icon input">
-                        <input class="prompt" type="text" placeholder="Search">
-                        <i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
-                    </div>
-                    <div class="results"></div>
-                </div>
-                <!--<a href="https://westlake.edu.cn" class="ui right floated header">
+						</ul>
+					</div>
+				</div>
+				<!--置右部分-->
+				<div class="right fixed menu" style="z-index:999!important">
+					<div class="ui right aligned category search item">
+						<div class="ui transparent icon input">
+							<input class="prompt" type="text" placeholder="Search">
+							<i class="search link icon"
+								style="margin-bottom:20px!important;margin-top:0px!important"></i>
+						</div>
+						<div class="results"></div>
+					</div>
+					<!--<a href="https://westlake.edu.cn" class="ui right floated header">
 					<img class="ui small image icon1" src="image/Westlakelogo.jpg">
 				</a>-->
-                <div class="tiny ui buttons" style="margin:20px 0 20px 0;">
-                    <button class="tiny ui button ">中文</button>
-                    <div class="or"></div>
-                    <button class="tiny ui button active yellow button">English</button>
-                </div>
+					<div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+						<button class="tiny ui button ">中文</button>
+						<div class="or"></div>
+						<button class="tiny ui button active yellow button">English</button>
+					</div>
 
-            </div>
-        </div>
-    </header>
+				</div>
+			</div>
+			<!--滚动展示进度-->
+			<script>$(window).scroll(function () {
+					var wintop = $(window).scrollTop(), docheight =
+
+						$(document).height(), winheight = $(window).height();
+					var scrolled = (wintop / (docheight - winheight)) * 100;
+
+					$('.scroll-line').css('width', (scrolled + '%'));
+				});</script>
+
+			<div class="scroll-line" style="
+			position: fixed;z-index:9999999"></div>
+			<!--滚动展示进度结束-->
+		</header>
     <br>
     <br>
     <br>
@@ -179,7 +196,7 @@
             <h3 class="profile-title">Alpha College Activities</h3>
         </div><!-- top-section -->
         <div class="main-navigation">
-            <ul class="navigation">
+            <ul class="navigation" style="text-align: center;">
                 <li>
                     <a href="#"><i class="fa fa-link"></i> 2023</a>
                     <ul class="dropdown-menu">
