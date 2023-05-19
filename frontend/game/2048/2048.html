@@ -10,7 +10,7 @@
     <script src="../../../ui_resources/jquery-3.1.1.min.js"></script>
     <script src="../../../ui_resources/semantic.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
-	<link href="../../../ui_resources/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
+    <link href="../../../ui_resources/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
     <script>
         $(function () {
             $(".ui.dropdown").dropdown();
@@ -92,123 +92,145 @@
 </head>
 
 <body onkeydown="keyLogin();">
-	<header><!--导航栏-->
-		<div class="ui yellow labeled fixed borderless menu" style="height:80px">
-			<a href="../../underneath_decoration/skystar.html" class="item">
-				<img class="ui small image icon2" src="../../../image/logo/logo.jpg">
-			</a>
+    <header><!--导航栏-->
+        <div class="ui yellow labeled fixed borderless menu" style="height:80px">
+            <a href="../../underneath_decoration/skystar.html" class="item">
+                <img class="ui small image icon2" src="../../../image/logo/logo.jpg">
+            </a>
 
-			<a href="../../../index.html" class="item navigator">
-				<i class="large home icon"></i>
-				Home
-			</a>
-			<a href="../../html/meetingsummary.html" class="item navigator">
-				<i class="large comment alternate icon"></i>
-				Journal
-			</a>
-			<a href="../../CollegeActivity/index.html" class="item navigator">
-				<i class="large pencil alternate icon"></i>
-				Activity</a>
-			<div class="item navigator" style="">
-				<div class="dropdown navigator" style="">
-					<i class="large paper plane icon"></i>
-					<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-						style="background-color:white;margin: 0px !important;">
-                        <p class="item navigator" style="border-bottom: none;padding: 0px !important;background-color: #fff;">Blog</p>
+            <a href="../../../index.html" class="item navigator">
+                <i class="large home icon"></i>
+                Home
+            </a>
+            <a href="../../html/meetingsummary.html" class="item navigator">
+                <i class="large comment alternate icon"></i>
+                Journal
+            </a>
+            <a href="../../CollegeActivity/index.html" class="item navigator">
+                <i class="large pencil alternate icon"></i>
+                Activity</a>
+            <div class="item navigator" style="">
+                <div class="dropdown navigator" style="">
+                    <i class="large paper plane icon"></i>
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                        style="background-color:white;margin: 0px !important;">
+                        <p class="item navigator"
+                            style="border-bottom: none;padding: 0px !important;background-color: #fff;">Blog</p>
 
-					</button>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-						<li role="presentation">
-							<a href="../../html/blog.html" role="menuitem" tabindex="-1"
-								style="color:#7d97df!important;">Daily Life</a>
-						</li>
-						<li role="presentation">
-							<a href="../../PictureRepository/index.html" role="menuitem" tabindex="-1"
-								style="color:#7d97df!important;">Picture Repository</a>
-						</li>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
+                            <a href="../../html/blog.html" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;">Daily Life</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="../../PictureRepository/index.html" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;">Picture Repository</a>
+                        </li>
 
-					</ul>
-				</div>
-			</div>
-			<a href="https://community.westlake.edu.cn" class="item navigator" style="margin-left: 15px !important;">
-				<i class="large comments icon"></i>Forum</a>
+                    </ul>
+                </div>
+            </div>
+            <a href="https://community.westlake.edu.cn" class="item navigator" style="margin-left: 15px !important;">
+                <i class="large comments icon"></i>Forum</a>
 
-			<div class="item navigator" style="">
-				<div class="dropdown navigator" style="">
-					<i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
-					<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
-						style="background-color:white;margin: 0px !important;">
-						<a href="../../html/people.html" class="item navigator"
-							style="border-bottom: none;padding: 0px !important;">About</a>
-					</button>
-					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-						<li role="presentation">
+            <div class="item navigator" style="">
+                <div class="dropdown navigator" style="">
+                    <i class="large users icon button" style="background-color:white;color: #7d97df!important;"></i>
+                    <button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
+                        style="background-color:white;margin: 0px !important;">
+                        <a href="../../html/people.html" class="item navigator"
+                            style="border-bottom: none;padding: 0px !important;">About</a>
+                    </button>
+                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                        <li role="presentation">
 
-							<a href="../../html/people.html#aboutcollege" role="menuitem" tabindex="-1"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-								Alpha College</a>
-						</li>
-						<li role="presentation">
-							<a href="../../html/people.html#collegemember" role="menuitem" tabindex="-1"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-								College Members</a>
-						</li>
-						<li role="presentation">
-							<a href="../../时间轴/Milestone.html" role="menuitem" tabindex="-1"
-								style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
-								Website Milestone</a>
-						</li>
+                            <a href="../../html/people.html#aboutcollege" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                Alpha College</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="../../html/people.html#collegemember" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                College Members</a>
+                        </li>
+                        <li role="presentation">
+                            <a href="../../时间轴/Milestone.html" role="menuitem" tabindex="-1"
+                                style="color:#7d97df!important;margin: 0px !important;border:0px!important;">
+                                Website Milestone</a>
+                        </li>
 
-					</ul>
-				</div>
-			</div>
-			<!--置右部分-->
-			<div class="right fixed menu" style="z-index:999!important">
-				<div class="ui right aligned category search item">
-					<div class="ui transparent icon input">
-						<input class="prompt" type="text" placeholder="Search">
-						<i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
-					</div>
-					<div class="results"></div>
-				</div>
+                    </ul>
+                </div>
+            </div>
+            <!--置右部分-->
+            <div class="right fixed menu" style="z-index:999!important">
+                <div class="ui right aligned category search item">
+                    <div class="ui transparent icon input">
+                        <input class="prompt" type="text" placeholder="Search">
+                        <i class="search link icon" style="margin-bottom:20px!important;margin-top:0px!important"></i>
+                    </div>
+                    <div class="results"></div>
+                </div>
 
-				<div class="tiny ui buttons" style="margin:20px 0 20px 0;">
-					<button class="tiny ui button ">中文</button>
-					<div class="or"></div>
-					<button class="tiny ui button active yellow button">English</button>
-				</div>
+                <div class="tiny ui buttons" style="margin:20px 0 20px 0;">
+                    <button class="tiny ui button ">中文</button>
+                    <div class="or"></div>
+                    <button class="tiny ui button active yellow button">English</button>
+                </div>
 
-			</div>
-		</div>
-		<!--滚动展示进度-->
-		<script>$(window).scroll(function () {
-				var wintop = $(window).scrollTop(), docheight =
+            </div>
+        </div>
+        <!--滚动展示进度-->
+        <script>$(window).scroll(function () {
+                var wintop = $(window).scrollTop(), docheight =
 
-					$(document).height(), winheight = $(window).height();
-				var scrolled = (wintop / (docheight - winheight)) * 100;
+                    $(document).height(), winheight = $(window).height();
+                var scrolled = (wintop / (docheight - winheight)) * 100;
 
-				$('.scroll-line').css('width', (scrolled + '%'));
-			});</script>
+                $('.scroll-line').css('width', (scrolled + '%'));
+            });</script>
 
-		<div class="scroll-line" style="
+        <div class="scroll-line" style="
 		position: fixed;z-index:9999999"></div>
-		<!--滚动展示进度结束-->
-	</header>
+        <!--滚动展示进度结束-->
+    </header>
     <br>
     <br>
     <br>
     <br>
-    <h1>2048</h1>
-    <p>Score: <span id="Score"></span></p>
+    <h1 style="text-align: center;">2048</h1>
+    <p style="text-align: center;">Score: <span id="Score"></span></p>
     <span id="FF1"></span>
     <span id="FF2"></span>
+
+    <style>
+        canvas {
+            display: block;
+            margin: 0 auto;
+            border: 1px solid #000;
+        }
+    </style>
+
     <canvas id="game" width="400" height="400"></canvas>
     <script>
-        var ffff=0;
+        new Image().src = "../../../image/2048/2.png";
+        new Image().src = "../../../image/2048/24.png";
+        new Image().src = "../../../image/2048/8.png";
+        new Image().src = "../../../image/2048/16.png";
+        new Image().src = "../../../image/2048/32.png";
+        new Image().src = "../../../image/2048/64.png";
+        new Image().src = "../../../image/2048/128.png";
+        new Image().src = "../../../image/2048/256.png";
+        new Image().src = "../../../image/2048/512.png";
+        new Image().src = "../../../image/2048/1024.png";
+        new Image().src = "../../../image/2048/2048.png";
+        new Image().src = "../../../image/2048/4096.png";
+        var ffff = 0;
         // Get the canvas element
         var canvas = document.getElementById("game");
         var ctx = canvas.getContext("2d");
-        var score = 44376;
+        var score = 0;
         updateScore();
         function updateScore() {
             document.getElementById("Score").innerHTML = score;
@@ -242,78 +264,11 @@
                     ctx.textAlign = "center";
                     ctx.textBaseline = "middle";
                     //ctx.fillText(grid[row][col], x + 50, y + 50);
-                    if (grid[row][col] == 2) {
+                    if (grid[row][col] > 0 && grid[row][col]<8192) {
                         var imageObj = new Image();
-                        imageObj.src = '../../../image/2048/2.png';
-                        ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
+                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png';
+                        ctx.drawImage(imageObj, x, y, imageObj.width, imageObj.height);
                     }
-                    else
-                        if (grid[row][col] == 4) {
-                            var imageObj = new Image();
-                            imageObj.src = '../../../image/2048/4.png';
-                            ctx.drawImage(imageObj, x, y, imageObj.width / 1.32, imageObj.height / 1.37);
-                        }
-                        else
-                            if (grid[row][col] == 8) {
-                                var imageObj = new Image();
-                                imageObj.src = '../../../image/2048/8.png';
-                                ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.32);
-                            }
-                            else
-                                if (grid[row][col] == 16) {
-                                    var imageObj = new Image();
-                                    imageObj.src = '../../../image/2048/16.png';
-                                    ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.32);
-                                }
-                                else
-                                    if (grid[row][col] == 32) {
-                                        var imageObj = new Image();
-                                        imageObj.src = '../../../image/2048/32.png';
-                                        ctx.drawImage(imageObj, x, y, imageObj.width / 1.35, imageObj.height / 1.37);
-                                    }
-                                    else
-                                        if (grid[row][col] == 64) {
-                                            var imageObj = new Image();
-                                            imageObj.src = '../../../image/2048/64.png';
-                                            ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.32);
-                                        }
-                                        else
-                                            if (grid[row][col] == 128) {
-                                                var imageObj = new Image();
-                                                imageObj.src = '../../../image/2048/128.png';
-                                                ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
-                                            }
-                                            else
-                                                if (grid[row][col] == 256) {
-                                                    var imageObj = new Image();
-                                                    imageObj.src = '../../../image/2048/256.png';
-                                                    ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
-                                                }
-                                                else
-
-                                                    if (grid[row][col] == 512) {
-                                                        var imageObj = new Image();
-                                                        imageObj.src = '../../../image/2048/512.png';
-                                                        ctx.drawImage(imageObj, x, y, imageObj.width / 1.37, imageObj.height / 1.37);
-                                                    }
-                                                    else
-                                                        if (grid[row][col] == 1024) {
-                                                            var imageObj = new Image();
-                                                            imageObj.src = '../../../image/2048/1024.png';
-                                                            ctx.drawImage(imageObj, x, y, imageObj.width / 0.765, imageObj.height / 0.765);
-                                                        }
-                                                        else
-                                                            if (grid[row][col] == 2048) {
-                                                                var imageObj = new Image();
-                                                                imageObj.src = '../../../image/2048/2048.png';
-                                                                ctx.drawImage(imageObj, x, y, imageObj.width / 0.765, imageObj.height / 0.765);
-                                                            }
-                                                            else
-                                                                if (grid[row][col] == 4096) {
-                                                                    var imageObj = new Image();
-                                                                    imageObj.src = '../../../image/2048/4096.png';
-                                                                    ctx.drawImage(imageObj, x, y, imageObj.width / 0.95, imageObj.height /0.93);
-                                                                }
 
                 }
             }
@@ -346,37 +301,37 @@
         }
         //按回车 重新加载
         function keyLogin() {
-                if (event.keyCode == 13 && ffff==1)  //回车键的键值为13
+            if (event.keyCode == 13 && ffff == 1)  //回车键的键值为13
                 location.reload();
-            }
+        }
         //游戏结束提示框
         function alertMsg(text) {
-                var bgHtml = "<div class='msg-bg'></div>";
-                var msgAlertHtml = "<div class='msg-alertWrap'>" +
-                    "<div class='msg-alert'>" +
-                    "<div class='msg-header'><button class='msg-dismiss'><span>&times;</span></button><h4 class='msg-title'>Game Over!</h4></div>" +
-                    "<div class='msg-body'>" +
-                    "<div class='msg-content'></div>" +
-                    "</div>" +
-                    "<div class='msg-footer'>" +
-                    "<button id='input1' type='button' class='msg-btnOk'>确定</button>" +
-                    "</div>" +
-                    "</div>" +
-                    "</div>";
-                if ($(".msg-bg").length == 0) {
-                    $("body").append(bgHtml + msgAlertHtml);
-                } else {
-                    $("body").append(msgAlertHtml);
-                }             
-                $(".msg-alertWrap:last-child .msg-content").html(text);
-                $(".msg-btnOk,.msg-dismiss").on("click", function () {
-                    $(this).parents(".msg-alertWrap").remove();
-                    if ($(".msg-alertWrap").length == 0) {
-                        $(".msg-bg").remove();
-                    }
-                })                
-
+            var bgHtml = "<div class='msg-bg'></div>";
+            var msgAlertHtml = "<div class='msg-alertWrap'>" +
+                "<div class='msg-alert'>" +
+                "<div class='msg-header'><button class='msg-dismiss'><span>&times;</span></button><h4 class='msg-title'>Game Over!</h4></div>" +
+                "<div class='msg-body'>" +
+                "<div class='msg-content'></div>" +
+                "</div>" +
+                "<div class='msg-footer'>" +
+                "<button id='input1' type='button' class='msg-btnOk'>确定</button>" +
+                "</div>" +
+                "</div>" +
+                "</div>";
+            if ($(".msg-bg").length == 0) {
+                $("body").append(bgHtml + msgAlertHtml);
+            } else {
+                $("body").append(msgAlertHtml);
             }
+            $(".msg-alertWrap:last-child .msg-content").html(text);
+            $(".msg-btnOk,.msg-dismiss").on("click", function () {
+                $(this).parents(".msg-alertWrap").remove();
+                if ($(".msg-alertWrap").length == 0) {
+                    $(".msg-bg").remove();
+                }
+            })
+
+        }
         function CheckGameOver() {
             var fff = 1;
             for (var row = 0; row < 4; row++) {
@@ -394,7 +349,7 @@
                     if (grid[row][col] == grid[row + 1][col]) { fff = 0; return; }
                 }
             }
-            if (fff == 1) {ffff=1; alertMsg("Your score is " + score); }
+            if (fff == 1) { ffff = 1; alertMsg("Your score is " + score); }
         }
         // Handle keyboard input
         document.addEventListener("keydown", function (event) {
