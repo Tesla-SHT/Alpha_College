@@ -215,7 +215,7 @@
     <canvas id="game" width="400" height="400"></canvas>
     <script>
         new Image().src = "../../../image/2048/2.png";
-        new Image().src = "../../../image/2048/24.png";
+        new Image().src = "../../../image/2048/4.png";
         new Image().src = "../../../image/2048/8.png";
         new Image().src = "../../../image/2048/16.png";
         new Image().src = "../../../image/2048/32.png";
@@ -452,7 +452,7 @@
                     }
                 }
                 for (var row = 0; row < 4; row++) {
-                    if ((grid[row][col] != newCol[row]) && (grid[row][col] != '')) {
+                    if ((grid[row][col] != newCol[row]) ) {
                         flag = 1;
                     }
                     grid[row][col] = newCol[row];
@@ -461,7 +461,7 @@
             // Merge the tiles up
             for (var row = 0; row < 3; row++) {
                 for (var col = 0; col < 4; col++) {
-                    if (grid[row][col] == grid[row + 1][col]) {
+                    if ((grid[row][col] == grid[row + 1][col])&& (grid[row][col] != '')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         updateScore();
@@ -508,7 +508,7 @@
                     }
                 }
                 for (var col = 3; col >= 0; col--) {
-                    if ((grid[row][col] != newRow[col]) && (grid[row][col] != '')) { flag = 1; }
+                    if ((grid[row][col] != newRow[col]) ) { flag = 1; }
                 }
                 grid[row] = newRow;
             }
@@ -516,7 +516,7 @@
             // Merge the tiles to the right
             for (var row = 0; row < 4; row++) {
                 for (var col = 3; col > 0; col--) {
-                    if (grid[row][col] == grid[row][col - 1]) {
+                    if ((grid[row][col] == grid[row][col - 1])&& (grid[row][col] != '')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         updateScore();
