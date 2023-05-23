@@ -181,19 +181,6 @@
 
             </div>
         </div>
-        <!--滚动展示进度-->
-        <script>$(window).scroll(function () {
-                var wintop = $(window).scrollTop(), docheight =
-
-                    $(document).height(), winheight = $(window).height();
-                var scrolled = (wintop / (docheight - winheight)) * 100;
-
-                $('.scroll-line').css('width', (scrolled + '%'));
-            });</script>
-
-        <div class="scroll-line" style="
-		position: fixed;z-index:9999999"></div>
-        <!--滚动展示进度结束-->
     </header>
     <br>
     <br>
@@ -214,18 +201,6 @@
 
     <canvas id="game" width="400" height="400"></canvas>
     <script>
-        new Image().src = "../../../image/2048/2.png";
-        new Image().src = "../../../image/2048/4.png";
-        new Image().src = "../../../image/2048/8.png";
-        new Image().src = "../../../image/2048/16.png";
-        new Image().src = "../../../image/2048/32.png";
-        new Image().src = "../../../image/2048/64.png";
-        new Image().src = "../../../image/2048/128.png";
-        new Image().src = "../../../image/2048/256.png";
-        new Image().src = "../../../image/2048/512.png";
-        new Image().src = "../../../image/2048/1024.png";
-        new Image().src = "../../../image/2048/2048.png";
-        new Image().src = "../../../image/2048/4096.png";
         var ffff = 0;
         // Get the canvas element
         var canvas = document.getElementById("game");
@@ -242,13 +217,40 @@
             ['', '', '', ''],
             ['', '', '', '']
         ];
-
+        var imageob=['', '','', '','', '', '', '','', '', '', '','', '', '', ''];
+        for (var i = 0; i < 16; i++) {
+            imageob[i] = new Image();
+        }
+        imageob[0].src = "../../../image/2048/2.png";
+        imageob[1].src = "../../../image/2048/4.png";
+        imageob[2].src = "../../../image/2048/8.png";
+        imageob[3].src = "../../../image/2048/16.png";
+        imageob[4].src = "../../../image/2048/32.png";
+        imageob[5].src = "../../../image/2048/64.png";
+        imageob[6].src = "../../../image/2048/128.png";
+        imageob[7].src = "../../../image/2048/256.png";
+        imageob[8].src = "../../../image/2048/512.png";
+        imageob[9].src = "../../../image/2048/1024.png";
+        imageob[10].src = "../../../image/2048/2048.png";
+        imageob[11].src = "../../../image/2048/4096.png";
         init();
         // Draw the game grid
         function drawGrid() {
             // Clear the canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-
+/*
+            new Image().src = "../../../image/2048/2.png";
+            new Image().src = "../../../image/2048/4.png";
+            new Image().src = "../../../image/2048/8.png";
+            new Image().src = "../../../image/2048/16.png";
+            new Image().src = "../../../image/2048/32.png";
+            new Image().src = "../../../image/2048/64.png";
+            new Image().src = "../../../image/2048/128.png";
+            new Image().src = "../../../image/2048/256.png";
+            new Image().src = "../../../image/2048/512.png";
+            new Image().src = "../../../image/2048/1024.png";
+            new Image().src = "../../../image/2048/2048.png";
+            new Image().src = "../../../image/2048/4096.png";*/
             // Draw each cell in the grid
             for (var row = 0; row < 4; row++) {
                 for (var col = 0; col < 4; col++) {
@@ -264,10 +266,10 @@
                     ctx.textAlign = "center";
                     ctx.textBaseline = "middle";
                     //ctx.fillText(grid[row][col], x + 50, y + 50);
-                    if (grid[row][col] > 0 && grid[row][col]<8192) {
-                        var imageObj = new Image();
-                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png';
-                        ctx.drawImage(imageObj, x, y, imageObj.width, imageObj.height);
+                    if (grid[row][col] > 0 && grid[row][col] < 8192) {
+                        /*var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png';*/
+                        ctx.drawImage(imageob[Math.floor((Math.log2(grid[row][col])+0.0001))-1], x, y, 100,100);
                     }
 
                 }
@@ -276,11 +278,9 @@
 
         // Initialize the game
         function init() {
-            // Draw the initial game grid
-            drawGrid();
-
             // Add a new tile to the grid
             addTile();
+
         }
 
         // Add a new tile to the grid
@@ -295,7 +295,22 @@
 
             // Set the value of the new tile to either 2 or 4
             grid[row][col] = Math.random() < 0.9 ? 2 : 4;
+            var x = col * 100;
+                    var y = row * 100;
 
+                    // Draw the cell
+                    ctx.strokeRect(x, y, 100, 100);
+
+                    // Draw the cell value
+                    ctx.font = "48px sans-serif";
+                    ctx.textAlign = "center";
+                    ctx.textBaseline = "middle";
+                    //ctx.fillText(grid[row][col], x + 50, y + 50);
+                    if (grid[row][col] > 0 && grid[row][col] < 8192) {
+                        /*var imageObj = new Image();
+                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png';*/
+                        ctx.drawImage(imageob[Math.floor((Math.log2(grid[row][col])+0.0001))-1], x, y, 100,100);
+                    }
             // Draw the updated game grid
             drawGrid();
         }
@@ -452,7 +467,7 @@
                     }
                 }
                 for (var row = 0; row < 4; row++) {
-                    if ((grid[row][col] != newCol[row]) ) {
+                    if ((grid[row][col] != newCol[row])) {
                         flag = 1;
                     }
                     grid[row][col] = newCol[row];
@@ -461,7 +476,7 @@
             // Merge the tiles up
             for (var row = 0; row < 3; row++) {
                 for (var col = 0; col < 4; col++) {
-                    if ((grid[row][col] == grid[row + 1][col])&& (grid[row][col] != '')) {
+                    if ((grid[row][col] == grid[row + 1][col]) && (grid[row][col] != '')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         updateScore();
@@ -508,7 +523,7 @@
                     }
                 }
                 for (var col = 3; col >= 0; col--) {
-                    if ((grid[row][col] != newRow[col]) ) { flag = 1; }
+                    if ((grid[row][col] != newRow[col])) { flag = 1; }
                 }
                 grid[row] = newRow;
             }
@@ -516,7 +531,7 @@
             // Merge the tiles to the right
             for (var row = 0; row < 4; row++) {
                 for (var col = 3; col > 0; col--) {
-                    if ((grid[row][col] == grid[row][col - 1])&& (grid[row][col] != '')) {
+                    if ((grid[row][col] == grid[row][col - 1]) && (grid[row][col] != '')) {
                         grid[row][col] *= 2;
                         score += grid[row][col];
                         updateScore();
