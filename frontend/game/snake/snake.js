@@ -16,6 +16,14 @@ snakeBody.unshift(newHead);
 
 };
 const drawSnake = (gameBoard) => {
+    /*
+    const snakeLength = document.createElement("p");    
+    snakeLength.style.textAlign = "center";
+    var node = document.createTextNode(snakeBody.length);
+    score.appendChild(node);*/
+
+    var len=document.getElementById("score");
+    len.innerText = snakeBody.length;
     for (let i =0; i < snakeBody.length; i++){
         const segment = snakeBody[i];
         const snakeElement = document.createElement("div");
@@ -24,4 +32,5 @@ const drawSnake = (gameBoard) => {
         snakeElement.classList.add("snake");
         gameBoard.appendChild(snakeElement);
     }
+    
 }
