@@ -1,17 +1,12 @@
-# Alpha_College
+# Alpha College Website
+Welcome to our college's website, which is totally designed and maintained by college members. Alpha College website is one of our major platforms for showing Alpha, consisting of several main sections.
+- "Home": We can show the latest updating, some useful tools and amazing games.
+- "Journal": It records our regular academy meetings, witnessing the birth of various activity schedules.
+- "Activity": We document significant college activities from various sports competitions to the come-of-age ceremony.
+- "Blog": It showcases our lively and fulfilling daily lives, including birthday parties, late-night snacks, and other small events. And the Picture Repository stores numerous memorable moments.
+- "About": Introduce ourselves, like members, our preferences, and our culture.
+  
+Currently, the website has not been hosted on the school's servers yet. As a consequence, the website can only be visited via my personal GitHub page. We welcome everyone to construct our website, whether it's redesigning the layout and color scheme or writing content for academy activities and daily life. Of course, if you are passionate about web programming, you can even rewrite a specific page or the entire website supported by the backend.
 
-Welcome to the website! This website serves as a platform to showcase  recent activities took place in alpha college. The website is designed with a user-friendly interface to enhance your browsing experience.
-
-Currently, the website is in its initial phase, and there are several areas that require improvement. Here is a list of the improvements that are needed:
-
-1. Updating images and content: We need to update the website with images and content from the end of last semester and the beginning of this semester.
-
-2. English/Chinese language switch: We are working on implementing a feature that allows the website to switch between English and Chinese.
-
-3. Subpage layout and structure: We are still working on designing the layout and structure of the subpages to ensure the website is easy to navigate.
-
-4. Image thumbnails: We are working on designing image thumbnails to help increase the loading speed of the website.
-
-5. Meeting minutes link: We are in the process of changing the meeting minutes link to a webpage.
-
-We appreciate your patience while we work to improve the website. Please check back soon for updates.
+ Wish our website a promising and sustainable development!
+![α书院网站新生介绍 (2)](https://github.com/Tesla-SHT/Alpha_College/assets/109467147/24ac56c1-79a9-4962-9399-c2922279171b)
