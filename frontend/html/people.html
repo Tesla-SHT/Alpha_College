@@ -5,10 +5,9 @@
 	<meta charset="utf-8">
 	<title>About Alpha College</title>
 	<link href="../css/index.css" rel="stylesheet">
+	<link href="../css/people.css" rel="stylesheet">
 	<link href="../../ui_resources/semantic.min.css" rel="stylesheet" type="text/css">
 	<link href="../css/navigator.css" rel="stylesheet">
-	<script src="../../ui_resources/jquery-3.1.1.min.js"></script>
-	<script src="../../ui_resources/semantic.min.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
 
 	<link href="../../ui_resources/bootstrap.min.css" rel="stylesheet" type="text/css" media="all">
@@ -45,7 +44,8 @@
 					<i class="large paper plane icon"></i>
 					<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
 						style="background-color:white;margin: 0px !important;">
-						<p class="item navigator" style="border-bottom: none;padding: 0px !important;background-color: #fff;">Blog</p>
+						<p class="item navigator"
+							style="border-bottom: none;padding: 0px !important;background-color: #fff;">Blog</p>
 
 					</button>
 					<ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
@@ -66,7 +66,8 @@
 
 			<div class="item navigator" style="">
 				<div class="dropdown navigator" style="">
-					<i class="yellow active large users icon style="background-color:white;color: #7d97df!important;"></i>
+					<i class="yellow active large users icon style=" background-color:white;color:
+						#7d97df!important;"></i>
 					<button type="button" class="btn dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown"
 						style="background-color:white;margin: 0px !important;">
 						<a href="../html/people.html" class="yellow active item navigator"
@@ -149,68 +150,9 @@
 		<img src="../../image/life&scenery/IMG_20230211_193845.jpg" class="img-circle roudned float-end" alt="..."
 			width="304" height="236">
 	</div>
-	<hr>
-
 	<!--about College Members-->
-	<div class="tableborder">
 		<a name="collegemember"></a>
-		<table width="90%" class="table1">
-			<caption>
-				<h2>
-					Three College Groups</h2>
-			</caption>
-			<thead>
-				<tr>
-					<th>人员</th>
-					<th>文体活动小组</th>
-					<th>文化建设小组</th>
-					<th>综合治理小组</th>
-				</tr>
-			</thead>
-			<tr>
-				<th>组长</th>
-				<td>王元石</td>
-				<td>郑舒乐怡</td>
-				<td>翁歌华</td>
-			</tr>
-			<tr>
-				<th rowspan="8">组员</th>
-				<td>黄霏凡</td>
-				<td>胡胜韬</td>
-				<td>吴陈乐</td>
-			<tr>
-				<td>胡胜韬</td>
-				<td>沈煜奇</td>
-				<td>张乐程</td>
-			</tr>
-			<tr>
-				<td>沈皓天</td>
-				<td>蔡贺丞</td>
-				<td>孙钱成</td>
-			</tr>
-			<tr>
-				<td>孙钱成</td>
-				<td></td>
-				<td>沈皓天</td>
-			</tr>
-			<tr>
-				<td>许经纬</td>
-				<td></td>
-				<td>周禾</td>
-			</tr>
-			<tr>
-				<td>苑东亭</td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr>
-				<td>赵书涵</td>
-				<td></td>
-				<td></td>
-			</tr>
-
-		</table>
-	</div>
+		<div id="Hierarchy"></div>
 
 	<a name="CollegeMmeber">
 		<h2 style="margin-bottom:10px">Members' fundamental information:</h2>
@@ -444,9 +386,15 @@
 			</div>
 		</div>
 	</div>
-	</footer>
+	<footer>
 	<!-- Copyrights Section -->
 	<div class="copyright">&copy;2022 - <strong>Alpha College</strong></div>
+	</footer>
+	
+	<script src="../../ui_resources/jquery-3.1.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+	<script src="../js/people.js"></script>
+	<script src="../../ui_resources/semantic.min.js"></script>
 </body>
 
 </html>
