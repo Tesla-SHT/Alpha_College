@@ -2,42 +2,44 @@
 var data = [{
     "name": "Alpha College",
     "children": [{
-        "name": "2022级",
+        "name": "行政",
         "children": [{
-            "name": "班长",
+            "name": "2022级",
             "children": [{
-                "name": "杨涵"
+                "name": "班长",
+                "children": [{
+                    "name": "杨涵"
+                }]
+            }, {
+                "name": "心理委员",
+                "children": [{
+                    "name": "王浩择"
+                }]
+            }, {
+                "name": "团支书",
+                "children": [{
+                    "name": "顾丁琦"
+                }]
             }]
         }, {
-            "name": "心理委员",
+            "name": "2023级",
             "children": [{
-                "name": "王浩择"
+                "name": "班长",
+                "children": [{
+                    "name": "孙钱成"
+                }]
+            }, {
+                "name": "心理委员",
+                "children": [{
+                    "name": "沈煜奇"
+                }]
+            }, {
+                "name": "团支书",
+                "children": [{
+                    "name": "郑舒乐怡"
+                }]
             }]
-        }, {
-            "name": "团支书",
-            "children": [{
-                "name": "顾丁琦"
-            }]
-        }]
-    }, {
-        "name": "2023级",
-        "children": [{
-            "name": "班长",
-            "children": [{
-                "name": "孙钱成"
-            }]
-        }, {
-            "name": "心理委员",
-            "children": [{
-                "name": "沈煜奇"
-            }]
-        }, {
-            "name": "团支书",
-            "children": [{
-                "name": "郑舒乐怡"
-            }]
-        }]
-    }, {
+        }]}, {
         "name": "SDC",
         "children": [{
             "name": "主席",
@@ -53,16 +55,16 @@ var data = [{
             "name": "部长",
             "children": [{
                 "name": "学术部部长",
-                "children": [{  "name" :"沈皓天"}]
-            },{
+                "children": [{ "name": "沈皓天" }]
+            }, {
                 "name": "综合治理部部长",
-                "children": [{  "name" :"楼鑫浩"}]
-            },{
+                "children": [{ "name": "楼鑫浩" }]
+            }, {
                 "name": "文体活动部部长",
-                "children": [{  "name" :"薛晨璐"}]
-            },{
+                "children": [{ "name": "薛晨璐" }]
+            }, {
                 "name": "文化建设部部长",
-                "children": [{  "name" :"吴泽邦"}]
+                "children": [{ "name": "吴泽邦" }]
             }]
         }]
     }]
@@ -88,10 +90,10 @@ var diagonal = d3.svg.diagonal()
 var screenWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
 var verticalOffset = 100; // 调整此值以控制垂直偏移量
 var svg = d3.select("#Hierarchy").append("svg")
-  .attr("width", size)
-  .attr("height", size)
-  .attr("transform", "translate(" + (screenWidth / 2 - size / 2) + "," + (-verticalOffset) + ")")
-  .append("g");
+    .attr("width", size)
+    .attr("height", size)
+    .attr("transform", "translate(" + (screenWidth / 2 - size / 2) + "," + (-verticalOffset) + ")")
+    .append("g");
 
 // Create a circle for cropping
 svg.append("clipPath")
