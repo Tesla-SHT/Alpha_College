@@ -95,7 +95,7 @@
     <header><!--导航栏-->
         <div class="ui yellow labeled fixed borderless menu" style="height:80px">
             <a href="../../underneath_decoration/skystar.html" class="item">
-                <img class="ui small image icon2" src="../../../image/logo/logo.jpg?x-oss-process=pv">
+                <img class="ui small image icon2" src="../../../image/logo/logo.jpg?x-oss-process=style/pv">
             </a>
 
             <a href="../../../index.html" class="item navigator">
@@ -221,36 +221,36 @@
         for (var i = 0; i < 16; i++) {
             imageob[i] = new Image();
         }
-        imageob[0].src = "../../../image/2048/2.png";
-        imageob[1].src = "../../../image/2048/4.png";
-        imageob[2].src = "../../../image/2048/8.png";
-        imageob[3].src = "../../../image/2048/16.png";
-        imageob[4].src = "../../../image/2048/32.png";
-        imageob[5].src = "../../../image/2048/64.png";
-        imageob[6].src = "../../../image/2048/128.png";
-        imageob[7].src = "../../../image/2048/256.png";
-        imageob[8].src = "../../../image/2048/512.png";
-        imageob[9].src = "../../../image/2048/1024.png";
-        imageob[10].src = "../../../image/2048/2048.png";
-        imageob[11].src = "../../../image/2048/4096.png";
+        imageob[0].src = "../../../image/2048/2.png?x-oss-process=style/pv";
+        imageob[1].src = "../../../image/2048/4.png?x-oss-process=style/pv";
+        imageob[2].src = "../../../image/2048/8.png?x-oss-process=style/pv";
+        imageob[3].src = "../../../image/2048/16.png?x-oss-process=style/pv";
+        imageob[4].src = "../../../image/2048/32.png?x-oss-process=style/pv";
+        imageob[5].src = "../../../image/2048/64.png?x-oss-process=style/pv";
+        imageob[6].src = "../../../image/2048/128.png?x-oss-process=style/pv";
+        imageob[7].src = "../../../image/2048/256.png?x-oss-process=style/pv";
+        imageob[8].src = "../../../image/2048/512.png?x-oss-process=style/pv";
+        imageob[9].src = "../../../image/2048/1024.png?x-oss-process=style/pv";
+        imageob[10].src = "../../../image/2048/2048.png?x-oss-process=style/pv";
+        imageob[11].src = "../../../image/2048/4096.png?x-oss-process=style/pv";
         init();
         // Draw the game grid
         function drawGrid() {
             // Clear the canvas
             ctx.clearRect(0, 0, canvas.width, canvas.height);
 /*
-            new Image().src = "../../../image/2048/2.png";
-            new Image().src = "../../../image/2048/4.png";
-            new Image().src = "../../../image/2048/8.png";
-            new Image().src = "../../../image/2048/16.png";
-            new Image().src = "../../../image/2048/32.png";
-            new Image().src = "../../../image/2048/64.png";
-            new Image().src = "../../../image/2048/128.png";
-            new Image().src = "../../../image/2048/256.png";
-            new Image().src = "../../../image/2048/512.png";
-            new Image().src = "../../../image/2048/1024.png";
-            new Image().src = "../../../image/2048/2048.png";
-            new Image().src = "../../../image/2048/4096.png";*/
+            new Image().src = "../../../image/2048/2.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/4.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/8.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/16.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/32.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/64.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/128.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/256.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/512.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/1024.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/2048.png?x-oss-process=style/pv";
+            new Image().src = "../../../image/2048/4096.png?x-oss-process=style/pv";*/
             // Draw each cell in the grid
             for (var row = 0; row < 4; row++) {
                 for (var col = 0; col < 4; col++) {
@@ -268,7 +268,7 @@
                     //ctx.fillText(grid[row][col], x + 50, y + 50);
                     if (grid[row][col] > 0 && grid[row][col] < 8192) {
                         /*var imageObj = new Image();
-                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png';*/
+                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png?x-oss-process=style/pv';*/
                         ctx.drawImage(imageob[Math.floor((Math.log2(grid[row][col])+0.0001))-1], x, y, 100,100);
                     }
 
@@ -308,7 +308,7 @@
                     //ctx.fillText(grid[row][col], x + 50, y + 50);
                     if (grid[row][col] > 0 && grid[row][col] < 8192) {
                         /*var imageObj = new Image();
-                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png';*/
+                        imageObj.src = '../../../image/2048/' + grid[row][col] + '.png?x-oss-process=style/pv';*/
                         ctx.drawImage(imageob[Math.floor((Math.log2(grid[row][col])+0.0001))-1], x, y, 100,100);
                     }
             // Draw the updated game grid
