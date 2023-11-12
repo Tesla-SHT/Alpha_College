@@ -55,7 +55,7 @@
 
 /* mouse grab icon */
 .grabbing { 
-    cursor:url(../img/grabbing.png) 8 8, move;
+    cursor:url(../img/grabbing.png?x-oss-process=style/pv) 8 8, move;
 }
 
 /* fix */

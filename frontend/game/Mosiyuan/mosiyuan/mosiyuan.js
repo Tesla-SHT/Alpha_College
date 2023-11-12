@@ -169,10 +169,10 @@
 		`传说${SIYUAN}会在被她抛弃的终端上用 root 权限执行<code>rm -rf /*</code>。`,
 		`${SIYUAN}太强了，所以你复制不了这个网站中的任何一个${SIYUAN}。`,
 		`空谈误国，实干兴邦。`,
-		`<img src="./daily1.png">`,
-		`<img src="./daily2.png">`,
-		`<img src="./daily3.png">`,
-		`<img src="./daily4.png">`,
+		`<img src="./daily1.png?x-oss-process=style/pv">`,
+		`<img src="./daily2.png?x-oss-process=style/pv">`,
+		`<img src="./daily3.png?x-oss-process=style/pv">`,
+		`<img src="./daily4.png?x-oss-process=style/pv">`,
 		`Orz${SIYUAN} 就来 <a href="https://orzsiyuan.com">orzsiyuan.com</a>！`,
 		`你知道吗？${SIYUAN}几乎每天都会上几次<a href="http://lydsy.online">http://lydsy.online</a>！(难道网址中的<code>dsy</code>是天意？)`,
 		`追寻真理的各种花费与你本轮尝试次数有关。`,
@@ -2706,7 +2706,7 @@
 							clearTimeout(saveSave);
 							this.$set(this,'debugging',true);
 							setTimeout(()=>{
-								window.location.href='./SiyuanAK.png';
+								window.location.href='./SiyuanAK.png?x-oss-process=style/pv';
 							},5000);
 							return undefined;
 						},
